@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground — CS Fundamentals Academy</title>
+  <meta name="description" content="A live HTML/CSS/JS code playground and terminal simulator.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-root="../">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="bg-mesh"></div>
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+    <section class="section" style="padding-top: calc(var(--nav-h) + 50px); padding-bottom: 50px;">
+      <div class="container">
+        <div class="section-head reveal" style="margin-bottom:36px;">
+          <span class="eyebrow">Write. Run. See it instantly.</span>
+          <h1 class="text-h1">Interactive Playground</h1>
+          <p class="text-lead" style="margin-top:12px; max-width:640px;">A live HTML/CSS/JS editor with instant preview — no setup, nothing to install.</p>
+        </div>
+
+        <div class="pg-toolbar">
+          <div class="flex gap-sm" style="flex-wrap:wrap;">
+            <button class="btn btn-primary btn-sm" id="run-btn">▶ Run</button>
+            <button class="btn btn-ghost btn-sm" id="reset-btn">↺ Reset</button>
+            <button class="btn btn-ghost btn-sm" id="format-btn">✦ Format</button>
+            <button class="btn btn-ghost btn-sm" id="copy-btn">⧉ Copy</button>
+            <button class="btn btn-ghost btn-sm" id="download-btn">⬇ Download</button>
+          </div>
+          <span class="text-mono" style="color:var(--text-2); font-size:0.8rem;" id="run-status">Ready</span>
+        </div>
+
+        <div class="pg-layout">
+          <div class="pg-editor-pane">
+            <div class="pg-tabs">
+              <button class="pg-tab is-active" data-tab="html">index.html</button>
+              <button class="pg-tab" data-tab="css">styles.css</button>
+              <button class="pg-tab" data-tab="js">script.js</button>
+            </div>
+            <div class="pg-editor-area">
+              <textarea class="pg-textarea" id="editor-html" spellcheck="false"></textarea>
+              <textarea class="pg-textarea" id="editor-css" spellcheck="false" hidden></textarea>
+              <textarea class="pg-textarea" id="editor-js" spellcheck="false" hidden></textarea>
+            </div>
+          </div>
+
+          <div class="pg-output-pane">
+            <div class="pg-output-bar">
+              <span>Live Preview</span>
+              <div class="flex gap-sm">
+                <button class="pg-tab" id="show-preview" style="border-bottom-color: var(--primary-2); color:var(--text-0); padding:4px 10px;">Preview</button>
+                <button class="pg-tab" id="show-console" style="padding:4px 10px;">Console</button>
+              </div>
+            </div>
+            <iframe class="pg-iframe" id="preview-frame" title="Live preview" sandbox="allow-scripts allow-modals"></iframe>
+            <div class="pg-console" id="console-output" hidden></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMINAL SIMULATOR -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-head reveal" style="margin-bottom:32px;">
+          <span class="eyebrow">Practice safely</span>
+          <h2 class="text-h2">Terminal Simulator</h2>
+          <p class="text-lead" style="margin-top:12px; max-width:640px;">Try real commands — Linux basics, Git, and Node — in a sandboxed simulation. Nothing here touches a real filesystem.</p>
+        </div>
+
+        <div class="terminal-frame reveal">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="terminal-dot" style="background:#F87171;"></span>
+              <span class="terminal-dot" style="background:#FBBF24;"></span>
+              <span class="terminal-dot" style="background:#34D399;"></span>
+            </div>
+            <span class="terminal-title">bash — csfa-sandbox</span>
+            <button class="icon-btn" id="terminal-reset" title="Reset terminal">↺</button>
+          </div>
+          <div class="terminal-body" id="terminal-body"></div>
+          <div style="padding: 0 18px 16px;">
+            <div class="term-input-row">
+              <span class="term-prompt">➜</span> <span class="term-path">~</span>
+              <input type="text" class="term-input" id="terminal-input" placeholder="Type a command (try: help)" autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+        <p class="term-help-text">Supports: ls, cd, mkdir, touch, pwd, echo, clear, cat, git init/add/commit/status/branch, npm install/run, help</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/modules-data.js"></script>
+  <script src="../js/topics-module1.js"></script>
+  <script src="../js/topics-module2.js"></script>
+  <script src="../js/topics-module3.js"></script>
+  <script src="../js/topics-module4.js"></script>
+  <script src="../js/topics-module5.js"></script>
+  <script src="../js/topics-module6.js"></script>
+  <script src="../js/topics-module7.js"></script>
+  <script src="../js/topics-module8.js"></script>
+  <script src="../js/topics-module9.js"></script>
+  <script src="../js/topics-module10.js"></script>
+  <script src="../js/topics-module11.js"></script>
+  <script src="../js/topics-module12.js"></script>
+  <script src="../js/core/models.js"></script>
+  <script src="../js/core/progress-store.js"></script>
+  <script src="../js/core/ui-services.js"></script>
+  <script src="../js/core/site-layout.js"></script>
+  <script src="../js/core/app.js"></script>
+  <script src="../js/core/code-playground.js"></script>
+  <script src="../js/core/virtual-file-system.js"></script>
+  <script src="../js/core/terminal-emulator.js"></script>
+</body>
+</html>

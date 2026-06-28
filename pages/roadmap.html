@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadmap — CS Fundamentals Academy</title>
+  <meta name="description" content="The full 12-module roadmap for CS Fundamentals Academy, from computer fundamentals to software engineering.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-root="../">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="bg-mesh"></div>
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+    <section class="section" style="padding-top: calc(var(--nav-h) + 60px);">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The full path</span>
+          <h1 class="text-h1">Roadmap</h1>
+          <p class="text-lead" style="margin-top:14px; max-width:640px;">
+            Twelve modules, ordered so each one builds on what came before — starting with how a computer physically works, ending with how to architect software like an engineer.
+          </p>
+        </div>
+
+        <div class="roadmap-track" id="roadmap-track"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/modules-data.js"></script>
+  <script src="../js/topics-module1.js"></script>
+  <script src="../js/topics-module2.js"></script>
+  <script src="../js/topics-module3.js"></script>
+  <script src="../js/topics-module4.js"></script>
+  <script src="../js/topics-module5.js"></script>
+  <script src="../js/topics-module6.js"></script>
+  <script src="../js/topics-module7.js"></script>
+  <script src="../js/topics-module8.js"></script>
+  <script src="../js/topics-module9.js"></script>
+  <script src="../js/topics-module10.js"></script>
+  <script src="../js/topics-module11.js"></script>
+  <script src="../js/topics-module12.js"></script>
+  <script src="../js/core/models.js"></script>
+  <script src="../js/core/progress-store.js"></script>
+  <script src="../js/core/ui-services.js"></script>
+  <script src="../js/core/site-layout.js"></script>
+  <script src="../js/core/app.js"></script>
+  <script>
+    function renderRoadmap() {
+      const track = document.getElementById('roadmap-track');
+      const state = window.CSFA.getState();
+      const builtTopicIds = window.CSFA_TOPICS.map(t => t.id);
+
+      track.innerHTML = window.CSFA_MODULES.map(m => {
+        const pct = window.CSFA.moduleCompletion(m.num);
+        const isComplete = pct >= 1;
+        const isModuleBuilt = m.topics.some(topicId => builtTopicIds.includes(topicId));
+        const topicsHTML = m.topics.map(topicId => {
+          const isBuilt = builtTopicIds.includes(topicId);
+          const isDone = state.completedLessons.includes(topicId);
+          const title = window.CSFA_TOPIC_TITLES[topicId] || topicId;
+          const href = isBuilt ? `topic.html?id=${topicId}` : '#';
+          return `<a href="${href}" class="roadmap-topic-chip ${isDone ? 'is-done' : ''}" ${!isBuilt ? 'title="Coming soon" style="opacity:0.45;cursor:default;" onclick="return false;"' : ''}>
+            ${isDone ? '✓ ' : ''}${title}
+          </a>`;
+        }).join('');
+
+        return `
+        <div class="roadmap-module reveal ${isComplete ? 'is-complete' : ''}" id="${m.id}">
+          <div class="roadmap-module-head">
+            <span class="roadmap-module-num">MODULE ${String(m.num).padStart(2, '0')}</span>
+            <h3 class="text-h3" style="margin:0;">${m.icon} ${m.name}</h3>
+            ${isModuleBuilt ? '<span class="badge" style="color:var(--success);border-color:rgba(52,211,153,0.3);">Available now</span>' : '<span class="badge">Coming soon</span>'}
+          </div>
+          <p style="color:var(--text-2); max-width:640px;">${m.description}</p>
+          <div class="roadmap-topics">${topicsHTML}</div>
+          ${isModuleBuilt ? `<div class="progress-bar-track" style="max-width:300px; margin-top:18px;"><div class="progress-bar-fill" style="width:${Math.round(pct*100)}%"></div></div>` : ''}
+        </div>`;
+      }).join('');
+
+      // re-run reveal observer for newly injected elements
+      document.querySelectorAll('.roadmap-module.reveal').forEach(el => {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        obs.observe(el);
+      });
+    }
+    document.addEventListener('csfa:layout-ready', renderRoadmap);
+  </script>
+</body>
+</html>

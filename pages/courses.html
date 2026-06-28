@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Explorer — CS Fundamentals Academy</title>
+  <meta name="description" content="Browse every module and topic in CS Fundamentals Academy.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-root="../">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="bg-mesh"></div>
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+    <section class="section" style="padding-top: calc(var(--nav-h) + 60px);">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Browse everything</span>
+          <h1 class="text-h1">Course Explorer</h1>
+          <p class="text-lead" style="margin-top:14px; max-width:640px;">Search or filter to find any topic across all 12 modules.</p>
+        </div>
+
+        <div class="filter-bar reveal">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" id="topic-search" placeholder="Search topics — e.g. closures, HTTP, recursion...">
+          </div>
+          <button class="filter-chip is-active" data-filter="all">All modules</button>
+          <button class="filter-chip" data-filter="available">Available</button>
+          <button class="filter-chip" data-filter="in-progress">In progress</button>
+          <button class="filter-chip" data-filter="completed">Completed</button>
+        </div>
+
+        <div id="explorer-results"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/modules-data.js"></script>
+  <script src="../js/topics-module1.js"></script>
+  <script src="../js/topics-module2.js"></script>
+  <script src="../js/topics-module3.js"></script>
+  <script src="../js/topics-module4.js"></script>
+  <script src="../js/topics-module5.js"></script>
+  <script src="../js/topics-module6.js"></script>
+  <script src="../js/topics-module7.js"></script>
+  <script src="../js/topics-module8.js"></script>
+  <script src="../js/topics-module9.js"></script>
+  <script src="../js/topics-module10.js"></script>
+  <script src="../js/topics-module11.js"></script>
+  <script src="../js/topics-module12.js"></script>
+  <script src="../js/core/models.js"></script>
+  <script src="../js/core/progress-store.js"></script>
+  <script src="../js/core/ui-services.js"></script>
+  <script src="../js/core/site-layout.js"></script>
+  <script src="../js/core/app.js"></script>
+  <script>
+    let activeFilter = 'all';
+    let searchTerm = '';
+
+    function topicMatchesFilter(topicId, isBuilt, state, filter) {
+      const isDone = state.completedLessons.includes(topicId);
+      if (filter === 'all') return true;
+      if (filter === 'available') return isBuilt;
+      if (filter === 'completed') return isDone;
+      if (filter === 'in-progress') return isBuilt && !isDone;
+      return true;
+    }
+
+    function renderExplorer() {
+      const container = document.getElementById('explorer-results');
+      const state = window.CSFA.getState();
+      const builtTopicIds = window.CSFA_TOPICS.map(t => t.id);
+      const term = searchTerm.trim().toLowerCase();
+
+      const sections = window.CSFA_MODULES.map(m => {
+        const matchingTopics = m.topics.filter(topicId => {
+          const title = window.CSFA_TOPIC_TITLES[topicId] || topicId;
+          const isBuilt = builtTopicIds.includes(topicId);
+          if (term && !title.toLowerCase().includes(term) && !m.name.toLowerCase().includes(term)) return false;
+          return topicMatchesFilter(topicId, isBuilt, state, activeFilter);
+        });
+
+        if (!matchingTopics.length) return '';
+
+        const rows = matchingTopics.map(topicId => {
+          const isBuilt = builtTopicIds.includes(topicId);
+          const isDone = state.completedLessons.includes(topicId);
+          const title = window.CSFA_TOPIC_TITLES[topicId] || topicId;
+          const topicData = window.CSFA_TOPICS.find(t => t.id === topicId);
+          const href = isBuilt ? `topic.html?id=${topicId}` : '#';
+
+          return `
+          <a href="${href}" class="topic-row" ${!isBuilt ? 'onclick="return false;" style="opacity:0.5;cursor:default;"' : ''}>
+            <div class="topic-row-left">
+              <span class="topic-check ${isDone ? 'is-done' : ''}">${isDone ? '✓' : ''}</span>
+              <div>
+                <div style="color:var(--text-0); font-weight:500;">${title}</div>
+                ${isBuilt ? `<div style="font-size:0.78rem; color:var(--text-2);">${topicData.readMinutes} min read · ${topicData.examples.length} examples · ${topicData.exercises.length} exercises</div>` : `<div style="font-size:0.78rem; color:var(--text-2);">Coming soon</div>`}
+              </div>
+            </div>
+            <span class="badge">${isBuilt ? (isDone ? 'Completed' : 'Start →') : 'Locked'}</span>
+          </a>`;
+        }).join('');
+
+        return `
+        <div class="reveal" id="${m.id}" style="margin-bottom:48px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+            <div class="module-icon">${m.icon}</div>
+            <div>
+              <div class="roadmap-module-num">MODULE ${String(m.num).padStart(2, '0')}</div>
+              <h3 class="text-h4" style="margin:0;">${m.name}</h3>
+            </div>
+          </div>
+          ${rows}
+        </div>`;
+      }).join('');
+
+      container.innerHTML = sections || `<div class="empty-state"><div class="em-icon">🔍</div><p>No topics match your search or filter.</p></div>`;
+    }
+
+    document.addEventListener('csfa:layout-ready', () => {
+      renderExplorer();
+
+      document.getElementById('topic-search').addEventListener('input', (e) => {
+        searchTerm = e.target.value;
+        renderExplorer();
+      });
+
+      document.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('is-active'));
+          chip.classList.add('is-active');
+          activeFilter = chip.dataset.filter;
+          renderExplorer();
+        });
+      });
+
+      // jump to hash target module if present
+      if (location.hash) {
+        setTimeout(() => {
+          const el = document.querySelector(location.hash);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+logs/
+*.log
+npm-debug.log*
+
+# Platform specific configs
+.gemini/
+.antigravity/

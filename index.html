@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Fundamentals Academy — Learn CS to Become a Better Vibe Coder</title>
+  <meta name="description" content="Master computer science fundamentals — how computers work, programming, web dev, data structures, algorithms, and more — through interactive examples built for AI-assisted developers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-root="">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="bg-mesh"></div>
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Built for AI-assisted developers</span>
+          <h1 class="text-display">
+            Learn Computer Science<br>
+            <span class="text-gradient">Fundamentals</span>
+          </h1>
+          <p class="text-lead" style="margin-top:24px; max-width: 540px;">
+            Become a better vibe coder. Master the foundations of programming, web development, algorithms, databases, networking, and software engineering — through interactive examples and live coding, not lectures.
+          </p>
+          <div class="hero-cta-row">
+            <a href="pages/courses.html" class="btn btn-primary">Start Learning <span aria-hidden="true">→</span></a>
+            <a href="pages/roadmap.html" class="btn btn-ghost">View Roadmap</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">12</div>
+              <div class="hero-stat-label">Modules</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">70+</div>
+              <div class="hero-stat-label">Topics</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">6</div>
+              <div class="hero-stat-label">Examples per topic</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">100%</div>
+              <div class="hero-stat-label">Interactive</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-float-stage" aria-hidden="true">
+          <div class="code-float-card c1">
+            <div class="cf-bar">
+              <span class="cf-dot" style="background:#F87171;"></span>
+              <span class="cf-dot" style="background:#FBBF24;"></span>
+              <span class="cf-dot" style="background:#34D399;"></span>
+            </div>
+            <div class="cf-body"><span class="tok-kw">function</span> <span class="tok-fn">fetchData</span>() {<br>&nbsp;&nbsp;<span class="tok-kw">return</span> <span class="tok-fn">fetch</span>(<span class="tok-str">"/api/users"</span>);<br>}</div>
+          </div>
+          <div class="code-float-card c2">
+            <div class="cf-bar">
+              <span class="cf-dot" style="background:#F87171;"></span>
+              <span class="cf-dot" style="background:#FBBF24;"></span>
+              <span class="cf-dot" style="background:#34D399;"></span>
+            </div>
+            <div class="cf-body"><span class="tok-cm">// CPU → RAM → Storage</span><br><span class="tok-kw">const</span> result = <span class="tok-num">2</span> + <span class="tok-num">2</span>;<br><span class="tok-fn">console</span>.log(result);</div>
+          </div>
+          <div class="code-float-card c3">
+            <div class="cf-bar">
+              <span class="cf-dot" style="background:#F87171;"></span>
+              <span class="cf-dot" style="background:#FBBF24;"></span>
+              <span class="cf-dot" style="background:#34D399;"></span>
+            </div>
+            <div class="cf-body">GET /users <span class="tok-num">200</span> OK<br>POST /users <span class="tok-num">201</span> Created<br>GET /missing <span class="tok-num">404</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP PREVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The path</span>
+          <h2 class="text-h1">Twelve modules. One clear path.</h2>
+          <p class="text-lead" style="margin-top:14px;">From how a CPU executes an instruction to designing software architecture — structured so each module builds on the last.</p>
+        </div>
+
+        <div class="module-grid" id="home-module-preview"></div>
+
+        <div style="text-align:center; margin-top:48px;">
+          <a href="pages/roadmap.html" class="btn btn-ghost">See the full roadmap <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY THIS MATTERS FOR VIBE CODING -->
+    <section class="section" style="background:linear-gradient(180deg, transparent, rgba(139,92,246,0.04), transparent);">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 56px; align-items:center;">
+          <div class="reveal">
+            <span class="eyebrow">Why fundamentals, in the age of AI</span>
+            <h2 class="text-h2">AI writes the code. You still need to know what it's doing.</h2>
+            <p class="text-lead" style="margin-top:18px;">
+              Directing an AI coding agent well means reading its output critically — spotting a bad data structure choice, recognizing a security gap, knowing why a request failed. None of that comes from prompting harder. It comes from understanding what's actually happening underneath.
+            </p>
+          </div>
+          <div class="glass card reveal" style="padding:36px;">
+            <div class="text-mono" style="color:var(--text-2); margin-bottom:10px;">terminal</div>
+            <div class="code-block" style="border:none; background:transparent;">
+              <pre style="padding:0;"><span class="tok-cm"># Your AI agent just ran this. Do you know why?</span>
+<span class="tok-fn">npm</span> install lodash
+<span class="tok-fn">git</span> commit -m <span class="tok-str">"fix: race condition in async handler"</span>
+<span class="tok-fn">curl</span> -X POST https://api.example.com/users</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYGROUND + PROGRESS PREVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 28px;">
+          <div class="glass card reveal">
+            <span class="eyebrow">Interactive Playground</span>
+            <h3 class="text-h3" style="margin-bottom:14px;">Write code. See it run. Instantly.</h3>
+            <p style="color:var(--text-2); margin-bottom:22px;">A live HTML/CSS/JS editor with instant preview, plus a terminal simulator for practicing real commands risk-free.</p>
+            <a href="pages/playground.html" class="btn btn-primary btn-sm">Open Playground</a>
+          </div>
+          <div class="glass card reveal">
+            <span class="eyebrow">Progress Dashboard</span>
+            <h3 class="text-h3" style="margin-bottom:14px;">XP, streaks, and badges that actually track learning.</h3>
+            <p style="color:var(--text-2); margin-bottom:22px;">Every lesson, exercise, and quiz feeds a real progress system — stored right in your browser.</p>
+            <a href="pages/progress.html" class="btn btn-ghost btn-sm">View Your Progress</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section" style="text-align:center;">
+      <div class="container">
+        <div class="reveal">
+          <h2 class="text-h1">Modules 1-4 are live. Start with how computers actually work.</h2>
+          <p class="text-lead" style="margin: 18px auto 32px; max-width: 560px;">Computer Fundamentals, Programming Fundamentals, HTML, and CSS Fundamentals — thirty-one topics, fully interactive.</p>
+          <a href="pages/topic.html?id=how-computers-work" class="btn btn-primary">Start Module 1 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/modules-data.js"></script>
+  <script src="js/topics-module1.js"></script>
+  <script src="js/topics-module2.js"></script>
+  <script src="js/topics-module3.js"></script>
+  <script src="js/topics-module4.js"></script>
+  <script src="js/topics-module5.js"></script>
+  <script src="js/topics-module6.js"></script>
+  <script src="js/topics-module7.js"></script>
+  <script src="js/topics-module8.js"></script>
+  <script src="js/topics-module9.js"></script>
+  <script src="js/topics-module10.js"></script>
+  <script src="js/topics-module11.js"></script>
+  <script src="js/topics-module12.js"></script>
+  <script src="js/core/models.js"></script>
+  <script src="js/core/progress-store.js"></script>
+  <script src="js/core/ui-services.js"></script>
+  <script src="js/core/site-layout.js"></script>
+  <script src="js/core/app.js"></script>
+  <script>
+    function renderHomeModules() {
+      const grid = document.getElementById('home-module-preview');
+      const modules = window.CSFA_MODULES.slice(0, 6);
+      const builtTopicIds = window.CSFA_TOPICS.map(t => t.id);
+      grid.innerHTML = modules.map(m => {
+        const isBuilt = m.topics.some(topicId => builtTopicIds.includes(topicId));
+        const pct = isBuilt ? Math.round((window.CSFA ? window.CSFA.moduleCompletion(m.num) : 0) * 100) : 0;
+        return `
+        <a href="${isBuilt ? 'pages/courses.html#' + m.id : 'pages/roadmap.html'}" class="card reveal" style="display:block;">
+          <div class="module-card-top">
+            <div class="module-icon">${m.icon}</div>
+            <span class="badge">${isBuilt ? 'Available' : 'Coming soon'}</span>
+          </div>
+          <h3>Module ${m.num}: ${m.name}</h3>
+          <p>${m.description}</p>
+          <div class="module-topic-count">${m.topics.length} topics</div>
+          <div class="progress-bar-track"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+        </a>`;
+      }).join('');
+    }
+    document.addEventListener('csfa:layout-ready', renderHomeModules);
+  </script>
+</body>
+</html>

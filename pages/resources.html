@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — CS Fundamentals Academy</title>
+  <meta name="description" content="Cheat sheets and downloadable notes for HTML, CSS, JavaScript, Git, and SQL.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-root="../">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="bg-mesh"></div>
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+    <section class="section" style="padding-top: calc(var(--nav-h) + 60px);">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Reference material</span>
+          <h1 class="text-h1">Resources</h1>
+          <p class="text-lead" style="margin-top:14px; max-width:640px;">Quick-reference cheat sheets, plus notes generated from your own completed lessons.</p>
+        </div>
+
+        <h2 class="text-h3 reveal" style="margin-bottom:20px;">Cheat Sheets</h2>
+        <div class="cheat-grid reveal" id="cheat-grid" style="margin-bottom:60px;"></div>
+
+        <h2 class="text-h3 reveal" style="margin-bottom:20px;">Your Downloadable Notes</h2>
+        <p class="text-lead reveal" style="margin-bottom:24px; max-width:600px;">Generated dynamically from the lessons you've completed in Module 1.</p>
+        <div class="card reveal" style="padding:28px;" id="notes-card"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/modules-data.js"></script>
+  <script src="../js/topics-module1.js"></script>
+  <script src="../js/topics-module2.js"></script>
+  <script src="../js/topics-module3.js"></script>
+  <script src="../js/topics-module4.js"></script>
+  <script src="../js/topics-module5.js"></script>
+  <script src="../js/topics-module6.js"></script>
+  <script src="../js/topics-module7.js"></script>
+  <script src="../js/topics-module8.js"></script>
+  <script src="../js/topics-module9.js"></script>
+  <script src="../js/topics-module10.js"></script>
+  <script src="../js/topics-module11.js"></script>
+  <script src="../js/topics-module12.js"></script>
+  <script src="../js/core/models.js"></script>
+  <script src="../js/core/progress-store.js"></script>
+  <script src="../js/core/ui-services.js"></script>
+  <script src="../js/core/site-layout.js"></script>
+  <script src="../js/core/app.js"></script>
+  <script>
+    const CHEAT_SHEETS = [
+      { id: 'html', tag: '.html', icon: '📄', title: 'HTML', items: [
+        ['<div>, <span>', 'Generic block / inline containers'],
+        ['<h1>–<h6>', 'Headings, in order of importance'],
+        ['<a href="">', 'Hyperlink to another page or resource'],
+        ['<img src="" alt="">', 'Image — alt text required for accessibility'],
+        ['<form>, <input>, <button>', 'Form elements for user input'],
+        ['<ul>, <ol>, <li>', 'Unordered / ordered lists'],
+      ]},
+      { id: 'css', tag: '.css', icon: '🎨', title: 'CSS', items: [
+        ['display: flex', 'One-dimensional flexible layout'],
+        ['display: grid', 'Two-dimensional grid layout'],
+        ['box-sizing: border-box', 'Padding/border included in element width'],
+        ['@media (max-width: 768px)', 'Responsive breakpoint'],
+        ['transition: all 0.2s ease', 'Smooth property changes'],
+        [':hover, :focus, :active', 'Interactive state selectors'],
+      ]},
+      { id: 'js', tag: '.js', icon: '⚡', title: 'JavaScript', items: [
+        ['const, let', 'Block-scoped variable declarations'],
+        ['arr.map(), .filter(), .reduce()', 'Core array transformation methods'],
+        ['async/await', 'Readable syntax for asynchronous code'],
+        ['fetch(url)', 'Make an HTTP request'],
+        ['try { } catch (e) { }', 'Error handling'],
+        ['=== vs ==', 'Strict vs loose equality — prefer ===' ],
+      ]},
+      { id: 'git', tag: 'CLI', icon: '🌿', title: 'Git', items: [
+        ['git init', 'Start a new repository'],
+        ['git add <file>', 'Stage changes for commit'],
+        ['git commit -m "msg"', 'Save staged changes with a message'],
+        ['git branch <name>', 'Create a new branch'],
+        ['git merge <branch>', 'Merge a branch into the current one'],
+        ['git status', 'See staged/unstaged changes'],
+      ]},
+      { id: 'sql', tag: '.sql', icon: '🗄️', title: 'SQL', items: [
+        ['SELECT * FROM table', 'Retrieve all columns from a table'],
+        ['WHERE condition', 'Filter rows'],
+        ['JOIN ... ON ...', 'Combine rows from related tables'],
+        ['GROUP BY column', 'Aggregate rows by a column'],
+        ['INSERT INTO table VALUES (...)', 'Add a new row'],
+        ['CREATE INDEX ON table(column)', 'Speed up lookups on a column'],
+      ]},
+    ];
+
+    function renderCheatSheets() {
+      const grid = document.getElementById('cheat-grid');
+      grid.innerHTML = CHEAT_SHEETS.map(sheet => `
+        <div class="card cheat-card">
+          <div class="cheat-card-top">
+            <div class="module-icon">${sheet.icon}</div>
+            <div>
+              <h3 style="margin:0;">${sheet.title}</h3>
+              <span class="cheat-tag">${sheet.tag}</span>
+            </div>
+          </div>
+          ${sheet.items.map(([code, desc]) => `
+            <div style="margin-bottom:10px;">
+              <div class="text-mono" style="color:var(--primary-3); font-size:0.82rem;">${code}</div>
+              <div style="color:var(--text-2); font-size:0.82rem;">${desc}</div>
+            </div>`).join('')}
+          <button class="btn btn-ghost btn-sm" style="margin-top:10px;" data-download-sheet="${sheet.id}">⬇ Download .md</button>
+        </div>
+      `).join('');
+
+      grid.querySelectorAll('[data-download-sheet]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const sheet = CHEAT_SHEETS.find(s => s.id === btn.dataset.downloadSheet);
+          const md = `# ${sheet.title} Cheat Sheet\n\n` + sheet.items.map(([c, d]) => `- \`${c}\` — ${d}`).join('\n');
+          downloadText(sheet.title.toLowerCase() + '-cheatsheet.md', md);
+        });
+      });
+    }
+
+    function downloadText(filename, content) {
+      const blob = new Blob([content], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = filename; a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function renderNotes() {
+      const state = window.CSFA.getState();
+      const done = window.CSFA_TOPICS.filter(t => state.completedLessons.includes(t.id));
+      const card = document.getElementById('notes-card');
+
+      if (!done.length) {
+        card.innerHTML = `<div class="empty-state"><div class="em-icon">📝</div><p>Complete a lesson in Module 1 to generate your first personal notes file.</p><a href="topic.html?id=how-computers-work" class="btn btn-primary btn-sm" style="margin-top:14px;">Start "How Computers Work"</a></div>`;
+        return;
+      }
+
+      card.innerHTML = `
+        <p style="color:var(--text-2); margin-bottom:18px;">You've completed <strong style="color:var(--text-0);">${done.length}</strong> lesson${done.length === 1 ? '' : 's'}: ${done.map(t => t.title).join(', ')}.</p>
+        <button class="btn btn-primary btn-sm" id="download-notes-btn">⬇ Download my notes (.md)</button>`;
+
+      document.getElementById('download-notes-btn').addEventListener('click', () => {
+        let md = `# My CS Fundamentals Notes\n\nGenerated from ${done.length} completed lesson(s).\n\n`;
+        done.forEach(t => {
+          md += `## ${t.title}\n\n${t.intro.whatItIs}\n\n**Why it matters:** ${t.intro.whyItMatters}\n\n**Common mistake:** ${t.intro.commonMistakes}\n\n---\n\n`;
+        });
+        downloadText('my-cs-fundamentals-notes.md', md);
+      });
+    }
+
+    document.addEventListener('csfa:layout-ready', () => {
+      renderCheatSheets();
+      renderNotes();
+    });
+  </script>
+</body>
+</html>

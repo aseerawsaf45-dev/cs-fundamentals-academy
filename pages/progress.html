@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Progress — CS Fundamentals Academy</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body data-root="../">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="bg-mesh"></div>
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+
+  <div id="site-nav"></div>
+
+  <main id="main">
+    <section class="section" style="padding-top: calc(var(--nav-h) + 60px);">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Your journey</span>
+          <h1 class="text-h1">Progress Dashboard</h1>
+          <p class="text-lead" style="margin-top:14px;">Stored locally in your browser — XP, streaks, and badges across everything you've learned.</p>
+        </div>
+
+        <!-- Level / XP -->
+        <div class="glass card reveal" style="padding:32px; margin-bottom:32px;">
+          <div class="level-ring-wrap">
+            <div>
+              <div class="stat-value" id="level-display">Level 1</div>
+              <div class="stat-label" id="xp-display">0 XP</div>
+            </div>
+            <div style="flex:1;">
+              <div class="xp-bar-track"><div class="xp-bar-fill" id="xp-bar" style="width:0%"></div></div>
+              <div class="stat-label" id="xp-to-next" style="margin-top:8px;">0 XP to next level</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stat grid -->
+        <div class="stat-grid reveal" style="margin-bottom:48px;">
+          <div class="card stat-card">
+            <div class="stat-icon">📘</div>
+            <div class="stat-value" id="stat-lessons">0</div>
+            <div class="stat-label">Lessons completed</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-icon">✏️</div>
+            <div class="stat-value" id="stat-exercises">0</div>
+            <div class="stat-label">Exercises solved</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-icon">🧠</div>
+            <div class="stat-value" id="stat-quizzes">0</div>
+            <div class="stat-label">Quizzes taken</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-value" id="stat-streak">0</div>
+            <div class="stat-label">Day streak</div>
+          </div>
+        </div>
+
+        <!-- Module completion -->
+        <div class="reveal" style="margin-bottom:48px;">
+          <h2 class="text-h3" style="margin-bottom:20px;">Module Completion</h2>
+          <div class="module-grid" id="module-completion-grid"></div>
+        </div>
+
+        <!-- Streak calendar -->
+        <div class="card reveal" style="padding:28px; margin-bottom:48px;">
+          <h3 class="text-h4" style="margin-bottom:6px;">Last 14 days</h3>
+          <p style="color:var(--text-2); font-size:0.85rem; margin-bottom:6px;">Days you visited and learned something.</p>
+          <div class="streak-cal" id="streak-calendar"></div>
+        </div>
+
+        <!-- Badges -->
+        <div class="reveal">
+          <h2 class="text-h3" style="margin-bottom:20px;">Badges &amp; Achievements</h2>
+          <div class="badge-grid" id="badge-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/modules-data.js"></script>
+  <script src="../js/topics-module1.js"></script>
+  <script src="../js/topics-module2.js"></script>
+  <script src="../js/topics-module3.js"></script>
+  <script src="../js/topics-module4.js"></script>
+  <script src="../js/topics-module5.js"></script>
+  <script src="../js/topics-module6.js"></script>
+  <script src="../js/topics-module7.js"></script>
+  <script src="../js/topics-module8.js"></script>
+  <script src="../js/topics-module9.js"></script>
+  <script src="../js/topics-module10.js"></script>
+  <script src="../js/topics-module11.js"></script>
+  <script src="../js/topics-module12.js"></script>
+  <script src="../js/core/models.js"></script>
+  <script src="../js/core/progress-store.js"></script>
+  <script src="../js/core/ui-services.js"></script>
+  <script src="../js/core/site-layout.js"></script>
+  <script src="../js/core/app.js"></script>
+  <script>
+    function renderProgress() {
+      const state = window.CSFA.getState();
+      const lvl = window.CSFA.computeLevel(state.xp);
+
+      document.getElementById('level-display').textContent = 'Level ' + lvl.level;
+      document.getElementById('xp-display').textContent = state.xp + ' XP total';
+      document.getElementById('xp-bar').style.width = Math.round((lvl.xpIntoLevel / lvl.xpNeeded) * 100) + '%';
+      document.getElementById('xp-to-next').textContent = (lvl.xpNeeded - lvl.xpIntoLevel) + ' XP to Level ' + (lvl.level + 1);
+
+      document.getElementById('stat-lessons').textContent = state.completedLessons.length;
+      document.getElementById('stat-exercises').textContent = window.CSFA.totalExercises(state);
+      document.getElementById('stat-quizzes').textContent = Object.keys(state.quizScores).length;
+      document.getElementById('stat-streak').textContent = state.streak;
+
+      // Module completion grid
+      const grid = document.getElementById('module-completion-grid');
+      grid.innerHTML = window.CSFA_MODULES.map(m => {
+        const pct = Math.round(window.CSFA.moduleCompletion(m.num) * 100);
+        return `
+        <div class="card">
+          <div class="module-card-top">
+            <div class="module-icon">${m.icon}</div>
+            <span class="badge">${pct}%</span>
+          </div>
+          <h3>Module ${m.num}: ${m.name}</h3>
+          <div class="module-topic-count">${m.topics.length} topics</div>
+          <div class="progress-bar-track"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+        </div>`;
+      }).join('');
+
+      // Streak calendar — last 14 days
+      const cal = document.getElementById('streak-calendar');
+      const days = [];
+      for (let i = 13; i >= 0; i--) {
+        const d = new Date(Date.now() - i * 86400000);
+        days.push(d.toISOString().slice(0, 10));
+      }
+      cal.innerHTML = days.map(d => {
+        const active = state.visitDates.includes(d);
+        const label = new Date(d).getDate();
+        return `<div class="streak-day ${active ? 'is-active' : ''}" title="${d}">${label}</div>`;
+      }).join('');
+
+      // Badges
+      const badgeGrid = document.getElementById('badge-grid');
+      badgeGrid.innerHTML = window.CSFA.BADGE_DEFS.map(b => {
+        const unlocked = state.badges.includes(b.id);
+        return `
+        <div class="card achievement-card ${unlocked ? 'is-unlocked' : ''}">
+          <div class="achievement-emoji">${b.emoji}</div>
+          <div class="achievement-name">${b.name}</div>
+          <div class="achievement-desc">${b.desc}</div>
+        </div>`;
+      }).join('');
+    }
+
+    document.addEventListener('csfa:layout-ready', renderProgress);
+  </script>
+</body>
+</html>
