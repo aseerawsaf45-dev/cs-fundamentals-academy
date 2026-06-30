@@ -1,0 +1,50 @@
+/* Modules 36-65: stub/redirect files — all content managed in combined files */
+if (!window.CSFA_RAW_TOPICS) { window.CSFA_RAW_TOPICS = []; }
+// Module 36 OOP — in topics-module34.js
+// Module 37 Async — in topics-module34.js
+// Module 38 Fetch — in topics-module34.js
+// Module 39 Git — in topics-module35.js
+// Module 40 Testing — in topics-module35.js
+
+// MODULE 41 — React Fundamentals
+window.CSFA_RAW_TOPICS.push({
+  id: 'm41-react-hooks', module: 41, title: 'React — Components, Hooks & State',
+  tagline: 'Building modern React apps with functional components, useState, useEffect, and custom hooks.',
+  readMinutes: 8,
+  intro: {
+    whatItIs: "React is a declarative UI library for building component-based interfaces. Functional components are plain functions returning JSX. Hooks (useState, useEffect, useCallback, useMemo, useRef) manage state and side effects without classes. Custom hooks extract reusable stateful logic.",
+    whyItMatters: "React is the most widely used frontend framework. It runs on web (React DOM), mobile (React Native), and desktop (Electron). Understanding hooks, the render cycle, and performance optimization is required for frontend roles.",
+    whereUsed: "Meta, Airbnb, Netflix, Uber, and thousands of companies use React in production. Next.js (built on React) is the leading full-stack framework.",
+    commonMistakes: "Calling hooks conditionally or inside loops — React's rules of hooks require every hook call to happen in the same order every render. Also: unnecessary re-renders from recreating objects/functions inside render."
+  },
+  visual: { caption: "Component → useState (state) → useEffect (side effects) → JSX → DOM updates", type: "react-lifecycle" },
+  examples: [
+    { difficulty: "very-easy", title: "Functional component with props", explanation: "Components are functions that accept props and return JSX.", code: "// Simulate React component rendering\nfunction Button({ label, onClick, variant = 'primary' }) {\n  return `<button class=\"btn btn-${variant}\" onClick={${onClick?.name}}>${label}</button>`;\n}\nconst handleClick = () => console.log('clicked');\nconsole.log(Button({ label: 'Save', onClick: handleClick, variant: 'primary' }));\nconsole.log(Button({ label: 'Cancel', variant: 'secondary' }));", language: "javascript", output: "<button class=\"btn btn-primary\" onClick={handleClick}>Save</button>\n<button class=\"btn btn-secondary\" onClick={undefined}>Cancel</button>" },
+    { difficulty: "easy", title: "useState hook", explanation: "useState returns [state, setter]. Calling setter triggers re-render with new state.", code: "// Simulate useState behavior\nfunction useState(initial) {\n  let state = initial;\n  function setState(newVal) {\n    state = typeof newVal === 'function' ? newVal(state) : newVal;\n    console.log('Re-render with state:', state);\n  }\n  return [state, setState];\n}\nconst [count, setCount] = useState(0);\nsetCount(1);\nsetCount(prev => prev + 1);\nsetCount(n => n * 2);", language: "javascript", output: "Re-render with state: 1\nRe-render with state: 2\nRe-render with state: 4" },
+    { difficulty: "medium", title: "useEffect for side effects", explanation: "useEffect runs after render. Dependencies array controls when it re-runs.", code: "// Simulate useEffect lifecycle\nconst effects = [\n  { deps: undefined,  when: 'After every render' },\n  { deps: [],         when: 'Only once (on mount)' },\n  { deps: ['userId'], when: 'When userId changes' },\n];\neffects.forEach(e => {\n  const depsStr = e.deps === undefined ? 'no deps' : JSON.stringify(e.deps);\n  console.log(`useEffect(fn, ${depsStr}) → ${e.when}`);\n});", language: "javascript", output: "useEffect(fn, no deps) → After every render\nuseEffect(fn, []) → Only once (on mount)\nuseEffect(fn, [\"userId\"]) → When userId changes" },
+    { difficulty: "medium-plus", title: "Custom hook: useLocalStorage", explanation: "Custom hooks extract reusable stateful logic into composable functions.", code: "// Custom hook pattern (simulation)\nfunction useLocalStorage(key, initialValue) {\n  const storage = {}; // simulates localStorage\n  let state = storage[key] ?? initialValue;\n  function setState(value) {\n    state = value;\n    storage[key] = value;\n    console.log(`localStorage.${key} = ${JSON.stringify(value)}`);\n  }\n  return [state, setState];\n}\nconst [theme, setTheme] = useLocalStorage('theme', 'light');\nconsole.log('Initial theme:', theme);\nsetTheme('dark');\nconsole.log('New theme:', theme);", language: "javascript", output: "Initial theme: light\nlocalStorage.theme = \"dark\"\nNew theme: light" },
+    { difficulty: "hard", title: "useMemo and useCallback for performance", explanation: "useMemo memoizes expensive computed values. useCallback memoizes functions to prevent child re-renders.", code: "// Simulate React memoization\nfunction useMemo(factory, deps) {\n  console.log('Computing expensive value...');\n  return factory();\n}\nfunction useCallback(fn, deps) {\n  console.log('Memoizing callback (same reference)...');\n  return fn;\n}\nconst items = [3,1,4,1,5,9,2,6];\nconst sortedItems = useMemo(() => [...items].sort((a,b) => a-b), [items]);\nconsole.log('Sorted:', sortedItems);\nconst handleClick = useCallback(() => console.log('clicked'), []);", language: "javascript", output: "Computing expensive value...\nSorted: [ 1, 1, 2, 3, 4, 5, 6, 9 ]\nMemoizing callback (same reference)..." },
+    { difficulty: "real-world", title: "React Query data fetching pattern", explanation: "Modern React apps use React Query to manage server state with caching, loading, and error states.", code: "// Simulate useQuery pattern from React Query\nfunction simulateQuery(key, fetchFn) {\n  const states = [\n    { status: 'loading', data: undefined, error: null },\n    { status: 'success', data: { id:1, name:'Alice' }, error: null },\n  ];\n  states.forEach(state => {\n    const { status, data, error } = state;\n    if (status === 'loading') console.log('⏳ Loading...');\n    if (status === 'success') console.log('✅ Data:', data?.name);\n    if (status === 'error') console.log('❌ Error:', error);\n  });\n}\nsimulateQuery(['user', 1], () => fetch('/api/user/1'));", language: "javascript", output: "⏳ Loading...\n✅ Data: Alice" }
+  ],
+  exercises: [
+    { level: 1, title: "Component simulation", problem: "Write a function `Card({title, description})` that returns an HTML string representing a card component.", hints: ["Return a template literal with title in h2 and description in p."], solution: "const Card=({title,description})=>`<div class='card'><h2>${title}</h2><p>${description}</p></div>`;\nconsole.log(Card({title:'Hello',description:'World'}));" },
+    { level: 2, title: "useState simulator", problem: "Write `createState(initial)` that returns [getValue, setValue]. setValue should update the stored value and log 'State updated: newValue'.", hints: ["Closure to capture state variable. getValue returns state, setValue updates it."], solution: "function createState(init){let state=init;return[()=>state,(v)=>{state=v;console.log('State updated:',v);}];}\nconst[get,set]=createState(0);set(5);console.log(get());" },
+    { level: 3, title: "useEffect dependency check", problem: "Write `shouldRunEffect(prevDeps, nextDeps)` that returns true if any dependency changed (shallow comparison).", hints: ["If lengths differ, return true. Use .some() to check if any prevDeps[i] !== nextDeps[i]."], solution: "function shouldRunEffect(prev,next){if(!prev)return true;return prev.length!==next.length||prev.some((d,i)=>d!==next[i]);}\nconsole.log(shouldRunEffect([1,'a'],[1,'a'])); // false\nconsole.log(shouldRunEffect([1,'a'],[1,'b'])); // true" }
+  ],
+  interview: [
+    { q: "What are the rules of React hooks?", a: "1. Only call hooks at the top level — not inside conditionals, loops, or nested functions. 2. Only call hooks from React function components or custom hooks. These rules ensure React can track hook calls in the same order every render." },
+    { q: "When should you use useMemo?", a: "useMemo is for expensive computations that would recalculate on every render. Use it when: (1) the computation is genuinely expensive (sorting thousands of items), (2) you've confirmed it's causing a performance problem with profiler. Don't premature-optimize — most renders are fast enough." },
+    { q: "What is the difference between useEffect cleanup and componentWillUnmount?", a: "A useEffect can return a cleanup function. It runs when the component unmounts OR before the effect re-runs when dependencies change. This handles subscriptions, event listeners, or timers that must be cleaned up to prevent memory leaks." }
+  ],
+  realWorld: [
+    { company: "Vercel / Next.js", text: "Next.js App Router (React Server Components) extends React with server-side rendering at the component level. Understanding hooks deeply helps you know which components can be Server Components (no hooks) vs Client Components (with hooks)." },
+    { company: "Airbnb", text: "Airbnb's frontend is built entirely on React. They created react-dates, react-with-styles, and react-sketchapp — all showing React's extensibility through hooks and custom components." }
+  ],
+  quiz: [
+    { q: "What does useState return?", options: ["The state value only", "A setter function only", "[state, setter] array", "An object with get/set"], answer: 2 },
+    { q: "useEffect with an empty dependency array [] runs:", options: ["After every render", "Never", "Only once on mount", "Only when component unmounts"], answer: 2 },
+    { q: "Which hook prevents expensive recalculations on every render?", options: ["useState", "useRef", "useEffect", "useMemo"], answer: 3 },
+    { q: "What is a custom hook?", options: ["A hook provided by React", "A function starting with 'use' that calls other hooks", "A HOC wrapper", "A class component method"], answer: 1 },
+    { q: "Calling a hook inside an if statement violates:", options: ["Performance rules", "Rules of Hooks", "ESLint preferences", "TypeScript rules"], answer: 1 }
+  ]
+});
