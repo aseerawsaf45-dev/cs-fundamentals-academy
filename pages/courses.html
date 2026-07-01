@@ -203,6 +203,7 @@
   <script src="../js/topics-module43.js"></script>
   <script src="../js/topics-module44.js"></script>
   <script src="../js/topics-module45.js"></script>
+  <script src="../js/specializations-data.js"></script>
   <script src="../js/core/models.js"></script>
   <script src="../js/core/progress-store.js"></script>
   <script src="../js/core/ui-services.js"></script>
@@ -211,6 +212,7 @@
   <script>
     let activeFilter = 'all';
     let searchTerm = '';
+    const collapsedModules = new Set();
 
     function topicMatchesFilter(topicId, isBuilt, state, filter) {
       const isDone = state.completedLessons.includes(topicId);
@@ -221,13 +223,30 @@
       return true;
     }
 
+    window.toggleModule = function(moduleId) {
+      if (collapsedModules.has(moduleId)) {
+        collapsedModules.delete(moduleId);
+      } else {
+        collapsedModules.add(moduleId);
+      }
+      renderExplorer();
+    };
+
     function renderExplorer() {
       const container = document.getElementById('explorer-results');
       const state = window.CSFA.getState();
       const builtTopicIds = window.CSFA_TOPICS.map(t => t.id);
       const term = searchTerm.trim().toLowerCase();
 
-      const sections = window.CSFA_MODULES.map(m => {
+      // Check lock status for specialization tracks
+      const allCoreDone = [1,2,3,4,5,6,7,8,9,10,11,12].every(num => {
+        return window.CSFA.moduleCompletion(num).percentage === 100;
+      });
+      const forceUnlock = localStorage.getItem('csfa_force_unlock_specs') === 'true';
+      const isUnlocked = allCoreDone || forceUnlock;
+
+      // Render Core Modules
+      const coreModulesHTML = window.CSFA_MODULES.map(m => {
         const matchingTopics = m.topics.filter(topicId => {
           const title = window.CSFA_TOPIC_TITLES[topicId] || topicId;
           const isBuilt = builtTopicIds.includes(topicId);
@@ -236,6 +255,8 @@
         });
 
         if (!matchingTopics.length) return '';
+
+        const isCollapsed = collapsedModules.has(m.id);
 
         const rows = matchingTopics.map(topicId => {
           const isBuilt = builtTopicIds.includes(topicId);
@@ -259,18 +280,164 @@
 
         return `
         <div class="reveal" id="${m.id}" style="margin-bottom:48px;">
-          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
-            <div class="module-icon">${m.icon}</div>
-            <div>
-              <div class="roadmap-module-num">MODULE ${String(m.num).padStart(2, '0')}</div>
-              <h3 class="text-h4" style="margin:0;">${m.name}</h3>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; flex-wrap: wrap; gap: 10px;">
+            <div style="display:flex; align-items:center; gap:14px;">
+              <div class="module-icon">${m.icon}</div>
+              <div>
+                <div class="roadmap-module-num">MODULE ${String(m.num).padStart(2, '0')}</div>
+                <h3 class="text-h4" style="margin:0;">${m.name}</h3>
+              </div>
             </div>
+            <button class="btn btn-ghost btn-sm toggle-module-btn" onclick="toggleModule('${m.id}')" style="padding: 6px 12px; font-size: 0.8rem; min-width: 80px;">
+              ${isCollapsed ? 'Show' : 'Hide'}
+            </button>
           </div>
-          ${rows}
+          <div id="topics-${m.id}" style="display: ${isCollapsed ? 'none' : 'block'};">
+            ${rows}
+          </div>
         </div>`;
       }).join('');
 
-      container.innerHTML = sections || `<div class="empty-state"><div class="em-icon">🔍</div><p>No topics match your search or filter.</p></div>`;
+      // Render Specialization Tracks
+      let specHTML = '';
+      if (window.CSFA_SPECIALIZATIONS) {
+        // Add a status banner similar to roadmap.html inside the Specializations block
+        let bannerHTML = '';
+        if (isUnlocked) {
+          bannerHTML = `
+            <div class="glass card" style="padding: 16px 24px; border-color: rgba(52,211,153,0.3); background: rgba(52,211,153,0.04); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 32px;">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <span style="font-size: 1.6rem;">🔓</span>
+                <div>
+                  <strong style="color: var(--success); font-size: 1.0rem; display: block; margin-bottom: 2px;">Specialization Tracks Unlocked!</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-2);">You've unlocked the advanced tracks bridging CS theory with modern production workflows.</span>
+                </div>
+              </div>
+              ${!allCoreDone ? `<button class="btn btn-ghost btn-sm" id="btn-lock-specs" style="font-size: 0.8rem; padding: 6px 12px;">Lock Tracks (Previewing)</button>` : ''}
+            </div>
+          `;
+        } else {
+          bannerHTML = `
+            <div class="glass card" style="padding: 16px 24px; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.02); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 32px;">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <span style="font-size: 1.6rem;">🔒</span>
+                <div>
+                  <strong style="color: var(--primary-3); font-size: 1.0rem; display: block; margin-bottom: 2px;">Locked: Complete core CS Fundamentals</strong>
+                  <span style="font-size: 0.85rem; color: var(--text-2);">Complete Modules 1–12 of Computer Science Fundamentals to unlock these Specialization Tracks.</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm" id="btn-unlock-specs" style="font-size: 0.8rem; padding: 6px 12px;">Force Unlock (Preview Mode)</button>
+            </div>
+          `;
+        }
+
+        const specsContent = window.CSFA_SPECIALIZATIONS.map(spec => {
+          const modulesHTML = spec.modules.map((mod, modIdx) => {
+            const modId = `spec-${spec.num}-mod-${modIdx}`;
+            const matchingTopics = mod.topics.filter(t => {
+              const slug = 'spec' + spec.num + '-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+              const title = window.CSFA_TOPIC_TITLES[slug] || t;
+              const isBuilt = builtTopicIds.includes(slug);
+              if (term && !title.toLowerCase().includes(term) && !spec.title.toLowerCase().includes(term) && !mod.name.toLowerCase().includes(term)) return false;
+              return topicMatchesFilter(slug, isBuilt, state, activeFilter);
+            });
+
+            if (!matchingTopics.length) return '';
+
+            const isCollapsed = collapsedModules.has(modId);
+
+            const rows = matchingTopics.map(t => {
+              const slug = 'spec' + spec.num + '-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+              const isBuilt = builtTopicIds.includes(slug) && isUnlocked;
+              const isDone = state.completedLessons.includes(slug);
+              const title = window.CSFA_TOPIC_TITLES[slug] || t;
+              const topicData = window.CSFA_TOPICS.find(top => top.id === slug);
+              const href = isBuilt ? `topic.html?id=${slug}` : '#';
+
+              return `
+              <a href="${href}" class="topic-row" ${!isBuilt ? 'onclick="return false;" style="opacity:0.5;cursor:default;"' : ''}>
+                <div class="topic-row-left">
+                  <span class="topic-check ${isDone ? 'is-done' : ''}">${isDone ? '✓' : ''}</span>
+                  <div>
+                    <div style="color:var(--text-0); font-weight:500;">${title}</div>
+                    ${isBuilt && topicData ? `<div style="font-size:0.78rem; color:var(--text-2);">${topicData.readMinutes} min read · ${topicData.examples.length} examples · ${topicData.exercises.length} exercises</div>` : (isUnlocked ? `<div style="font-size:0.78rem; color:var(--text-2);">Coming soon</div>` : `<div style="font-size:0.78rem; color:var(--text-2);">Locked — Complete Core CS Fundamentals</div>`)}
+                  </div>
+                </div>
+                <span class="badge">${isBuilt ? (isDone ? 'Completed' : 'Start →') : 'Locked'}</span>
+              </a>`;
+            }).join('');
+
+            return `
+            <div class="reveal" id="${modId}" style="margin-bottom:32px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; flex-wrap: wrap; gap: 10px;">
+                <div style="display:flex; align-items:center; gap:14px;">
+                  <div class="module-icon" style="width: 36px; height: 36px; font-size: 1rem; border-radius: 8px;">${spec.icon}</div>
+                  <div>
+                    <div class="roadmap-module-num" style="font-size:0.7rem;">MODULE ${modIdx + 1}</div>
+                    <h4 class="text-h4" style="margin:0; font-size: 1.1rem;">${mod.name}</h4>
+                  </div>
+                </div>
+                <button class="btn btn-ghost btn-sm toggle-module-btn" onclick="toggleModule('${modId}')" style="padding: 4px 8px; font-size: 0.75rem; min-width: 60px;">
+                  ${isCollapsed ? 'Show' : 'Hide'}
+                </button>
+              </div>
+              <div id="topics-${modId}" style="display: ${isCollapsed ? 'none' : 'block'};">
+                ${rows}
+              </div>
+            </div>`;
+          }).join('');
+
+          if (!modulesHTML.trim().length) return '';
+
+          return `
+            <div class="reveal" style="margin-bottom: 48px; border-left: 3px solid var(--border-glow); padding-left: 20px;">
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                <div class="module-icon" style="width: 44px; height: 44px; font-size: 1.2rem; border-radius: 10px;">${spec.icon}</div>
+                <div>
+                  <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--primary-3); font-weight: 600;">SPECIALIZATION ${spec.num}</span>
+                  <h3 style="font-size: 1.3rem; margin: 2px 0 0 0; color: var(--text-0); font-weight: 700;">${spec.title}</h3>
+                </div>
+              </div>
+              ${modulesHTML}
+            </div>
+          `;
+        }).join('');
+
+        if (specsContent.trim().length) {
+          specHTML = bannerHTML + specsContent;
+        }
+      }
+
+      let combinedHTML = '';
+      if (coreModulesHTML) {
+        combinedHTML += `<h2 class="text-h2 reveal" style="margin-bottom: 28px; border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; font-size: 1.6rem; font-weight: 700;">CS Fundamentals</h2>` + coreModulesHTML;
+      }
+      if (specHTML) {
+        combinedHTML += `<h2 class="text-h2 reveal" style="margin-top: 64px; margin-bottom: 28px; border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; font-size: 1.6rem; font-weight: 700;">Specialization Tracks</h2>` + specHTML;
+      }
+
+      container.innerHTML = combinedHTML || `<div class="empty-state"><div class="em-icon">🔍</div><p>No topics match your search or filter.</p></div>`;
+
+      // Re-attach listeners to lock/unlock banner buttons
+      const unlockBtn = document.getElementById('btn-unlock-specs');
+      if (unlockBtn) {
+        unlockBtn.addEventListener('click', () => {
+          localStorage.setItem('csfa_force_unlock_specs', 'true');
+          renderExplorer();
+        });
+      }
+      const lockBtn = document.getElementById('btn-lock-specs');
+      if (lockBtn) {
+        lockBtn.addEventListener('click', () => {
+          localStorage.removeItem('csfa_force_unlock_specs');
+          renderExplorer();
+        });
+      }
+
+      // Re-trigger scroll reveal observation
+      if (window.CSFA_APP_INSTANCE && window.CSFA_APP_INSTANCE.reveal) {
+        window.CSFA_APP_INSTANCE.reveal.observe();
+      }
     }
 
     document.addEventListener('csfa:layout-ready', () => {
