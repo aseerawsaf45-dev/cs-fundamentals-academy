@@ -178,12 +178,51 @@ class TopicPageRenderer {
   }
 
   /* ---------------------------------------------------------------------
+     PREV / NEXT NAVIGATION HELPERS
+  --------------------------------------------------------------------- */
+  _getPrevNextTopics(topic) {
+    const mod = this.app.catalog.getModuleForTopic(topic.id);
+    if (!mod) return { prev: null, next: null };
+    const ids = mod.topicIds;
+    const idx = ids.indexOf(topic.id);
+    const prevId = idx > 0 ? ids[idx - 1] : null;
+    const nextId = idx < ids.length - 1 ? ids[idx + 1] : null;
+    return {
+      prev: prevId ? { id: prevId, title: this.app.catalog.topicTitle(prevId) } : null,
+      next: nextId ? { id: nextId, title: this.app.catalog.topicTitle(nextId) } : null,
+    };
+  }
+
+  _renderNavButtons(prev, next) {
+    const prevBtn = prev
+      ? `<a href="topic.html?id=${prev.id}" class="topic-nav-btn topic-nav-prev" id="btn-prev-topic">
+           <span class="topic-nav-arrow">←</span>
+           <span class="topic-nav-label">
+             <span class="topic-nav-hint">Previous</span>
+             <span class="topic-nav-title">${this._escapeHtml(prev.title)}</span>
+           </span>
+         </a>`
+      : `<div></div>`;
+    const nextBtn = next
+      ? `<a href="topic.html?id=${next.id}" class="topic-nav-btn topic-nav-next" id="btn-next-topic">
+           <span class="topic-nav-label">
+             <span class="topic-nav-hint">Next</span>
+             <span class="topic-nav-title">${this._escapeHtml(next.title)}</span>
+           </span>
+           <span class="topic-nav-arrow">→</span>
+         </a>`
+      : `<div></div>`;
+    return `<div class="topic-nav-row">${prevBtn}${nextBtn}</div>`;
+  }
+
+  /* ---------------------------------------------------------------------
      PAGE ASSEMBLY
   --------------------------------------------------------------------- */
   _renderTopic(topic) {
     document.title = topic.title + ' — CS Fundamentals Academy';
     const mod = this.app.catalog.getModuleForTopic(topic.id);
     const isDone = this.app.progressStore.isLessonComplete(topic.id);
+    const { prev, next } = this._getPrevNextTopics(topic);
 
     this.rootEl.innerHTML = `
       <div class="topic-hero">
@@ -201,28 +240,44 @@ class TopicPageRenderer {
             <span class="badge">✏️ ${topic.exerciseCount} exercises</span>
             <button class="btn ${isDone ? 'btn-ghost' : 'btn-primary'} btn-sm" id="mark-complete-btn">${isDone ? '✓ Lesson complete' : 'Mark lesson complete'}</button>
           </div>
+
+          <!-- Show / Hide content toggle -->
+          <div class="topic-reveal-row">
+            <button class="btn btn-primary" id="show-content-btn">
+              <span id="show-content-icon">👁</span> Show Content
+            </button>
+            <span class="topic-reveal-hint">Content is hidden — press the button to start reading.</span>
+          </div>
         </div>
       </div>
 
-      <div class="container topic-layout">
-        <nav class="topic-toc" aria-label="On this page">
-          <a href="#sec-intro" class="toc-link">Introduction</a>
-          <a href="#sec-visual" class="toc-link">Visual Explanation</a>
-          <a href="#sec-examples" class="toc-link">Examples</a>
-          <a href="#sec-exercises" class="toc-link">Exercises</a>
-          <a href="#sec-interview" class="toc-link">Interview Qs</a>
-          <a href="#sec-realworld" class="toc-link">Real World</a>
-          <a href="#sec-quiz" class="toc-link">Quiz</a>
-        </nav>
-        <div>
-          ${this._renderIntro(topic)}
-          ${this._renderVisual(topic)}
-          ${this._renderExamples(topic)}
-          ${this._renderExercises(topic)}
-          ${this._renderInterview(topic)}
-          ${this._renderRealWorld(topic)}
-          ${this._renderQuizSection()}
+      <!-- Collapsible content wrapper -->
+      <div id="topic-content-area" class="topic-content-area" aria-hidden="true">
+        <div class="container topic-layout">
+          <nav class="topic-toc" aria-label="On this page">
+            <a href="#sec-intro" class="toc-link">Introduction</a>
+            <a href="#sec-visual" class="toc-link">Visual Explanation</a>
+            <a href="#sec-examples" class="toc-link">Examples</a>
+            <a href="#sec-exercises" class="toc-link">Exercises</a>
+            <a href="#sec-interview" class="toc-link">Interview Qs</a>
+            <a href="#sec-realworld" class="toc-link">Real World</a>
+            <a href="#sec-quiz" class="toc-link">Quiz</a>
+          </nav>
+          <div>
+            ${this._renderIntro(topic)}
+            ${this._renderVisual(topic)}
+            ${this._renderExamples(topic)}
+            ${this._renderExercises(topic)}
+            ${this._renderInterview(topic)}
+            ${this._renderRealWorld(topic)}
+            ${this._renderQuizSection()}
+          </div>
         </div>
+      </div>
+
+      <!-- Prev / Next navigation -->
+      <div class="container">
+        ${this._renderNavButtons(prev, next)}
       </div>`;
 
     this._bindInteractions(topic);
@@ -260,6 +315,27 @@ class TopicPageRenderer {
       e.target.textContent = '✓ Lesson complete';
       e.target.classList.remove('btn-primary');
       e.target.classList.add('btn-ghost');
+    });
+
+    // Show / Hide content toggle
+    const showBtn = document.getElementById('show-content-btn');
+    const contentArea = document.getElementById('topic-content-area');
+    const hintEl = showBtn.parentElement.querySelector('.topic-reveal-hint');
+    let isVisible = false;
+    showBtn.addEventListener('click', () => {
+      isVisible = !isVisible;
+      contentArea.classList.toggle('is-visible', isVisible);
+      contentArea.setAttribute('aria-hidden', String(!isVisible));
+      showBtn.innerHTML = isVisible
+        ? '<span>🙈</span> Hide Content'
+        : '<span>👁</span> Show Content';
+      hintEl.textContent = isVisible
+        ? 'Scroll down to read the lesson.'
+        : 'Content is hidden — press the button to start reading.';
+      if (isVisible) {
+        // Smooth scroll into content
+        setTimeout(() => contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+      }
     });
 
     document.querySelectorAll('[data-run-example]').forEach(btn => {
