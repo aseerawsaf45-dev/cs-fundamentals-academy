@@ -16,6 +16,10 @@ for (let i = 1; i <= 45; i++) {
   newScriptsBase += `  <script src="js/topics-module${i}.js"></script>\n`;
   newScriptsPages += `  <script src="../js/topics-module${i}.js"></script>\n`;
 }
+for (let i = 1; i <= 14; i++) {
+  newScriptsBase += `  <script src="js/topics-spec${i}.js"></script>\n`;
+  newScriptsPages += `  <script src="../js/topics-spec${i}.js"></script>\n`;
+}
 
 // Remove trailing newlines to keep formatting exact
 newScriptsBase = newScriptsBase.trimEnd();

@@ -99,6 +99,53 @@
   <script src="../js/topics-module43.js"></script>
   <script src="../js/topics-module44.js"></script>
   <script src="../js/topics-module45.js"></script>
+  <script src="../js/topics-spec1.js"></script>
+  <script src="../js/topics-spec2.js"></script>
+  <script src="../js/topics-spec3.js"></script>
+  <script src="../js/topics-spec4.js"></script>
+  <script src="../js/topics-spec5.js"></script>
+  <script src="../js/topics-spec6.js"></script>
+  <script src="../js/topics-spec7.js"></script>
+  <script src="../js/topics-spec8.js"></script>
+  <script src="../js/topics-spec9.js"></script>
+  <script src="../js/topics-spec10.js"></script>
+  <script src="../js/topics-spec11.js"></script>
+  <script src="../js/topics-spec12.js"></script>
+  <script src="../js/topics-spec13.js"></script>
+  <script src="../js/topics-spec14.js"></script>
+  <script src="../js/topics-module13.js"></script>
+  <script src="../js/topics-module14.js"></script>
+  <script src="../js/topics-module15.js"></script>
+  <script src="../js/topics-module16.js"></script>
+  <script src="../js/topics-module17.js"></script>
+  <script src="../js/topics-module18.js"></script>
+  <script src="../js/topics-module19.js"></script>
+  <script src="../js/topics-module20.js"></script>
+  <script src="../js/topics-module21.js"></script>
+  <script src="../js/topics-module22.js"></script>
+  <script src="../js/topics-module23.js"></script>
+  <script src="../js/topics-module24.js"></script>
+  <script src="../js/topics-module25.js"></script>
+  <script src="../js/topics-module26.js"></script>
+  <script src="../js/topics-module27.js"></script>
+  <script src="../js/topics-module28.js"></script>
+  <script src="../js/topics-module29.js"></script>
+  <script src="../js/topics-module30.js"></script>
+  <script src="../js/topics-module31.js"></script>
+  <script src="../js/topics-module32.js"></script>
+  <script src="../js/topics-module33.js"></script>
+  <script src="../js/topics-module34.js"></script>
+  <script src="../js/topics-module35.js"></script>
+  <script src="../js/topics-module36.js"></script>
+  <script src="../js/topics-module37.js"></script>
+  <script src="../js/topics-module38.js"></script>
+  <script src="../js/topics-module39.js"></script>
+  <script src="../js/topics-module40.js"></script>
+  <script src="../js/topics-module41.js"></script>
+  <script src="../js/topics-module42.js"></script>
+  <script src="../js/topics-module43.js"></script>
+  <script src="../js/topics-module44.js"></script>
+  <script src="../js/topics-module45.js"></script>
   <script src="../js/specializations-data.js"></script>
   <script src="../js/core/models.js"></script>
   <script src="../js/core/progress-store.js"></script>
@@ -126,6 +173,17 @@
     .spec-locked:hover .lock-overlay {
       opacity: 0.18;
       backdrop-filter: blur(1px);
+    }
+    .specialization-grid a {
+      transition: color var(--dur-fast), border-color var(--dur-fast);
+    }
+    .specialization-grid a:hover {
+      color: var(--primary-3) !important;
+      border-bottom-color: var(--primary-3) !important;
+    }
+    .specialization-grid a.is-done {
+      color: var(--success) !important;
+      border-bottom-color: rgba(52,211,153,0.4) !important;
     }
   </style>
   <script>
@@ -224,11 +282,19 @@
 
       // Render Spec Grid
       const specGrid = document.getElementById('specialization-grid');
+      const builtTopicIds = window.CSFA_TOPICS.map(t => t.id);
       specGrid.innerHTML = window.CSFA_SPECIALIZATIONS.map(spec => {
         const modulesHTML = spec.modules.map(mod => {
-          const topicsHTML = mod.topics.map(t => `<li style="font-size: 0.82rem; color: var(--text-2); margin-bottom: 4px; display: flex; align-items: start; gap: 8px;">
-            <span style="color: var(--primary-3); font-size: 0.75rem; margin-top: 3px;">•</span> <span>${t}</span>
-          </li>`).join('');
+          const topicsHTML = mod.topics.map(t => {
+            const slug = 'spec' + spec.num + '-' + t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            const isBuilt = builtTopicIds.includes(slug);
+            const isDone = state.completedLessons.includes(slug);
+            const href = isBuilt ? `topic.html?id=${slug}` : '#';
+            return `<li style="font-size: 0.82rem; color: var(--text-2); margin-bottom: 4px; display: flex; align-items: start; gap: 8px;">
+              <span style="color: var(--primary-3); font-size: 0.75rem; margin-top: 3px;">•</span>
+              ${isUnlocked ? `<a href="${href}" class="${isDone ? 'is-done' : ''}" style="color: var(--text-1); text-decoration: none; border-bottom: 1px dashed var(--border-glass);">${t}</a>` : `<span>${t}</span>`}
+            </li>`;
+          }).join('');
 
           return `
             <div style="margin-top: 14px;">
