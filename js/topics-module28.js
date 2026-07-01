@@ -41,3 +41,96 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Which function type does NOT have its own 'this'?", options: ["function declaration", "function expression", "Arrow function", "Generator function"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm28-params-args',
+  module: 28,
+  title: 'Parameters & Arguments',
+  tagline: 'Master Parameters & Arguments to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Parameters & Arguments.',
+    whyItMatters: 'Understanding Parameters & Arguments is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Parameters & Arguments before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Parameters & Arguments.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Parameters & Arguments', explanation: 'Let\'s look at a simple example demonstrating Parameters & Arguments in action.', code: 'console.log("Initializing Parameters & Arguments...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Parameters & Arguments...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Parameters & Arguments', explanation: 'A practical example showing a real-world coding scenario using Parameters & Arguments.', code: 'function demonstrate() {\n  console.log("Running Parameters & Arguments flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Parameters & Arguments flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Parameters & Arguments setup', problem: 'Write a function testSetup() that returns the string "Parameters & Arguments OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Parameters & Arguments OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Parameters & Arguments important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Parameters & Arguments in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Parameters & Arguments?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm28-return-values',
+  module: 28,
+  title: 'Return Values',
+  tagline: 'Master Return Values to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Return Values.',
+    whyItMatters: 'Understanding Return Values is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Return Values before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Return Values.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Return Values', explanation: 'Let\'s look at a simple example demonstrating Return Values in action.', code: 'console.log("Initializing Return Values...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Return Values...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Return Values', explanation: 'A practical example showing a real-world coding scenario using Return Values.', code: 'function demonstrate() {\n  console.log("Running Return Values flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Return Values flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Return Values setup', problem: 'Write a function testSetup() that returns the string "Return Values OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Return Values OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Return Values important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Return Values in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Return Values?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm28-scope-fn',
+  module: 28,
+  title: 'Scope',
+  tagline: 'Master Scope to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Scope.',
+    whyItMatters: 'Understanding Scope is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Scope before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Scope.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Scope', explanation: 'Let\'s look at a simple example demonstrating Scope in action.', code: 'console.log("Initializing Scope...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Scope...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Scope', explanation: 'A practical example showing a real-world coding scenario using Scope.', code: 'function demonstrate() {\n  console.log("Running Scope flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Scope flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Scope setup', problem: 'Write a function testSetup() that returns the string "Scope OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Scope OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Scope important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Scope in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Scope?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

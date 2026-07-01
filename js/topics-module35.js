@@ -90,3 +90,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Jest expects() throw an error when:", options: ["Test passes", "Test code has syntax error", "Assertion fails", "Test takes too long"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm35-js-syntax',
+  module: 35,
+  title: 'Syntax',
+  tagline: 'Master Syntax to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Syntax.',
+    whyItMatters: 'Understanding Syntax is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Syntax before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Syntax.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Syntax', explanation: 'Let\'s look at a simple example demonstrating Syntax in action.', code: 'console.log("Initializing Syntax...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Syntax...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Syntax', explanation: 'A practical example showing a real-world coding scenario using Syntax.', code: 'function demonstrate() {\n  console.log("Running Syntax flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Syntax flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Syntax setup', problem: 'Write a function testSetup() that returns the string "Syntax OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Syntax OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Syntax important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Syntax in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Syntax?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm35-js-variables',
+  module: 35,
+  title: 'Variables',
+  tagline: 'Master Variables to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Variables.',
+    whyItMatters: 'Understanding Variables is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Variables before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Variables.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Variables', explanation: 'Let\'s look at a simple example demonstrating Variables in action.', code: 'console.log("Initializing Variables...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Variables...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Variables', explanation: 'A practical example showing a real-world coding scenario using Variables.', code: 'function demonstrate() {\n  console.log("Running Variables flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Variables flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Variables setup', problem: 'Write a function testSetup() that returns the string "Variables OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Variables OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Variables important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Variables in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Variables?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm35-js-data-types',
+  module: 35,
+  title: 'Data Types',
+  tagline: 'Master Data Types to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Data Types.',
+    whyItMatters: 'Understanding Data Types is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Data Types before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Data Types.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Data Types', explanation: 'Let\'s look at a simple example demonstrating Data Types in action.', code: 'console.log("Initializing Data Types...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Data Types...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Data Types', explanation: 'A practical example showing a real-world coding scenario using Data Types.', code: 'function demonstrate() {\n  console.log("Running Data Types flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Data Types flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Data Types setup', problem: 'Write a function testSetup() that returns the string "Data Types OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Data Types OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Data Types important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Data Types in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Data Types?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm35-js-operators',
+  module: 35,
+  title: 'Operators',
+  tagline: 'Master Operators to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Operators.',
+    whyItMatters: 'Understanding Operators is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Operators before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Operators.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Operators', explanation: 'Let\'s look at a simple example demonstrating Operators in action.', code: 'console.log("Initializing Operators...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Operators...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Operators', explanation: 'A practical example showing a real-world coding scenario using Operators.', code: 'function demonstrate() {\n  console.log("Running Operators flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Operators flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Operators setup', problem: 'Write a function testSetup() that returns the string "Operators OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Operators OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Operators important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Operators in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Operators?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

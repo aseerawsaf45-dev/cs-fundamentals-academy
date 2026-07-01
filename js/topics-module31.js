@@ -86,3 +86,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is the fr unit?", options: ["Fixed ratio", "Fraction of available space", "Font ratio", "Flex row unit"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm31-forms-html',
+  module: 31,
+  title: 'Forms',
+  tagline: 'Master Forms to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Forms.',
+    whyItMatters: 'Understanding Forms is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Forms before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Forms.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Forms', explanation: 'Let\'s look at a simple example demonstrating Forms in action.', code: 'console.log("Initializing Forms...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Forms...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Forms', explanation: 'A practical example showing a real-world coding scenario using Forms.', code: 'function demonstrate() {\n  console.log("Running Forms flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Forms flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Forms setup', problem: 'Write a function testSetup() that returns the string "Forms OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Forms OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Forms important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Forms in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Forms?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm31-tables-html',
+  module: 31,
+  title: 'Tables',
+  tagline: 'Master Tables to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Tables.',
+    whyItMatters: 'Understanding Tables is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Tables before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Tables.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Tables', explanation: 'Let\'s look at a simple example demonstrating Tables in action.', code: 'console.log("Initializing Tables...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Tables...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Tables', explanation: 'A practical example showing a real-world coding scenario using Tables.', code: 'function demonstrate() {\n  console.log("Running Tables flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Tables flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Tables setup', problem: 'Write a function testSetup() that returns the string "Tables OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Tables OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Tables important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Tables in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Tables?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm31-accessibility',
+  module: 31,
+  title: 'Accessibility',
+  tagline: 'Master Accessibility to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Accessibility.',
+    whyItMatters: 'Understanding Accessibility is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Accessibility before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Accessibility.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Accessibility', explanation: 'Let\'s look at a simple example demonstrating Accessibility in action.', code: 'console.log("Initializing Accessibility...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Accessibility...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Accessibility', explanation: 'A practical example showing a real-world coding scenario using Accessibility.', code: 'function demonstrate() {\n  console.log("Running Accessibility flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Accessibility flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Accessibility setup', problem: 'Write a function testSetup() that returns the string "Accessibility OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Accessibility OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Accessibility important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Accessibility in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Accessibility?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm31-seo-basics',
+  module: 31,
+  title: 'SEO Basics',
+  tagline: 'Master SEO Basics to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at SEO Basics.',
+    whyItMatters: 'Understanding SEO Basics is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of SEO Basics before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of SEO Basics.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of SEO Basics', explanation: 'Let\'s look at a simple example demonstrating SEO Basics in action.', code: 'console.log("Initializing SEO Basics...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing SEO Basics...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with SEO Basics', explanation: 'A practical example showing a real-world coding scenario using SEO Basics.', code: 'function demonstrate() {\n  console.log("Running SEO Basics flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running SEO Basics flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check SEO Basics setup', problem: 'Write a function testSetup() that returns the string "SEO Basics OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "SEO Basics OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is SEO Basics important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to SEO Basics in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of SEO Basics?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

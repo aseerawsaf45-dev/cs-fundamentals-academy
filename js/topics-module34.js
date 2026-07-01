@@ -132,3 +132,158 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is a request interceptor?", options: ["Middleware blocking requests", "Function that runs before request to modify config", "CORS handler", "Response parser"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm34-animations',
+  module: 34,
+  title: 'Animations',
+  tagline: 'Master Animations to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Animations.',
+    whyItMatters: 'Understanding Animations is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Animations before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Animations.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Animations', explanation: 'Let\'s look at a simple example demonstrating Animations in action.', code: 'console.log("Initializing Animations...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Animations...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Animations', explanation: 'A practical example showing a real-world coding scenario using Animations.', code: 'function demonstrate() {\n  console.log("Running Animations flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Animations flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Animations setup', problem: 'Write a function testSetup() that returns the string "Animations OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Animations OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Animations important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Animations in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Animations?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm34-transitions',
+  module: 34,
+  title: 'Transitions',
+  tagline: 'Master Transitions to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Transitions.',
+    whyItMatters: 'Understanding Transitions is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Transitions before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Transitions.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Transitions', explanation: 'Let\'s look at a simple example demonstrating Transitions in action.', code: 'console.log("Initializing Transitions...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Transitions...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Transitions', explanation: 'A practical example showing a real-world coding scenario using Transitions.', code: 'function demonstrate() {\n  console.log("Running Transitions flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Transitions flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Transitions setup', problem: 'Write a function testSetup() that returns the string "Transitions OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Transitions OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Transitions important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Transitions in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Transitions?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm34-css-variables',
+  module: 34,
+  title: 'CSS Variables',
+  tagline: 'Master CSS Variables to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at CSS Variables.',
+    whyItMatters: 'Understanding CSS Variables is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of CSS Variables before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of CSS Variables.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of CSS Variables', explanation: 'Let\'s look at a simple example demonstrating CSS Variables in action.', code: 'console.log("Initializing CSS Variables...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing CSS Variables...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with CSS Variables', explanation: 'A practical example showing a real-world coding scenario using CSS Variables.', code: 'function demonstrate() {\n  console.log("Running CSS Variables flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running CSS Variables flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check CSS Variables setup', problem: 'Write a function testSetup() that returns the string "CSS Variables OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "CSS Variables OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is CSS Variables important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to CSS Variables in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of CSS Variables?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm34-gradients',
+  module: 34,
+  title: 'Gradients',
+  tagline: 'Master Gradients to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Gradients.',
+    whyItMatters: 'Understanding Gradients is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Gradients before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Gradients.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Gradients', explanation: 'Let\'s look at a simple example demonstrating Gradients in action.', code: 'console.log("Initializing Gradients...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Gradients...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Gradients', explanation: 'A practical example showing a real-world coding scenario using Gradients.', code: 'function demonstrate() {\n  console.log("Running Gradients flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Gradients flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Gradients setup', problem: 'Write a function testSetup() that returns the string "Gradients OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Gradients OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Gradients important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Gradients in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Gradients?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm34-glassmorphism',
+  module: 34,
+  title: 'Glassmorphism',
+  tagline: 'Master Glassmorphism to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Glassmorphism.',
+    whyItMatters: 'Understanding Glassmorphism is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Glassmorphism before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Glassmorphism.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Glassmorphism', explanation: 'Let\'s look at a simple example demonstrating Glassmorphism in action.', code: 'console.log("Initializing Glassmorphism...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Glassmorphism...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Glassmorphism', explanation: 'A practical example showing a real-world coding scenario using Glassmorphism.', code: 'function demonstrate() {\n  console.log("Running Glassmorphism flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Glassmorphism flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Glassmorphism setup', problem: 'Write a function testSetup() that returns the string "Glassmorphism OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Glassmorphism OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Glassmorphism important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Glassmorphism in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Glassmorphism?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

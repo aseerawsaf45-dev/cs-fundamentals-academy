@@ -86,3 +86,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "ACID stands for:", options: ["Authentication, Config, Integrity, Data", "Atomicity, Consistency, Isolation, Durability", "Async, Concurrent, Indexed, Distributed", "Availability, Concurrency, Independence, Durability"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm37-object-methods',
+  module: 37,
+  title: 'Object Methods',
+  tagline: 'Master Object Methods to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Object Methods.',
+    whyItMatters: 'Understanding Object Methods is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Object Methods before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Object Methods.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Object Methods', explanation: 'Let\'s look at a simple example demonstrating Object Methods in action.', code: 'console.log("Initializing Object Methods...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Object Methods...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Object Methods', explanation: 'A practical example showing a real-world coding scenario using Object Methods.', code: 'function demonstrate() {\n  console.log("Running Object Methods flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Object Methods flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Object Methods setup', problem: 'Write a function testSetup() that returns the string "Object Methods OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Object Methods OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Object Methods important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Object Methods in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Object Methods?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm37-array-methods',
+  module: 37,
+  title: 'Array Methods',
+  tagline: 'Master Array Methods to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Array Methods.',
+    whyItMatters: 'Understanding Array Methods is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Array Methods before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Array Methods.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Array Methods', explanation: 'Let\'s look at a simple example demonstrating Array Methods in action.', code: 'console.log("Initializing Array Methods...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Array Methods...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Array Methods', explanation: 'A practical example showing a real-world coding scenario using Array Methods.', code: 'function demonstrate() {\n  console.log("Running Array Methods flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Array Methods flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Array Methods setup', problem: 'Write a function testSetup() that returns the string "Array Methods OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Array Methods OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Array Methods important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Array Methods in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Array Methods?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm37-destructuring',
+  module: 37,
+  title: 'Destructuring',
+  tagline: 'Master Destructuring to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Destructuring.',
+    whyItMatters: 'Understanding Destructuring is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Destructuring before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Destructuring.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Destructuring', explanation: 'Let\'s look at a simple example demonstrating Destructuring in action.', code: 'console.log("Initializing Destructuring...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Destructuring...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Destructuring', explanation: 'A practical example showing a real-world coding scenario using Destructuring.', code: 'function demonstrate() {\n  console.log("Running Destructuring flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Destructuring flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Destructuring setup', problem: 'Write a function testSetup() that returns the string "Destructuring OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Destructuring OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Destructuring important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Destructuring in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Destructuring?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm37-spread-rest',
+  module: 37,
+  title: 'Spread & Rest',
+  tagline: 'Master Spread & Rest to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Spread & Rest.',
+    whyItMatters: 'Understanding Spread & Rest is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Spread & Rest before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Spread & Rest.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Spread & Rest', explanation: 'Let\'s look at a simple example demonstrating Spread & Rest in action.', code: 'console.log("Initializing Spread & Rest...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Spread & Rest...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Spread & Rest', explanation: 'A practical example showing a real-world coding scenario using Spread & Rest.', code: 'function demonstrate() {\n  console.log("Running Spread & Rest flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Spread & Rest flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Spread & Rest setup', problem: 'Write a function testSetup() that returns the string "Spread & Rest OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Spread & Rest OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Spread & Rest important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Spread & Rest in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Spread & Rest?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

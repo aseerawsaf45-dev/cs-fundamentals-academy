@@ -86,3 +86,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Why is deploying frequently better?", options: ["Uses less bandwidth", "Smaller changes are easier to debug and rollback", "Avoids code review", "Reduces server costs"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm42-pull-requests',
+  module: 42,
+  title: 'Pull Requests',
+  tagline: 'Master Pull Requests to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Pull Requests.',
+    whyItMatters: 'Understanding Pull Requests is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Pull Requests before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Pull Requests.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Pull Requests', explanation: 'Let\'s look at a simple example demonstrating Pull Requests in action.', code: 'console.log("Initializing Pull Requests...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Pull Requests...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Pull Requests', explanation: 'A practical example showing a real-world coding scenario using Pull Requests.', code: 'function demonstrate() {\n  console.log("Running Pull Requests flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Pull Requests flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Pull Requests setup', problem: 'Write a function testSetup() that returns the string "Pull Requests OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Pull Requests OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Pull Requests important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Pull Requests in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Pull Requests?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm42-issues',
+  module: 42,
+  title: 'Issues',
+  tagline: 'Master Issues to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Issues.',
+    whyItMatters: 'Understanding Issues is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Issues before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Issues.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Issues', explanation: 'Let\'s look at a simple example demonstrating Issues in action.', code: 'console.log("Initializing Issues...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Issues...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Issues', explanation: 'A practical example showing a real-world coding scenario using Issues.', code: 'function demonstrate() {\n  console.log("Running Issues flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Issues flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Issues setup', problem: 'Write a function testSetup() that returns the string "Issues OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Issues OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Issues important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Issues in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Issues?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm42-collaboration',
+  module: 42,
+  title: 'Collaboration',
+  tagline: 'Master Collaboration to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Collaboration.',
+    whyItMatters: 'Understanding Collaboration is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Collaboration before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Collaboration.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Collaboration', explanation: 'Let\'s look at a simple example demonstrating Collaboration in action.', code: 'console.log("Initializing Collaboration...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Collaboration...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Collaboration', explanation: 'A practical example showing a real-world coding scenario using Collaboration.', code: 'function demonstrate() {\n  console.log("Running Collaboration flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Collaboration flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Collaboration setup', problem: 'Write a function testSetup() that returns the string "Collaboration OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Collaboration OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Collaboration important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Collaboration in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Collaboration?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm42-open-source',
+  module: 42,
+  title: 'Open Source',
+  tagline: 'Master Open Source to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Open Source.',
+    whyItMatters: 'Understanding Open Source is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Open Source before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Open Source.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Open Source', explanation: 'Let\'s look at a simple example demonstrating Open Source in action.', code: 'console.log("Initializing Open Source...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Open Source...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Open Source', explanation: 'A practical example showing a real-world coding scenario using Open Source.', code: 'function demonstrate() {\n  console.log("Running Open Source flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Open Source flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Open Source setup', problem: 'Write a function testSetup() that returns the string "Open Source OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Open Source OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Open Source important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Open Source in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Open Source?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

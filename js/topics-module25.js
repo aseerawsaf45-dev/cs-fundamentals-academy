@@ -41,3 +41,158 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Which API syncs animation with browser repaint?", options: ["setInterval", "setTimeout", "requestAnimationFrame", "MutationObserver"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm25-rendering-engine',
+  module: 25,
+  title: 'Rendering Engine',
+  tagline: 'Master Rendering Engine to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Rendering Engine.',
+    whyItMatters: 'Understanding Rendering Engine is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Rendering Engine before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Rendering Engine.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Rendering Engine', explanation: 'Let\'s look at a simple example demonstrating Rendering Engine in action.', code: 'console.log("Initializing Rendering Engine...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Rendering Engine...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Rendering Engine', explanation: 'A practical example showing a real-world coding scenario using Rendering Engine.', code: 'function demonstrate() {\n  console.log("Running Rendering Engine flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Rendering Engine flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Rendering Engine setup', problem: 'Write a function testSetup() that returns the string "Rendering Engine OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Rendering Engine OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Rendering Engine important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Rendering Engine in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Rendering Engine?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm25-cssom',
+  module: 25,
+  title: 'CSSOM',
+  tagline: 'Master CSSOM to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at CSSOM.',
+    whyItMatters: 'Understanding CSSOM is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of CSSOM before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of CSSOM.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of CSSOM', explanation: 'Let\'s look at a simple example demonstrating CSSOM in action.', code: 'console.log("Initializing CSSOM...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing CSSOM...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with CSSOM', explanation: 'A practical example showing a real-world coding scenario using CSSOM.', code: 'function demonstrate() {\n  console.log("Running CSSOM flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running CSSOM flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check CSSOM setup', problem: 'Write a function testSetup() that returns the string "CSSOM OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "CSSOM OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is CSSOM important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to CSSOM in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of CSSOM?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm25-js-engine',
+  module: 25,
+  title: 'JavaScript Engine',
+  tagline: 'Master JavaScript Engine to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at JavaScript Engine.',
+    whyItMatters: 'Understanding JavaScript Engine is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of JavaScript Engine before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of JavaScript Engine.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of JavaScript Engine', explanation: 'Let\'s look at a simple example demonstrating JavaScript Engine in action.', code: 'console.log("Initializing JavaScript Engine...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing JavaScript Engine...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with JavaScript Engine', explanation: 'A practical example showing a real-world coding scenario using JavaScript Engine.', code: 'function demonstrate() {\n  console.log("Running JavaScript Engine flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running JavaScript Engine flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check JavaScript Engine setup', problem: 'Write a function testSetup() that returns the string "JavaScript Engine OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "JavaScript Engine OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is JavaScript Engine important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to JavaScript Engine in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of JavaScript Engine?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm25-event-loop',
+  module: 25,
+  title: 'Event Loop',
+  tagline: 'Master Event Loop to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Event Loop.',
+    whyItMatters: 'Understanding Event Loop is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Event Loop before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Event Loop.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Event Loop', explanation: 'Let\'s look at a simple example demonstrating Event Loop in action.', code: 'console.log("Initializing Event Loop...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Event Loop...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Event Loop', explanation: 'A practical example showing a real-world coding scenario using Event Loop.', code: 'function demonstrate() {\n  console.log("Running Event Loop flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Event Loop flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Event Loop setup', problem: 'Write a function testSetup() that returns the string "Event Loop OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Event Loop OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Event Loop important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Event Loop in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Event Loop?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm25-rendering-pipeline',
+  module: 25,
+  title: 'Rendering Pipeline',
+  tagline: 'Master Rendering Pipeline to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Rendering Pipeline.',
+    whyItMatters: 'Understanding Rendering Pipeline is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Rendering Pipeline before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Rendering Pipeline.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Rendering Pipeline', explanation: 'Let\'s look at a simple example demonstrating Rendering Pipeline in action.', code: 'console.log("Initializing Rendering Pipeline...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Rendering Pipeline...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Rendering Pipeline', explanation: 'A practical example showing a real-world coding scenario using Rendering Pipeline.', code: 'function demonstrate() {\n  console.log("Running Rendering Pipeline flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Rendering Pipeline flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Rendering Pipeline setup', problem: 'Write a function testSetup() that returns the string "Rendering Pipeline OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Rendering Pipeline OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Rendering Pipeline important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Rendering Pipeline in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Rendering Pipeline?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

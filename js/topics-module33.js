@@ -129,3 +129,96 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What does `0 || 'fallback'` return?", options: ["0", "false", "'fallback'", "null"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm33-mobile-first',
+  module: 33,
+  title: 'Mobile First',
+  tagline: 'Master Mobile First to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Mobile First.',
+    whyItMatters: 'Understanding Mobile First is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Mobile First before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Mobile First.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Mobile First', explanation: 'Let\'s look at a simple example demonstrating Mobile First in action.', code: 'console.log("Initializing Mobile First...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Mobile First...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Mobile First', explanation: 'A practical example showing a real-world coding scenario using Mobile First.', code: 'function demonstrate() {\n  console.log("Running Mobile First flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Mobile First flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Mobile First setup', problem: 'Write a function testSetup() that returns the string "Mobile First OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Mobile First OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Mobile First important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Mobile First in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Mobile First?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm33-css-units',
+  module: 33,
+  title: 'CSS Units',
+  tagline: 'Master CSS Units to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at CSS Units.',
+    whyItMatters: 'Understanding CSS Units is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of CSS Units before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of CSS Units.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of CSS Units', explanation: 'Let\'s look at a simple example demonstrating CSS Units in action.', code: 'console.log("Initializing CSS Units...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing CSS Units...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with CSS Units', explanation: 'A practical example showing a real-world coding scenario using CSS Units.', code: 'function demonstrate() {\n  console.log("Running CSS Units flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running CSS Units flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check CSS Units setup', problem: 'Write a function testSetup() that returns the string "CSS Units OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "CSS Units OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is CSS Units important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to CSS Units in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of CSS Units?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm33-layout-systems',
+  module: 33,
+  title: 'Layout Systems',
+  tagline: 'Master Layout Systems to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Layout Systems.',
+    whyItMatters: 'Understanding Layout Systems is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Layout Systems before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Layout Systems.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Layout Systems', explanation: 'Let\'s look at a simple example demonstrating Layout Systems in action.', code: 'console.log("Initializing Layout Systems...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Layout Systems...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Layout Systems', explanation: 'A practical example showing a real-world coding scenario using Layout Systems.', code: 'function demonstrate() {\n  console.log("Running Layout Systems flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Layout Systems flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Layout Systems setup', problem: 'Write a function testSetup() that returns the string "Layout Systems OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Layout Systems OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Layout Systems important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Layout Systems in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Layout Systems?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

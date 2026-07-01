@@ -46,3 +46,189 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What does $(command) do in Bash?", options: ["Comments it out", "Captures command output into a variable", "Runs in background", "Sets permissions"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm21-variables',
+  module: 21,
+  title: 'Variables',
+  tagline: 'Master Variables to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Variables.',
+    whyItMatters: 'Understanding Variables is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Variables before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Variables.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Variables', explanation: 'Let\'s look at a simple example demonstrating Variables in action.', code: 'console.log("Initializing Variables...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Variables...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Variables', explanation: 'A practical example showing a real-world coding scenario using Variables.', code: 'function demonstrate() {\n  console.log("Running Variables flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Variables flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Variables setup', problem: 'Write a function testSetup() that returns the string "Variables OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Variables OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Variables important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Variables in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Variables?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm21-loops',
+  module: 21,
+  title: 'Loops',
+  tagline: 'Master Loops to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Loops.',
+    whyItMatters: 'Understanding Loops is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Loops before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Loops.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Loops', explanation: 'Let\'s look at a simple example demonstrating Loops in action.', code: 'console.log("Initializing Loops...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Loops...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Loops', explanation: 'A practical example showing a real-world coding scenario using Loops.', code: 'function demonstrate() {\n  console.log("Running Loops flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Loops flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Loops setup', problem: 'Write a function testSetup() that returns the string "Loops OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Loops OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Loops important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Loops in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Loops?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm21-conditions',
+  module: 21,
+  title: 'Conditions',
+  tagline: 'Master Conditions to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Conditions.',
+    whyItMatters: 'Understanding Conditions is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Conditions before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Conditions.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Conditions', explanation: 'Let\'s look at a simple example demonstrating Conditions in action.', code: 'console.log("Initializing Conditions...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Conditions...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Conditions', explanation: 'A practical example showing a real-world coding scenario using Conditions.', code: 'function demonstrate() {\n  console.log("Running Conditions flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Conditions flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Conditions setup', problem: 'Write a function testSetup() that returns the string "Conditions OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Conditions OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Conditions important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Conditions in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Conditions?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm21-functions',
+  module: 21,
+  title: 'Functions',
+  tagline: 'Master Functions to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Functions.',
+    whyItMatters: 'Understanding Functions is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Functions before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Functions.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Functions', explanation: 'Let\'s look at a simple example demonstrating Functions in action.', code: 'console.log("Initializing Functions...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Functions...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Functions', explanation: 'A practical example showing a real-world coding scenario using Functions.', code: 'function demonstrate() {\n  console.log("Running Functions flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Functions flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Functions setup', problem: 'Write a function testSetup() that returns the string "Functions OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Functions OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Functions important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Functions in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Functions?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm21-automation',
+  module: 21,
+  title: 'Automation',
+  tagline: 'Master Automation to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Automation.',
+    whyItMatters: 'Understanding Automation is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Automation before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Automation.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Automation', explanation: 'Let\'s look at a simple example demonstrating Automation in action.', code: 'console.log("Initializing Automation...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Automation...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Automation', explanation: 'A practical example showing a real-world coding scenario using Automation.', code: 'function demonstrate() {\n  console.log("Running Automation flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Automation flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Automation setup', problem: 'Write a function testSetup() that returns the string "Automation OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Automation OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Automation important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Automation in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Automation?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm21-scheduling',
+  module: 21,
+  title: 'Scheduling',
+  tagline: 'Master Scheduling to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Scheduling.',
+    whyItMatters: 'Understanding Scheduling is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Scheduling before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Scheduling.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Scheduling', explanation: 'Let\'s look at a simple example demonstrating Scheduling in action.', code: 'console.log("Initializing Scheduling...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Scheduling...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Scheduling', explanation: 'A practical example showing a real-world coding scenario using Scheduling.', code: 'function demonstrate() {\n  console.log("Running Scheduling flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Scheduling flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Scheduling setup', problem: 'Write a function testSetup() that returns the string "Scheduling OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Scheduling OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Scheduling important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Scheduling in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Scheduling?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

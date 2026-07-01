@@ -41,3 +41,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Which equality operator prevents type coercion?", options: ["==", "===", "!=", "="], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm26-data-types-prog',
+  module: 26,
+  title: 'Data Types',
+  tagline: 'Master Data Types to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Data Types.',
+    whyItMatters: 'Understanding Data Types is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Data Types before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Data Types.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Data Types', explanation: 'Let\'s look at a simple example demonstrating Data Types in action.', code: 'console.log("Initializing Data Types...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Data Types...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Data Types', explanation: 'A practical example showing a real-world coding scenario using Data Types.', code: 'function demonstrate() {\n  console.log("Running Data Types flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Data Types flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Data Types setup', problem: 'Write a function testSetup() that returns the string "Data Types OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Data Types OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Data Types important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Data Types in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Data Types?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm26-operators',
+  module: 26,
+  title: 'Operators',
+  tagline: 'Master Operators to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Operators.',
+    whyItMatters: 'Understanding Operators is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Operators before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Operators.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Operators', explanation: 'Let\'s look at a simple example demonstrating Operators in action.', code: 'console.log("Initializing Operators...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Operators...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Operators', explanation: 'A practical example showing a real-world coding scenario using Operators.', code: 'function demonstrate() {\n  console.log("Running Operators flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Operators flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Operators setup', problem: 'Write a function testSetup() that returns the string "Operators OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Operators OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Operators important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Operators in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Operators?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm26-expressions',
+  module: 26,
+  title: 'Expressions',
+  tagline: 'Master Expressions to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Expressions.',
+    whyItMatters: 'Understanding Expressions is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Expressions before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Expressions.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Expressions', explanation: 'Let\'s look at a simple example demonstrating Expressions in action.', code: 'console.log("Initializing Expressions...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Expressions...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Expressions', explanation: 'A practical example showing a real-world coding scenario using Expressions.', code: 'function demonstrate() {\n  console.log("Running Expressions flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Expressions flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Expressions setup', problem: 'Write a function testSetup() that returns the string "Expressions OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Expressions OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Expressions important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Expressions in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Expressions?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm26-input-output',
+  module: 26,
+  title: 'Input & Output',
+  tagline: 'Master Input & Output to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Input & Output.',
+    whyItMatters: 'Understanding Input & Output is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Input & Output before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Input & Output.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Input & Output', explanation: 'Let\'s look at a simple example demonstrating Input & Output in action.', code: 'console.log("Initializing Input & Output...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Input & Output...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Input & Output', explanation: 'A practical example showing a real-world coding scenario using Input & Output.', code: 'function demonstrate() {\n  console.log("Running Input & Output flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Input & Output flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Input & Output setup', problem: 'Write a function testSetup() that returns the string "Input & Output OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Input & Output OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Input & Output important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Input & Output in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Input & Output?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

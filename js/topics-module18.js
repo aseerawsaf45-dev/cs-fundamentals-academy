@@ -22,7 +22,7 @@ window.CSFA_RAW_TOPICS.push({
     { difficulty: "medium", title: "Race condition demonstration", explanation: "Two 'threads' reading and writing shared state without synchronization can corrupt data.", code: "let balance = 1000;\n// Both threads read 1000, both add 100, result should be 1200 but may not be\nfunction threadA() { const read = balance; balance = read + 100; }\nfunction threadB() { const read = balance; balance = read + 100; }\nthreadA(); threadB();\nconsole.log('Balance (no race here):', balance);\nconsole.log('In a true parallel env, race could produce 1100 instead of 1200');", language: "javascript", output: "Balance (no race here): 1200\nIn a true parallel env, race could produce 1100 instead of 1200" },
     { difficulty: "medium-plus", title: "Simulating round-robin CPU scheduling", explanation: "Round-robin gives each process a fixed time slice (quantum), then moves to the next.", code: "const tasks = [\n  { name: 'A', remaining: 6 },\n  { name: 'B', remaining: 4 },\n  { name: 'C', remaining: 2 },\n];\nconst quantum = 2;\nlet time = 0;\nwhile (tasks.some(t => t.remaining > 0)) {\n  tasks.filter(t => t.remaining > 0).forEach(t => {\n    const run = Math.min(t.remaining, quantum);\n    console.log(`t=${time}: Run ${t.name} for ${run}ms`);\n    t.remaining -= run; time += run;\n  });\n}", language: "javascript", output: "t=0: Run A for 2ms\nt=2: Run B for 2ms\nt=4: Run C for 2ms\nt=6: Run A for 2ms\nt=8: Run B for 2ms\nt=10: Run A for 2ms" },
     { difficulty: "hard", title: "Deadlock simulation", explanation: "Deadlock: two processes each hold a resource the other needs, so both wait forever.", code: "function simulateDeadlock() {\n  const locks = { A: null, B: null };\n  function tryLock(proc, res1, res2) {\n    if (locks[res1] === null) {\n      locks[res1] = proc;\n      console.log(`${proc} acquired ${res1}`);\n      if (locks[res2] !== null) {\n        console.log(`${proc} waiting for ${res2} (held by ${locks[res2]}) → DEADLOCK`);\n        return false;\n      }\n    }\n    return true;\n  }\n  tryLock('P1', 'A', 'B');\n  tryLock('P2', 'B', 'A');\n}\nsimulateDeadlock();", language: "javascript", output: "P1 acquired A\nP2 acquired B\nP1 waiting for B (held by P2) → DEADLOCK" },
-    { difficulty: "real-world", title: "Node.js Worker Threads", explanation: "Node.js worker_threads allow CPU-intensive tasks to run in parallel without blocking the event loop.", code: "// Conceptual example (actual Worker needs a file path)\nconst os = require ? require('os') : { cpus: () => Array(4) };\nconst cpuCount = os.cpus().length;\nconsole.log(`Available CPU cores: ${cpuCount}`);\nconsole.log(`Can spawn up to ${cpuCount} worker threads for parallel CPU work`);\nconsole.log('Use: const { Worker } = require(\"worker_threads\");");", language: "javascript", output: "Available CPU cores: 4\nCan spawn up to 4 worker threads for parallel CPU work\nUse: const { Worker } = require(\"worker_threads\");" }
+    { difficulty: "real-world", title: "Node.js Worker Threads", explanation: "Node.js worker_threads allow CPU-intensive tasks to run in parallel without blocking the event loop.", code: "// Conceptual example (actual Worker needs a file path)\nconst os = require ? require('os') : { cpus: () => Array(4) };\nconst cpuCount = os.cpus().length;\nconsole.log(`Available CPU cores: ${cpuCount}`);\nconsole.log(`Can spawn up to ${cpuCount} worker threads for parallel CPU work`);\nconsole.log('Use: const { Worker } = require(\"worker_threads\");');", language: "javascript", output: "Available CPU cores: 4\nCan spawn up to 4 worker threads for parallel CPU work\nUse: const { Worker } = require(\"worker_threads\");" }
   ],
   exercises: [
     { level: 1, title: "Process table", problem: "Create an array of 4 process objects each with pid, name, and state ('Running', 'Waiting', or 'Ready'). Print only the Running processes.", hints: ["Use .filter() to get running.", "Print with .forEach()."], solution: "const procs = [{pid:1,name:'A',state:'Running'},{pid:2,name:'B',state:'Waiting'},{pid:3,name:'C',state:'Running'},{pid:4,name:'D',state:'Ready'}];\nprocs.filter(p=>p.state==='Running').forEach(p=>console.log(p.pid, p.name));" },
@@ -88,5 +88,222 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is livelock?", options: ["Processes blocked permanently", "Processes actively running but making no progress", "Stack overflow", "Memory leak"], answer: 1 },
     { q: "How can deadlock be prevented in databases?", options: ["Use faster CPUs", "Always acquire locks in a consistent order", "Use more threads", "Avoid transactions"], answer: 1 },
     { q: "What does the OS do when it detects a deadlock?", options: ["Restarts the computer", "Kills or rolls back one of the deadlocked processes", "Waits indefinitely", "Increases RAM"], answer: 1 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm18-threads',
+  module: 18,
+  title: 'Threads',
+  tagline: 'Master Threads to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Threads.',
+    whyItMatters: 'Understanding Threads is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Threads before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Threads.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Threads', explanation: 'Let\'s look at a simple example demonstrating Threads in action.', code: 'console.log("Initializing Threads...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Threads...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Threads', explanation: 'A practical example showing a real-world coding scenario using Threads.', code: 'function demonstrate() {\n  console.log("Running Threads flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Threads flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Threads setup', problem: 'Write a function testSetup() that returns the string "Threads OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Threads OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Threads important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Threads in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Threads?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm18-scheduling',
+  module: 18,
+  title: 'Scheduling',
+  tagline: 'Master Scheduling to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Scheduling.',
+    whyItMatters: 'Understanding Scheduling is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Scheduling before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Scheduling.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Scheduling', explanation: 'Let\'s look at a simple example demonstrating Scheduling in action.', code: 'console.log("Initializing Scheduling...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Scheduling...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Scheduling', explanation: 'A practical example showing a real-world coding scenario using Scheduling.', code: 'function demonstrate() {\n  console.log("Running Scheduling flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Scheduling flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Scheduling setup', problem: 'Write a function testSetup() that returns the string "Scheduling OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Scheduling OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Scheduling important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Scheduling in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Scheduling?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm18-context-switching',
+  module: 18,
+  title: 'Context Switching',
+  tagline: 'Master Context Switching to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Context Switching.',
+    whyItMatters: 'Understanding Context Switching is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Context Switching before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Context Switching.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Context Switching', explanation: 'Let\'s look at a simple example demonstrating Context Switching in action.', code: 'console.log("Initializing Context Switching...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Context Switching...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Context Switching', explanation: 'A practical example showing a real-world coding scenario using Context Switching.', code: 'function demonstrate() {\n  console.log("Running Context Switching flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Context Switching flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Context Switching setup', problem: 'Write a function testSetup() that returns the string "Context Switching OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Context Switching OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Context Switching important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Context Switching in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Context Switching?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm18-system-calls',
+  module: 18,
+  title: 'System Calls',
+  tagline: 'Master System Calls to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at System Calls.',
+    whyItMatters: 'Understanding System Calls is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of System Calls before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of System Calls.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of System Calls', explanation: 'Let\'s look at a simple example demonstrating System Calls in action.', code: 'console.log("Initializing System Calls...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing System Calls...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with System Calls', explanation: 'A practical example showing a real-world coding scenario using System Calls.', code: 'function demonstrate() {\n  console.log("Running System Calls flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running System Calls flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check System Calls setup', problem: 'Write a function testSetup() that returns the string "System Calls OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "System Calls OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is System Calls important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to System Calls in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of System Calls?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm18-file-systems',
+  module: 18,
+  title: 'File Systems',
+  tagline: 'Master File Systems to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at File Systems.',
+    whyItMatters: 'Understanding File Systems is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of File Systems before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of File Systems.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of File Systems', explanation: 'Let\'s look at a simple example demonstrating File Systems in action.', code: 'console.log("Initializing File Systems...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing File Systems...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with File Systems', explanation: 'A practical example showing a real-world coding scenario using File Systems.', code: 'function demonstrate() {\n  console.log("Running File Systems flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running File Systems flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check File Systems setup', problem: 'Write a function testSetup() that returns the string "File Systems OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "File Systems OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is File Systems important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to File Systems in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of File Systems?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm18-memory-management',
+  module: 18,
+  title: 'Memory Management',
+  tagline: 'Master Memory Management to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Memory Management.',
+    whyItMatters: 'Understanding Memory Management is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Memory Management before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Memory Management.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Memory Management', explanation: 'Let\'s look at a simple example demonstrating Memory Management in action.', code: 'console.log("Initializing Memory Management...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Memory Management...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Memory Management', explanation: 'A practical example showing a real-world coding scenario using Memory Management.', code: 'function demonstrate() {\n  console.log("Running Memory Management flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Memory Management flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Memory Management setup', problem: 'Write a function testSetup() that returns the string "Memory Management OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Memory Management OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Memory Management important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Memory Management in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Memory Management?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm18-interrupts',
+  module: 18,
+  title: 'Interrupts',
+  tagline: 'Master Interrupts to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Interrupts.',
+    whyItMatters: 'Understanding Interrupts is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Interrupts before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Interrupts.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Interrupts', explanation: 'Let\'s look at a simple example demonstrating Interrupts in action.', code: 'console.log("Initializing Interrupts...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Interrupts...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Interrupts', explanation: 'A practical example showing a real-world coding scenario using Interrupts.', code: 'function demonstrate() {\n  console.log("Running Interrupts flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Interrupts flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Interrupts setup', problem: 'Write a function testSetup() that returns the string "Interrupts OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Interrupts OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Interrupts important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Interrupts in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Interrupts?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
   ]
 });

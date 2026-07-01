@@ -182,3 +182,251 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Why are bit shifts faster than multiplication for powers of 2?", options: ["They use fewer registers", "They complete in a single ALU cycle", "They use less memory", "They avoid using the FPU"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-cpu-components',
+  module: 14,
+  title: 'CPU Components',
+  tagline: 'Master CPU Components to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at CPU Components.',
+    whyItMatters: 'Understanding CPU Components is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of CPU Components before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of CPU Components.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of CPU Components', explanation: 'Let\'s look at a simple example demonstrating CPU Components in action.', code: 'console.log("Initializing CPU Components...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing CPU Components...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with CPU Components', explanation: 'A practical example showing a real-world coding scenario using CPU Components.', code: 'function demonstrate() {\n  console.log("Running CPU Components flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running CPU Components flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check CPU Components setup', problem: 'Write a function testSetup() that returns the string "CPU Components OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "CPU Components OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is CPU Components important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to CPU Components in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of CPU Components?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-registers',
+  module: 14,
+  title: 'Registers',
+  tagline: 'Master Registers to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Registers.',
+    whyItMatters: 'Understanding Registers is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Registers before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Registers.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Registers', explanation: 'Let\'s look at a simple example demonstrating Registers in action.', code: 'console.log("Initializing Registers...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Registers...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Registers', explanation: 'A practical example showing a real-world coding scenario using Registers.', code: 'function demonstrate() {\n  console.log("Running Registers flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Registers flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Registers setup', problem: 'Write a function testSetup() that returns the string "Registers OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Registers OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Registers important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Registers in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Registers?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-control-unit',
+  module: 14,
+  title: 'Control Unit',
+  tagline: 'Master Control Unit to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Control Unit.',
+    whyItMatters: 'Understanding Control Unit is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Control Unit before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Control Unit.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Control Unit', explanation: 'Let\'s look at a simple example demonstrating Control Unit in action.', code: 'console.log("Initializing Control Unit...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Control Unit...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Control Unit', explanation: 'A practical example showing a real-world coding scenario using Control Unit.', code: 'function demonstrate() {\n  console.log("Running Control Unit flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Control Unit flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Control Unit setup', problem: 'Write a function testSetup() that returns the string "Control Unit OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Control Unit OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Control Unit important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Control Unit in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Control Unit?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-instruction-cycle',
+  module: 14,
+  title: 'Instruction Cycle',
+  tagline: 'Master Instruction Cycle to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Instruction Cycle.',
+    whyItMatters: 'Understanding Instruction Cycle is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Instruction Cycle before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Instruction Cycle.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Instruction Cycle', explanation: 'Let\'s look at a simple example demonstrating Instruction Cycle in action.', code: 'console.log("Initializing Instruction Cycle...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Instruction Cycle...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Instruction Cycle', explanation: 'A practical example showing a real-world coding scenario using Instruction Cycle.', code: 'function demonstrate() {\n  console.log("Running Instruction Cycle flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Instruction Cycle flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Instruction Cycle setup', problem: 'Write a function testSetup() that returns the string "Instruction Cycle OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Instruction Cycle OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Instruction Cycle important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Instruction Cycle in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Instruction Cycle?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-clock-speed',
+  module: 14,
+  title: 'Clock Speed',
+  tagline: 'Master Clock Speed to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Clock Speed.',
+    whyItMatters: 'Understanding Clock Speed is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Clock Speed before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Clock Speed.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Clock Speed', explanation: 'Let\'s look at a simple example demonstrating Clock Speed in action.', code: 'console.log("Initializing Clock Speed...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Clock Speed...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Clock Speed', explanation: 'A practical example showing a real-world coding scenario using Clock Speed.', code: 'function demonstrate() {\n  console.log("Running Clock Speed flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Clock Speed flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Clock Speed setup', problem: 'Write a function testSetup() that returns the string "Clock Speed OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Clock Speed OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Clock Speed important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Clock Speed in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Clock Speed?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-multi-core',
+  module: 14,
+  title: 'Multi-Core Processors',
+  tagline: 'Master Multi-Core Processors to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Multi-Core Processors.',
+    whyItMatters: 'Understanding Multi-Core Processors is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Multi-Core Processors before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Multi-Core Processors.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Multi-Core Processors', explanation: 'Let\'s look at a simple example demonstrating Multi-Core Processors in action.', code: 'console.log("Initializing Multi-Core Processors...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Multi-Core Processors...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Multi-Core Processors', explanation: 'A practical example showing a real-world coding scenario using Multi-Core Processors.', code: 'function demonstrate() {\n  console.log("Running Multi-Core Processors flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Multi-Core Processors flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Multi-Core Processors setup', problem: 'Write a function testSetup() that returns the string "Multi-Core Processors OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Multi-Core Processors OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Multi-Core Processors important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Multi-Core Processors in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Multi-Core Processors?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-gpu-vs-cpu',
+  module: 14,
+  title: 'GPU vs CPU',
+  tagline: 'Master GPU vs CPU to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at GPU vs CPU.',
+    whyItMatters: 'Understanding GPU vs CPU is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of GPU vs CPU before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of GPU vs CPU.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of GPU vs CPU', explanation: 'Let\'s look at a simple example demonstrating GPU vs CPU in action.', code: 'console.log("Initializing GPU vs CPU...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing GPU vs CPU...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with GPU vs CPU', explanation: 'A practical example showing a real-world coding scenario using GPU vs CPU.', code: 'function demonstrate() {\n  console.log("Running GPU vs CPU flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running GPU vs CPU flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check GPU vs CPU setup', problem: 'Write a function testSetup() that returns the string "GPU vs CPU OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "GPU vs CPU OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is GPU vs CPU important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to GPU vs CPU in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of GPU vs CPU?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm14-cache-memory',
+  module: 14,
+  title: 'Cache Memory',
+  tagline: 'Master Cache Memory to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Cache Memory.',
+    whyItMatters: 'Understanding Cache Memory is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Cache Memory before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Cache Memory.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Cache Memory', explanation: 'Let\'s look at a simple example demonstrating Cache Memory in action.', code: 'console.log("Initializing Cache Memory...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Cache Memory...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Cache Memory', explanation: 'A practical example showing a real-world coding scenario using Cache Memory.', code: 'function demonstrate() {\n  console.log("Running Cache Memory flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Cache Memory flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Cache Memory setup', problem: 'Write a function testSetup() that returns the string "Cache Memory OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Cache Memory OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Cache Memory important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Cache Memory in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Cache Memory?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

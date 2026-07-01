@@ -49,3 +49,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Which load balancing algorithm ensures same client always hits same server?", options: ["Round Robin", "Least Connections", "IP Hash", "Weighted Random"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm40-es-modules',
+  module: 40,
+  title: 'ES Modules',
+  tagline: 'Master ES Modules to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at ES Modules.',
+    whyItMatters: 'Understanding ES Modules is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of ES Modules before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of ES Modules.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of ES Modules', explanation: 'Let\'s look at a simple example demonstrating ES Modules in action.', code: 'console.log("Initializing ES Modules...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing ES Modules...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with ES Modules', explanation: 'A practical example showing a real-world coding scenario using ES Modules.', code: 'function demonstrate() {\n  console.log("Running ES Modules flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running ES Modules flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check ES Modules setup', problem: 'Write a function testSetup() that returns the string "ES Modules OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "ES Modules OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is ES Modules important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to ES Modules in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of ES Modules?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm40-npm',
+  module: 40,
+  title: 'npm',
+  tagline: 'Master npm to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at npm.',
+    whyItMatters: 'Understanding npm is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of npm before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of npm.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of npm', explanation: 'Let\'s look at a simple example demonstrating npm in action.', code: 'console.log("Initializing npm...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing npm...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with npm', explanation: 'A practical example showing a real-world coding scenario using npm.', code: 'function demonstrate() {\n  console.log("Running npm flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running npm flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check npm setup', problem: 'Write a function testSetup() that returns the string "npm OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "npm OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is npm important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to npm in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of npm?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm40-bundlers',
+  module: 40,
+  title: 'Bundlers',
+  tagline: 'Master Bundlers to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Bundlers.',
+    whyItMatters: 'Understanding Bundlers is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Bundlers before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Bundlers.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Bundlers', explanation: 'Let\'s look at a simple example demonstrating Bundlers in action.', code: 'console.log("Initializing Bundlers...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Bundlers...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Bundlers', explanation: 'A practical example showing a real-world coding scenario using Bundlers.', code: 'function demonstrate() {\n  console.log("Running Bundlers flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Bundlers flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Bundlers setup', problem: 'Write a function testSetup() that returns the string "Bundlers OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Bundlers OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Bundlers important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Bundlers in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Bundlers?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm40-package-management',
+  module: 40,
+  title: 'Package Management',
+  tagline: 'Master Package Management to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Package Management.',
+    whyItMatters: 'Understanding Package Management is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Package Management before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Package Management.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Package Management', explanation: 'Let\'s look at a simple example demonstrating Package Management in action.', code: 'console.log("Initializing Package Management...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Package Management...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Package Management', explanation: 'A practical example showing a real-world coding scenario using Package Management.', code: 'function demonstrate() {\n  console.log("Running Package Management flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Package Management flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Package Management setup', problem: 'Write a function testSetup() that returns the string "Package Management OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Package Management OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Package Management important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Package Management in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Package Management?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

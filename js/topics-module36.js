@@ -48,3 +48,96 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Calling a hook inside an if statement violates:", options: ["Performance rules", "Rules of Hooks", "ESLint preferences", "TypeScript rules"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm36-arrow-functions',
+  module: 36,
+  title: 'Arrow Functions',
+  tagline: 'Master Arrow Functions to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Arrow Functions.',
+    whyItMatters: 'Understanding Arrow Functions is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Arrow Functions before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Arrow Functions.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Arrow Functions', explanation: 'Let\'s look at a simple example demonstrating Arrow Functions in action.', code: 'console.log("Initializing Arrow Functions...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Arrow Functions...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Arrow Functions', explanation: 'A practical example showing a real-world coding scenario using Arrow Functions.', code: 'function demonstrate() {\n  console.log("Running Arrow Functions flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Arrow Functions flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Arrow Functions setup', problem: 'Write a function testSetup() that returns the string "Arrow Functions OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Arrow Functions OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Arrow Functions important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Arrow Functions in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Arrow Functions?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm36-closures',
+  module: 36,
+  title: 'Closures',
+  tagline: 'Master Closures to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Closures.',
+    whyItMatters: 'Understanding Closures is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Closures before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Closures.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Closures', explanation: 'Let\'s look at a simple example demonstrating Closures in action.', code: 'console.log("Initializing Closures...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Closures...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Closures', explanation: 'A practical example showing a real-world coding scenario using Closures.', code: 'function demonstrate() {\n  console.log("Running Closures flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Closures flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Closures setup', problem: 'Write a function testSetup() that returns the string "Closures OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Closures OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Closures important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Closures in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Closures?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm36-hoisting',
+  module: 36,
+  title: 'Hoisting',
+  tagline: 'Master Hoisting to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Hoisting.',
+    whyItMatters: 'Understanding Hoisting is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Hoisting before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Hoisting.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Hoisting', explanation: 'Let\'s look at a simple example demonstrating Hoisting in action.', code: 'console.log("Initializing Hoisting...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Hoisting...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Hoisting', explanation: 'A practical example showing a real-world coding scenario using Hoisting.', code: 'function demonstrate() {\n  console.log("Running Hoisting flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Hoisting flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Hoisting setup', problem: 'Write a function testSetup() that returns the string "Hoisting OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Hoisting OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Hoisting important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Hoisting in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Hoisting?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

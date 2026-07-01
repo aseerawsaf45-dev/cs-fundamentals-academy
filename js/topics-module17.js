@@ -46,3 +46,251 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What does garbage collection do?", options: ["Deletes unused variables from source code", "Reclaims unreachable heap memory automatically", "Clears the call stack", "Compresses files"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-ram',
+  module: 17,
+  title: 'RAM',
+  tagline: 'Master RAM to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at RAM.',
+    whyItMatters: 'Understanding RAM is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of RAM before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of RAM.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of RAM', explanation: 'Let\'s look at a simple example demonstrating RAM in action.', code: 'console.log("Initializing RAM...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing RAM...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with RAM', explanation: 'A practical example showing a real-world coding scenario using RAM.', code: 'function demonstrate() {\n  console.log("Running RAM flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running RAM flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check RAM setup', problem: 'Write a function testSetup() that returns the string "RAM OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "RAM OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is RAM important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to RAM in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of RAM?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-rom',
+  module: 17,
+  title: 'ROM',
+  tagline: 'Master ROM to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at ROM.',
+    whyItMatters: 'Understanding ROM is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of ROM before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of ROM.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of ROM', explanation: 'Let\'s look at a simple example demonstrating ROM in action.', code: 'console.log("Initializing ROM...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing ROM...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with ROM', explanation: 'A practical example showing a real-world coding scenario using ROM.', code: 'function demonstrate() {\n  console.log("Running ROM flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running ROM flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check ROM setup', problem: 'Write a function testSetup() that returns the string "ROM OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "ROM OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is ROM important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to ROM in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of ROM?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-cache',
+  module: 17,
+  title: 'Cache',
+  tagline: 'Master Cache to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Cache.',
+    whyItMatters: 'Understanding Cache is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Cache before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Cache.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Cache', explanation: 'Let\'s look at a simple example demonstrating Cache in action.', code: 'console.log("Initializing Cache...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Cache...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Cache', explanation: 'A practical example showing a real-world coding scenario using Cache.', code: 'function demonstrate() {\n  console.log("Running Cache flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Cache flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Cache setup', problem: 'Write a function testSetup() that returns the string "Cache OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Cache OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Cache important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Cache in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Cache?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-registers-mem',
+  module: 17,
+  title: 'Registers',
+  tagline: 'Master Registers to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Registers.',
+    whyItMatters: 'Understanding Registers is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Registers before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Registers.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Registers', explanation: 'Let\'s look at a simple example demonstrating Registers in action.', code: 'console.log("Initializing Registers...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Registers...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Registers', explanation: 'A practical example showing a real-world coding scenario using Registers.', code: 'function demonstrate() {\n  console.log("Running Registers flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Registers flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Registers setup', problem: 'Write a function testSetup() that returns the string "Registers OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Registers OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Registers important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Registers in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Registers?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-heap-memory',
+  module: 17,
+  title: 'Heap Memory',
+  tagline: 'Master Heap Memory to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Heap Memory.',
+    whyItMatters: 'Understanding Heap Memory is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Heap Memory before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Heap Memory.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Heap Memory', explanation: 'Let\'s look at a simple example demonstrating Heap Memory in action.', code: 'console.log("Initializing Heap Memory...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Heap Memory...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Heap Memory', explanation: 'A practical example showing a real-world coding scenario using Heap Memory.', code: 'function demonstrate() {\n  console.log("Running Heap Memory flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Heap Memory flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Heap Memory setup', problem: 'Write a function testSetup() that returns the string "Heap Memory OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Heap Memory OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Heap Memory important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Heap Memory in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Heap Memory?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-virtual-memory',
+  module: 17,
+  title: 'Virtual Memory',
+  tagline: 'Master Virtual Memory to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Virtual Memory.',
+    whyItMatters: 'Understanding Virtual Memory is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Virtual Memory before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Virtual Memory.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Virtual Memory', explanation: 'Let\'s look at a simple example demonstrating Virtual Memory in action.', code: 'console.log("Initializing Virtual Memory...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Virtual Memory...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Virtual Memory', explanation: 'A practical example showing a real-world coding scenario using Virtual Memory.', code: 'function demonstrate() {\n  console.log("Running Virtual Memory flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Virtual Memory flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Virtual Memory setup', problem: 'Write a function testSetup() that returns the string "Virtual Memory OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Virtual Memory OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Virtual Memory important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Virtual Memory in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Virtual Memory?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-memory-allocation',
+  module: 17,
+  title: 'Memory Allocation',
+  tagline: 'Master Memory Allocation to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Memory Allocation.',
+    whyItMatters: 'Understanding Memory Allocation is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Memory Allocation before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Memory Allocation.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Memory Allocation', explanation: 'Let\'s look at a simple example demonstrating Memory Allocation in action.', code: 'console.log("Initializing Memory Allocation...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Memory Allocation...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Memory Allocation', explanation: 'A practical example showing a real-world coding scenario using Memory Allocation.', code: 'function demonstrate() {\n  console.log("Running Memory Allocation flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Memory Allocation flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Memory Allocation setup', problem: 'Write a function testSetup() that returns the string "Memory Allocation OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Memory Allocation OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Memory Allocation important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Memory Allocation in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Memory Allocation?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm17-garbage-collection',
+  module: 17,
+  title: 'Garbage Collection',
+  tagline: 'Master Garbage Collection to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Garbage Collection.',
+    whyItMatters: 'Understanding Garbage Collection is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Garbage Collection before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Garbage Collection.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Garbage Collection', explanation: 'Let\'s look at a simple example demonstrating Garbage Collection in action.', code: 'console.log("Initializing Garbage Collection...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Garbage Collection...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Garbage Collection', explanation: 'A practical example showing a real-world coding scenario using Garbage Collection.', code: 'function demonstrate() {\n  console.log("Running Garbage Collection flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Garbage Collection flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Garbage Collection setup', problem: 'Write a function testSetup() that returns the string "Garbage Collection OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Garbage Collection OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Garbage Collection important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Garbage Collection in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Garbage Collection?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

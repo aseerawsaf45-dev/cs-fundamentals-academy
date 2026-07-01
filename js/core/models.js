@@ -61,10 +61,10 @@ class RealWorldCase {
 class QuizQuestion {
   constructor(raw, index) {
     this.index = index;
-    this.type = raw.type; // 'mcq' | 'true-false' | 'code-output' | 'drag-drop'
+    this.type = raw.type || 'mcq'; // 'mcq' | 'true-false' | 'code-output' | 'drag-drop'
     this.q = raw.q;
     this.options = raw.options;
-    this.correct = raw.correct; // number | number[]
+    this.correct = raw.correct !== undefined ? raw.correct : raw.answer; // number | number[]
   }
 
   isCorrectChoice(optionIndex) {

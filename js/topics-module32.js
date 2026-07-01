@@ -41,3 +41,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Total rendered width (content-box): width:200px, padding:10px each side, border:1px each side =", options: ["200px", "220px", "222px", "211px"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm32-box-model',
+  module: 32,
+  title: 'Box Model',
+  tagline: 'Master Box Model to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Box Model.',
+    whyItMatters: 'Understanding Box Model is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Box Model before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Box Model.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Box Model', explanation: 'Let\'s look at a simple example demonstrating Box Model in action.', code: 'console.log("Initializing Box Model...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Box Model...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Box Model', explanation: 'A practical example showing a real-world coding scenario using Box Model.', code: 'function demonstrate() {\n  console.log("Running Box Model flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Box Model flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Box Model setup', problem: 'Write a function testSetup() that returns the string "Box Model OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Box Model OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Box Model important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Box Model in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Box Model?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm32-positioning',
+  module: 32,
+  title: 'Positioning',
+  tagline: 'Master Positioning to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Positioning.',
+    whyItMatters: 'Understanding Positioning is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Positioning before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Positioning.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Positioning', explanation: 'Let\'s look at a simple example demonstrating Positioning in action.', code: 'console.log("Initializing Positioning...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Positioning...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Positioning', explanation: 'A practical example showing a real-world coding scenario using Positioning.', code: 'function demonstrate() {\n  console.log("Running Positioning flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Positioning flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Positioning setup', problem: 'Write a function testSetup() that returns the string "Positioning OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Positioning OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Positioning important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Positioning in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Positioning?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm32-flexbox',
+  module: 32,
+  title: 'Flexbox',
+  tagline: 'Master Flexbox to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Flexbox.',
+    whyItMatters: 'Understanding Flexbox is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Flexbox before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Flexbox.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Flexbox', explanation: 'Let\'s look at a simple example demonstrating Flexbox in action.', code: 'console.log("Initializing Flexbox...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Flexbox...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Flexbox', explanation: 'A practical example showing a real-world coding scenario using Flexbox.', code: 'function demonstrate() {\n  console.log("Running Flexbox flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Flexbox flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Flexbox setup', problem: 'Write a function testSetup() that returns the string "Flexbox OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Flexbox OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Flexbox important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Flexbox in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Flexbox?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm32-grid',
+  module: 32,
+  title: 'Grid',
+  tagline: 'Master Grid to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Grid.',
+    whyItMatters: 'Understanding Grid is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Grid before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Grid.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Grid', explanation: 'Let\'s look at a simple example demonstrating Grid in action.', code: 'console.log("Initializing Grid...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Grid...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Grid', explanation: 'A practical example showing a real-world coding scenario using Grid.', code: 'function demonstrate() {\n  console.log("Running Grid flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Grid flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Grid setup', problem: 'Write a function testSetup() that returns the string "Grid OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Grid OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Grid important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Grid in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Grid?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

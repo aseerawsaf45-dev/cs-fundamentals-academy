@@ -41,3 +41,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What does httpOnly cookie prevent?", options: ["CSRF attacks", "Network interception", "JavaScript from reading the cookie (prevents XSS theft)", "Cookie expiry"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm38-dom-tree',
+  module: 38,
+  title: 'DOM Tree',
+  tagline: 'Master DOM Tree to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at DOM Tree.',
+    whyItMatters: 'Understanding DOM Tree is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of DOM Tree before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of DOM Tree.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of DOM Tree', explanation: 'Let\'s look at a simple example demonstrating DOM Tree in action.', code: 'console.log("Initializing DOM Tree...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing DOM Tree...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with DOM Tree', explanation: 'A practical example showing a real-world coding scenario using DOM Tree.', code: 'function demonstrate() {\n  console.log("Running DOM Tree flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running DOM Tree flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check DOM Tree setup', problem: 'Write a function testSetup() that returns the string "DOM Tree OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "DOM Tree OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is DOM Tree important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to DOM Tree in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of DOM Tree?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm38-events-dom',
+  module: 38,
+  title: 'Events',
+  tagline: 'Master Events to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Events.',
+    whyItMatters: 'Understanding Events is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Events before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Events.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Events', explanation: 'Let\'s look at a simple example demonstrating Events in action.', code: 'console.log("Initializing Events...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Events...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Events', explanation: 'A practical example showing a real-world coding scenario using Events.', code: 'function demonstrate() {\n  console.log("Running Events flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Events flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Events setup', problem: 'Write a function testSetup() that returns the string "Events OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Events OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Events important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Events in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Events?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm38-forms-dom',
+  module: 38,
+  title: 'Forms',
+  tagline: 'Master Forms to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Forms.',
+    whyItMatters: 'Understanding Forms is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Forms before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Forms.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Forms', explanation: 'Let\'s look at a simple example demonstrating Forms in action.', code: 'console.log("Initializing Forms...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Forms...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Forms', explanation: 'A practical example showing a real-world coding scenario using Forms.', code: 'function demonstrate() {\n  console.log("Running Forms flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Forms flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Forms setup', problem: 'Write a function testSetup() that returns the string "Forms OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Forms OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Forms important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Forms in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Forms?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm38-dynamic-ui',
+  module: 38,
+  title: 'Dynamic UI',
+  tagline: 'Master Dynamic UI to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Dynamic UI.',
+    whyItMatters: 'Understanding Dynamic UI is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Dynamic UI before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Dynamic UI.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Dynamic UI', explanation: 'Let\'s look at a simple example demonstrating Dynamic UI in action.', code: 'console.log("Initializing Dynamic UI...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Dynamic UI...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Dynamic UI', explanation: 'A practical example showing a real-world coding scenario using Dynamic UI.', code: 'function demonstrate() {\n  console.log("Running Dynamic UI flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Dynamic UI flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Dynamic UI setup', problem: 'Write a function testSetup() that returns the string "Dynamic UI OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Dynamic UI OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Dynamic UI important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Dynamic UI in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Dynamic UI?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

@@ -93,3 +93,220 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Which operator enables a specific bit in a bitmask?", options: ["& (AND)", "^ (XOR)", "| (OR)", "~ (NOT)"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm16-boolean-algebra',
+  module: 16,
+  title: 'Boolean Algebra',
+  tagline: 'Master Boolean Algebra to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Boolean Algebra.',
+    whyItMatters: 'Understanding Boolean Algebra is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Boolean Algebra before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Boolean Algebra.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Boolean Algebra', explanation: 'Let\'s look at a simple example demonstrating Boolean Algebra in action.', code: 'console.log("Initializing Boolean Algebra...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Boolean Algebra...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Boolean Algebra', explanation: 'A practical example showing a real-world coding scenario using Boolean Algebra.', code: 'function demonstrate() {\n  console.log("Running Boolean Algebra flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Boolean Algebra flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Boolean Algebra setup', problem: 'Write a function testSetup() that returns the string "Boolean Algebra OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Boolean Algebra OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Boolean Algebra important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Boolean Algebra in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Boolean Algebra?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm16-truth-tables',
+  module: 16,
+  title: 'Truth Tables',
+  tagline: 'Master Truth Tables to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Truth Tables.',
+    whyItMatters: 'Understanding Truth Tables is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Truth Tables before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Truth Tables.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Truth Tables', explanation: 'Let\'s look at a simple example demonstrating Truth Tables in action.', code: 'console.log("Initializing Truth Tables...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Truth Tables...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Truth Tables', explanation: 'A practical example showing a real-world coding scenario using Truth Tables.', code: 'function demonstrate() {\n  console.log("Running Truth Tables flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Truth Tables flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Truth Tables setup', problem: 'Write a function testSetup() that returns the string "Truth Tables OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Truth Tables OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Truth Tables important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Truth Tables in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Truth Tables?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm16-flip-flops',
+  module: 16,
+  title: 'Flip-Flops',
+  tagline: 'Master Flip-Flops to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Flip-Flops.',
+    whyItMatters: 'Understanding Flip-Flops is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Flip-Flops before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Flip-Flops.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Flip-Flops', explanation: 'Let\'s look at a simple example demonstrating Flip-Flops in action.', code: 'console.log("Initializing Flip-Flops...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Flip-Flops...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Flip-Flops', explanation: 'A practical example showing a real-world coding scenario using Flip-Flops.', code: 'function demonstrate() {\n  console.log("Running Flip-Flops flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Flip-Flops flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Flip-Flops setup', problem: 'Write a function testSetup() that returns the string "Flip-Flops OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Flip-Flops OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Flip-Flops important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Flip-Flops in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Flip-Flops?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm16-multiplexers',
+  module: 16,
+  title: 'Multiplexers',
+  tagline: 'Master Multiplexers to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Multiplexers.',
+    whyItMatters: 'Understanding Multiplexers is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Multiplexers before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Multiplexers.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Multiplexers', explanation: 'Let\'s look at a simple example demonstrating Multiplexers in action.', code: 'console.log("Initializing Multiplexers...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Multiplexers...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Multiplexers', explanation: 'A practical example showing a real-world coding scenario using Multiplexers.', code: 'function demonstrate() {\n  console.log("Running Multiplexers flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Multiplexers flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Multiplexers setup', problem: 'Write a function testSetup() that returns the string "Multiplexers OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Multiplexers OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Multiplexers important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Multiplexers in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Multiplexers?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm16-adders',
+  module: 16,
+  title: 'Adders',
+  tagline: 'Master Adders to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Adders.',
+    whyItMatters: 'Understanding Adders is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Adders before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Adders.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Adders', explanation: 'Let\'s look at a simple example demonstrating Adders in action.', code: 'console.log("Initializing Adders...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Adders...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Adders', explanation: 'A practical example showing a real-world coding scenario using Adders.', code: 'function demonstrate() {\n  console.log("Running Adders flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Adders flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Adders setup', problem: 'Write a function testSetup() that returns the string "Adders OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Adders OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Adders important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Adders in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Adders?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm16-memory-circuits',
+  module: 16,
+  title: 'Memory Circuits',
+  tagline: 'Master Memory Circuits to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Memory Circuits.',
+    whyItMatters: 'Understanding Memory Circuits is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Memory Circuits before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Memory Circuits.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Memory Circuits', explanation: 'Let\'s look at a simple example demonstrating Memory Circuits in action.', code: 'console.log("Initializing Memory Circuits...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Memory Circuits...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Memory Circuits', explanation: 'A practical example showing a real-world coding scenario using Memory Circuits.', code: 'function demonstrate() {\n  console.log("Running Memory Circuits flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Memory Circuits flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Memory Circuits setup', problem: 'Write a function testSetup() that returns the string "Memory Circuits OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Memory Circuits OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Memory Circuits important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Memory Circuits in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Memory Circuits?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm16-cpu-logic',
+  module: 16,
+  title: 'CPU Logic',
+  tagline: 'Master CPU Logic to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at CPU Logic.',
+    whyItMatters: 'Understanding CPU Logic is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of CPU Logic before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of CPU Logic.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of CPU Logic', explanation: 'Let\'s look at a simple example demonstrating CPU Logic in action.', code: 'console.log("Initializing CPU Logic...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing CPU Logic...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with CPU Logic', explanation: 'A practical example showing a real-world coding scenario using CPU Logic.', code: 'function demonstrate() {\n  console.log("Running CPU Logic flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running CPU Logic flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check CPU Logic setup', problem: 'Write a function testSetup() that returns the string "CPU Logic OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "CPU Logic OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is CPU Logic important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to CPU Logic in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of CPU Logic?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

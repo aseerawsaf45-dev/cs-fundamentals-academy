@@ -131,3 +131,127 @@ const remainingModules = [
 ];
 
 remainingModules.forEach(m => window.CSFA_RAW_TOPICS.push(m));
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm43-array-basics',
+  module: 43,
+  title: 'Array Basics',
+  tagline: 'Master Array Basics to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Array Basics.',
+    whyItMatters: 'Understanding Array Basics is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Array Basics before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Array Basics.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Array Basics', explanation: 'Let\'s look at a simple example demonstrating Array Basics in action.', code: 'console.log("Initializing Array Basics...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Array Basics...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Array Basics', explanation: 'A practical example showing a real-world coding scenario using Array Basics.', code: 'function demonstrate() {\n  console.log("Running Array Basics flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Array Basics flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Array Basics setup', problem: 'Write a function testSetup() that returns the string "Array Basics OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Array Basics OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Array Basics important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Array Basics in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Array Basics?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm43-array-operations',
+  module: 43,
+  title: 'Array Operations',
+  tagline: 'Master Array Operations to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Array Operations.',
+    whyItMatters: 'Understanding Array Operations is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Array Operations before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Array Operations.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Array Operations', explanation: 'Let\'s look at a simple example demonstrating Array Operations in action.', code: 'console.log("Initializing Array Operations...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Array Operations...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Array Operations', explanation: 'A practical example showing a real-world coding scenario using Array Operations.', code: 'function demonstrate() {\n  console.log("Running Array Operations flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Array Operations flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Array Operations setup', problem: 'Write a function testSetup() that returns the string "Array Operations OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Array Operations OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Array Operations important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Array Operations in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Array Operations?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm43-multi-dim',
+  module: 43,
+  title: 'Multi-Dimensional Arrays',
+  tagline: 'Master Multi-Dimensional Arrays to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Multi-Dimensional Arrays.',
+    whyItMatters: 'Understanding Multi-Dimensional Arrays is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Multi-Dimensional Arrays before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Multi-Dimensional Arrays.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Multi-Dimensional Arrays', explanation: 'Let\'s look at a simple example demonstrating Multi-Dimensional Arrays in action.', code: 'console.log("Initializing Multi-Dimensional Arrays...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Multi-Dimensional Arrays...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Multi-Dimensional Arrays', explanation: 'A practical example showing a real-world coding scenario using Multi-Dimensional Arrays.', code: 'function demonstrate() {\n  console.log("Running Multi-Dimensional Arrays flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Multi-Dimensional Arrays flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Multi-Dimensional Arrays setup', problem: 'Write a function testSetup() that returns the string "Multi-Dimensional Arrays OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Multi-Dimensional Arrays OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Multi-Dimensional Arrays important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Multi-Dimensional Arrays in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Multi-Dimensional Arrays?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm43-array-algorithms',
+  module: 43,
+  title: 'Array Algorithms',
+  tagline: 'Master Array Algorithms to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Array Algorithms.',
+    whyItMatters: 'Understanding Array Algorithms is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Array Algorithms before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Array Algorithms.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Array Algorithms', explanation: 'Let\'s look at a simple example demonstrating Array Algorithms in action.', code: 'console.log("Initializing Array Algorithms...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Array Algorithms...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Array Algorithms', explanation: 'A practical example showing a real-world coding scenario using Array Algorithms.', code: 'function demonstrate() {\n  console.log("Running Array Algorithms flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Array Algorithms flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Array Algorithms setup', problem: 'Write a function testSetup() that returns the string "Array Algorithms OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Array Algorithms OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Array Algorithms important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Array Algorithms in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Array Algorithms?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

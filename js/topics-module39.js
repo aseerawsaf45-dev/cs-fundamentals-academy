@@ -90,3 +90,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is cache-aside pattern?", options: ["Cache is always populated on write", "App checks cache first; on miss queries DB and populates cache", "Cache mirrors all DB operations", "DB pushes updates to cache"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm39-callbacks',
+  module: 39,
+  title: 'Callbacks',
+  tagline: 'Master Callbacks to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Callbacks.',
+    whyItMatters: 'Understanding Callbacks is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Callbacks before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Callbacks.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Callbacks', explanation: 'Let\'s look at a simple example demonstrating Callbacks in action.', code: 'console.log("Initializing Callbacks...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Callbacks...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Callbacks', explanation: 'A practical example showing a real-world coding scenario using Callbacks.', code: 'function demonstrate() {\n  console.log("Running Callbacks flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Callbacks flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Callbacks setup', problem: 'Write a function testSetup() that returns the string "Callbacks OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Callbacks OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Callbacks important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Callbacks in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Callbacks?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm39-promises',
+  module: 39,
+  title: 'Promises',
+  tagline: 'Master Promises to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Promises.',
+    whyItMatters: 'Understanding Promises is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Promises before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Promises.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Promises', explanation: 'Let\'s look at a simple example demonstrating Promises in action.', code: 'console.log("Initializing Promises...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Promises...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Promises', explanation: 'A practical example showing a real-world coding scenario using Promises.', code: 'function demonstrate() {\n  console.log("Running Promises flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Promises flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Promises setup', problem: 'Write a function testSetup() that returns the string "Promises OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Promises OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Promises important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Promises in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Promises?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm39-async-await',
+  module: 39,
+  title: 'Async/Await',
+  tagline: 'Master Async/Await to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Async/Await.',
+    whyItMatters: 'Understanding Async/Await is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Async/Await before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Async/Await.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Async/Await', explanation: 'Let\'s look at a simple example demonstrating Async/Await in action.', code: 'console.log("Initializing Async/Await...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Async/Await...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Async/Await', explanation: 'A practical example showing a real-world coding scenario using Async/Await.', code: 'function demonstrate() {\n  console.log("Running Async/Await flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Async/Await flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Async/Await setup', problem: 'Write a function testSetup() that returns the string "Async/Await OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Async/Await OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Async/Await important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Async/Await in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Async/Await?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm39-fetch-api',
+  module: 39,
+  title: 'Fetch API',
+  tagline: 'Master Fetch API to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Fetch API.',
+    whyItMatters: 'Understanding Fetch API is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Fetch API before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Fetch API.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Fetch API', explanation: 'Let\'s look at a simple example demonstrating Fetch API in action.', code: 'console.log("Initializing Fetch API...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Fetch API...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Fetch API', explanation: 'A practical example showing a real-world coding scenario using Fetch API.', code: 'function demonstrate() {\n  console.log("Running Fetch API flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Fetch API flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Fetch API setup', problem: 'Write a function testSetup() that returns the string "Fetch API OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Fetch API OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Fetch API important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Fetch API in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Fetch API?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

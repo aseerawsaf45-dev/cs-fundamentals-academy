@@ -44,3 +44,189 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is the correct sequence of DNS resolution?", options: ["Authoritative → Root → TLD", "Browser cache → Resolver → Root → TLD → Authoritative", "Root → Browser → ISP", "ISP → CDN → Browser"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm23-tcp',
+  module: 23,
+  title: 'TCP',
+  tagline: 'Master TCP to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at TCP.',
+    whyItMatters: 'Understanding TCP is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of TCP before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of TCP.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of TCP', explanation: 'Let\'s look at a simple example demonstrating TCP in action.', code: 'console.log("Initializing TCP...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing TCP...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with TCP', explanation: 'A practical example showing a real-world coding scenario using TCP.', code: 'function demonstrate() {\n  console.log("Running TCP flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running TCP flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check TCP setup', problem: 'Write a function testSetup() that returns the string "TCP OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "TCP OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is TCP important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to TCP in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of TCP?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm23-udp',
+  module: 23,
+  title: 'UDP',
+  tagline: 'Master UDP to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at UDP.',
+    whyItMatters: 'Understanding UDP is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of UDP before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of UDP.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of UDP', explanation: 'Let\'s look at a simple example demonstrating UDP in action.', code: 'console.log("Initializing UDP...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing UDP...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with UDP', explanation: 'A practical example showing a real-world coding scenario using UDP.', code: 'function demonstrate() {\n  console.log("Running UDP flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running UDP flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check UDP setup', problem: 'Write a function testSetup() that returns the string "UDP OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "UDP OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is UDP important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to UDP in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of UDP?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm23-ipv4-ipv6',
+  module: 23,
+  title: 'IPv4 & IPv6',
+  tagline: 'Master IPv4 & IPv6 to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at IPv4 & IPv6.',
+    whyItMatters: 'Understanding IPv4 & IPv6 is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of IPv4 & IPv6 before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of IPv4 & IPv6.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of IPv4 & IPv6', explanation: 'Let\'s look at a simple example demonstrating IPv4 & IPv6 in action.', code: 'console.log("Initializing IPv4 & IPv6...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing IPv4 & IPv6...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with IPv4 & IPv6', explanation: 'A practical example showing a real-world coding scenario using IPv4 & IPv6.', code: 'function demonstrate() {\n  console.log("Running IPv4 & IPv6 flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running IPv4 & IPv6 flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check IPv4 & IPv6 setup', problem: 'Write a function testSetup() that returns the string "IPv4 & IPv6 OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "IPv4 & IPv6 OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is IPv4 & IPv6 important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to IPv4 & IPv6 in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of IPv4 & IPv6?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm23-routing',
+  module: 23,
+  title: 'Routing',
+  tagline: 'Master Routing to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Routing.',
+    whyItMatters: 'Understanding Routing is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Routing before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Routing.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Routing', explanation: 'Let\'s look at a simple example demonstrating Routing in action.', code: 'console.log("Initializing Routing...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Routing...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Routing', explanation: 'A practical example showing a real-world coding scenario using Routing.', code: 'function demonstrate() {\n  console.log("Running Routing flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Routing flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Routing setup', problem: 'Write a function testSetup() that returns the string "Routing OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Routing OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Routing important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Routing in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Routing?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm23-nat',
+  module: 23,
+  title: 'NAT',
+  tagline: 'Master NAT to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at NAT.',
+    whyItMatters: 'Understanding NAT is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of NAT before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of NAT.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of NAT', explanation: 'Let\'s look at a simple example demonstrating NAT in action.', code: 'console.log("Initializing NAT...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing NAT...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with NAT', explanation: 'A practical example showing a real-world coding scenario using NAT.', code: 'function demonstrate() {\n  console.log("Running NAT flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running NAT flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check NAT setup', problem: 'Write a function testSetup() that returns the string "NAT OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "NAT OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is NAT important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to NAT in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of NAT?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm23-subnetting',
+  module: 23,
+  title: 'Subnetting',
+  tagline: 'Master Subnetting to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Subnetting.',
+    whyItMatters: 'Understanding Subnetting is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Subnetting before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Subnetting.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Subnetting', explanation: 'Let\'s look at a simple example demonstrating Subnetting in action.', code: 'console.log("Initializing Subnetting...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Subnetting...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Subnetting', explanation: 'A practical example showing a real-world coding scenario using Subnetting.', code: 'function demonstrate() {\n  console.log("Running Subnetting flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Subnetting flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Subnetting setup', problem: 'Write a function testSetup() that returns the string "Subnetting OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Subnetting OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Subnetting important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Subnetting in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Subnetting?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

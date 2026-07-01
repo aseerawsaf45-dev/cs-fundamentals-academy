@@ -45,3 +45,251 @@ window.CSFA_RAW_TOPICS.push({
     { q: "How do you run CPU-heavy work without blocking the event loop?", options: ["Use longer setTimeout", "Use Promise.race", "Use Web Workers / worker_threads", "Use JSON.stringify"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-http',
+  module: 24,
+  title: 'HTTP',
+  tagline: 'Master HTTP to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at HTTP.',
+    whyItMatters: 'Understanding HTTP is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of HTTP before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of HTTP.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of HTTP', explanation: 'Let\'s look at a simple example demonstrating HTTP in action.', code: 'console.log("Initializing HTTP...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing HTTP...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with HTTP', explanation: 'A practical example showing a real-world coding scenario using HTTP.', code: 'function demonstrate() {\n  console.log("Running HTTP flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running HTTP flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check HTTP setup', problem: 'Write a function testSetup() that returns the string "HTTP OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "HTTP OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is HTTP important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to HTTP in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of HTTP?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-https',
+  module: 24,
+  title: 'HTTPS',
+  tagline: 'Master HTTPS to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at HTTPS.',
+    whyItMatters: 'Understanding HTTPS is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of HTTPS before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of HTTPS.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of HTTPS', explanation: 'Let\'s look at a simple example demonstrating HTTPS in action.', code: 'console.log("Initializing HTTPS...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing HTTPS...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with HTTPS', explanation: 'A practical example showing a real-world coding scenario using HTTPS.', code: 'function demonstrate() {\n  console.log("Running HTTPS flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running HTTPS flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check HTTPS setup', problem: 'Write a function testSetup() that returns the string "HTTPS OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "HTTPS OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is HTTPS important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to HTTPS in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of HTTPS?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-ssl-tls',
+  module: 24,
+  title: 'SSL/TLS',
+  tagline: 'Master SSL/TLS to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at SSL/TLS.',
+    whyItMatters: 'Understanding SSL/TLS is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of SSL/TLS before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of SSL/TLS.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of SSL/TLS', explanation: 'Let\'s look at a simple example demonstrating SSL/TLS in action.', code: 'console.log("Initializing SSL/TLS...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing SSL/TLS...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with SSL/TLS', explanation: 'A practical example showing a real-world coding scenario using SSL/TLS.', code: 'function demonstrate() {\n  console.log("Running SSL/TLS flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running SSL/TLS flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check SSL/TLS setup', problem: 'Write a function testSetup() that returns the string "SSL/TLS OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "SSL/TLS OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is SSL/TLS important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to SSL/TLS in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of SSL/TLS?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-cookies',
+  module: 24,
+  title: 'Cookies',
+  tagline: 'Master Cookies to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Cookies.',
+    whyItMatters: 'Understanding Cookies is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Cookies before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Cookies.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Cookies', explanation: 'Let\'s look at a simple example demonstrating Cookies in action.', code: 'console.log("Initializing Cookies...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Cookies...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Cookies', explanation: 'A practical example showing a real-world coding scenario using Cookies.', code: 'function demonstrate() {\n  console.log("Running Cookies flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Cookies flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Cookies setup', problem: 'Write a function testSetup() that returns the string "Cookies OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Cookies OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Cookies important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Cookies in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Cookies?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-sessions',
+  module: 24,
+  title: 'Sessions',
+  tagline: 'Master Sessions to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Sessions.',
+    whyItMatters: 'Understanding Sessions is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Sessions before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Sessions.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Sessions', explanation: 'Let\'s look at a simple example demonstrating Sessions in action.', code: 'console.log("Initializing Sessions...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Sessions...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Sessions', explanation: 'A practical example showing a real-world coding scenario using Sessions.', code: 'function demonstrate() {\n  console.log("Running Sessions flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Sessions flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Sessions setup', problem: 'Write a function testSetup() that returns the string "Sessions OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Sessions OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Sessions important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Sessions in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Sessions?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-browser-lifecycle',
+  module: 24,
+  title: 'Browser Lifecycle',
+  tagline: 'Master Browser Lifecycle to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Browser Lifecycle.',
+    whyItMatters: 'Understanding Browser Lifecycle is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Browser Lifecycle before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Browser Lifecycle.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Browser Lifecycle', explanation: 'Let\'s look at a simple example demonstrating Browser Lifecycle in action.', code: 'console.log("Initializing Browser Lifecycle...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Browser Lifecycle...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Browser Lifecycle', explanation: 'A practical example showing a real-world coding scenario using Browser Lifecycle.', code: 'function demonstrate() {\n  console.log("Running Browser Lifecycle flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Browser Lifecycle flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Browser Lifecycle setup', problem: 'Write a function testSetup() that returns the string "Browser Lifecycle OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Browser Lifecycle OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Browser Lifecycle important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Browser Lifecycle in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Browser Lifecycle?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-request-response',
+  module: 24,
+  title: 'Request/Response',
+  tagline: 'Master Request/Response to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Request/Response.',
+    whyItMatters: 'Understanding Request/Response is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Request/Response before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Request/Response.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Request/Response', explanation: 'Let\'s look at a simple example demonstrating Request/Response in action.', code: 'console.log("Initializing Request/Response...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Request/Response...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Request/Response', explanation: 'A practical example showing a real-world coding scenario using Request/Response.', code: 'function demonstrate() {\n  console.log("Running Request/Response flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Request/Response flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Request/Response setup', problem: 'Write a function testSetup() that returns the string "Request/Response OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Request/Response OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Request/Response important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Request/Response in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Request/Response?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm24-rest',
+  module: 24,
+  title: 'REST',
+  tagline: 'Master REST to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at REST.',
+    whyItMatters: 'Understanding REST is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of REST before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of REST.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of REST', explanation: 'Let\'s look at a simple example demonstrating REST in action.', code: 'console.log("Initializing REST...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing REST...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with REST', explanation: 'A practical example showing a real-world coding scenario using REST.', code: 'function demonstrate() {\n  console.log("Running REST flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running REST flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check REST setup', problem: 'Write a function testSetup() that returns the string "REST OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "REST OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is REST important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to REST in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of REST?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

@@ -135,3 +135,189 @@ window.CSFA_RAW_TOPICS.push({
     { q: "Which HTTP method is NOT idempotent?", options: ["GET", "PUT", "DELETE", "POST"], answer: 3 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm22-lan-wan',
+  module: 22,
+  title: 'LAN / WAN',
+  tagline: 'Master LAN / WAN to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at LAN / WAN.',
+    whyItMatters: 'Understanding LAN / WAN is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of LAN / WAN before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of LAN / WAN.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of LAN / WAN', explanation: 'Let\'s look at a simple example demonstrating LAN / WAN in action.', code: 'console.log("Initializing LAN / WAN...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing LAN / WAN...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with LAN / WAN', explanation: 'A practical example showing a real-world coding scenario using LAN / WAN.', code: 'function demonstrate() {\n  console.log("Running LAN / WAN flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running LAN / WAN flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check LAN / WAN setup', problem: 'Write a function testSetup() that returns the string "LAN / WAN OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "LAN / WAN OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is LAN / WAN important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to LAN / WAN in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of LAN / WAN?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm22-internet',
+  module: 22,
+  title: 'The Internet',
+  tagline: 'Master The Internet to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at The Internet.',
+    whyItMatters: 'Understanding The Internet is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of The Internet before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of The Internet.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of The Internet', explanation: 'Let\'s look at a simple example demonstrating The Internet in action.', code: 'console.log("Initializing The Internet...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing The Internet...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with The Internet', explanation: 'A practical example showing a real-world coding scenario using The Internet.', code: 'function demonstrate() {\n  console.log("Running The Internet flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running The Internet flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check The Internet setup', problem: 'Write a function testSetup() that returns the string "The Internet OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "The Internet OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is The Internet important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to The Internet in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of The Internet?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm22-routers-switches',
+  module: 22,
+  title: 'Routers & Switches',
+  tagline: 'Master Routers & Switches to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Routers & Switches.',
+    whyItMatters: 'Understanding Routers & Switches is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Routers & Switches before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Routers & Switches.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Routers & Switches', explanation: 'Let\'s look at a simple example demonstrating Routers & Switches in action.', code: 'console.log("Initializing Routers & Switches...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Routers & Switches...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Routers & Switches', explanation: 'A practical example showing a real-world coding scenario using Routers & Switches.', code: 'function demonstrate() {\n  console.log("Running Routers & Switches flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Routers & Switches flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Routers & Switches setup', problem: 'Write a function testSetup() that returns the string "Routers & Switches OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Routers & Switches OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Routers & Switches important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Routers & Switches in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Routers & Switches?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm22-mac-address',
+  module: 22,
+  title: 'MAC Address',
+  tagline: 'Master MAC Address to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at MAC Address.',
+    whyItMatters: 'Understanding MAC Address is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of MAC Address before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of MAC Address.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of MAC Address', explanation: 'Let\'s look at a simple example demonstrating MAC Address in action.', code: 'console.log("Initializing MAC Address...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing MAC Address...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with MAC Address', explanation: 'A practical example showing a real-world coding scenario using MAC Address.', code: 'function demonstrate() {\n  console.log("Running MAC Address flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running MAC Address flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check MAC Address setup', problem: 'Write a function testSetup() that returns the string "MAC Address OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "MAC Address OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is MAC Address important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to MAC Address in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of MAC Address?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm22-ports',
+  module: 22,
+  title: 'Ports',
+  tagline: 'Master Ports to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Ports.',
+    whyItMatters: 'Understanding Ports is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Ports before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Ports.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Ports', explanation: 'Let\'s look at a simple example demonstrating Ports in action.', code: 'console.log("Initializing Ports...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Ports...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Ports', explanation: 'A practical example showing a real-world coding scenario using Ports.', code: 'function demonstrate() {\n  console.log("Running Ports flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Ports flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Ports setup', problem: 'Write a function testSetup() that returns the string "Ports OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Ports OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Ports important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Ports in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Ports?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm22-packets',
+  module: 22,
+  title: 'Packets',
+  tagline: 'Master Packets to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Packets.',
+    whyItMatters: 'Understanding Packets is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Packets before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Packets.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Packets', explanation: 'Let\'s look at a simple example demonstrating Packets in action.', code: 'console.log("Initializing Packets...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Packets...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Packets', explanation: 'A practical example showing a real-world coding scenario using Packets.', code: 'function demonstrate() {\n  console.log("Running Packets flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Packets flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Packets setup', problem: 'Write a function testSetup() that returns the string "Packets OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Packets OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Packets important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Packets in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Packets?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

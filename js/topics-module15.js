@@ -182,3 +182,251 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is Number.MAX_SAFE_INTEGER?", options: ["2^32 - 1", "2^53 - 1", "2^64 - 1", "2^31 - 1"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-decimal',
+  module: 15,
+  title: 'Decimal',
+  tagline: 'Master Decimal to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Decimal.',
+    whyItMatters: 'Understanding Decimal is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Decimal before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Decimal.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Decimal', explanation: 'Let\'s look at a simple example demonstrating Decimal in action.', code: 'console.log("Initializing Decimal...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Decimal...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Decimal', explanation: 'A practical example showing a real-world coding scenario using Decimal.', code: 'function demonstrate() {\n  console.log("Running Decimal flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Decimal flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Decimal setup', problem: 'Write a function testSetup() that returns the string "Decimal OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Decimal OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Decimal important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Decimal in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Decimal?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-octal',
+  module: 15,
+  title: 'Octal',
+  tagline: 'Master Octal to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Octal.',
+    whyItMatters: 'Understanding Octal is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Octal before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Octal.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Octal', explanation: 'Let\'s look at a simple example demonstrating Octal in action.', code: 'console.log("Initializing Octal...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Octal...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Octal', explanation: 'A practical example showing a real-world coding scenario using Octal.', code: 'function demonstrate() {\n  console.log("Running Octal flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Octal flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Octal setup', problem: 'Write a function testSetup() that returns the string "Octal OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Octal OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Octal important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Octal in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Octal?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-hexadecimal',
+  module: 15,
+  title: 'Hexadecimal',
+  tagline: 'Master Hexadecimal to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Hexadecimal.',
+    whyItMatters: 'Understanding Hexadecimal is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Hexadecimal before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Hexadecimal.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Hexadecimal', explanation: 'Let\'s look at a simple example demonstrating Hexadecimal in action.', code: 'console.log("Initializing Hexadecimal...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Hexadecimal...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Hexadecimal', explanation: 'A practical example showing a real-world coding scenario using Hexadecimal.', code: 'function demonstrate() {\n  console.log("Running Hexadecimal flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Hexadecimal flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Hexadecimal setup', problem: 'Write a function testSetup() that returns the string "Hexadecimal OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Hexadecimal OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Hexadecimal important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Hexadecimal in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Hexadecimal?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-binary-arithmetic',
+  module: 15,
+  title: 'Binary Arithmetic',
+  tagline: 'Master Binary Arithmetic to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Binary Arithmetic.',
+    whyItMatters: 'Understanding Binary Arithmetic is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Binary Arithmetic before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Binary Arithmetic.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Binary Arithmetic', explanation: 'Let\'s look at a simple example demonstrating Binary Arithmetic in action.', code: 'console.log("Initializing Binary Arithmetic...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Binary Arithmetic...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Binary Arithmetic', explanation: 'A practical example showing a real-world coding scenario using Binary Arithmetic.', code: 'function demonstrate() {\n  console.log("Running Binary Arithmetic flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Binary Arithmetic flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Binary Arithmetic setup', problem: 'Write a function testSetup() that returns the string "Binary Arithmetic OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Binary Arithmetic OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Binary Arithmetic important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Binary Arithmetic in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Binary Arithmetic?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-twos-complement',
+  module: 15,
+  title: 'Two\'s Complement',
+  tagline: 'Master Two\'s Complement to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Two\'s Complement.',
+    whyItMatters: 'Understanding Two\'s Complement is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Two\'s Complement before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Two\'s Complement.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Two\'s Complement', explanation: 'Let\'s look at a simple example demonstrating Two\'s Complement in action.', code: 'console.log("Initializing Two\'s Complement...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Two\'s Complement...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Two\'s Complement', explanation: 'A practical example showing a real-world coding scenario using Two\'s Complement.', code: 'function demonstrate() {\n  console.log("Running Two\'s Complement flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Two\'s Complement flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Two\'s Complement setup', problem: 'Write a function testSetup() that returns the string "Two\'s Complement OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Two\'s Complement OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Two\'s Complement important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Two\'s Complement in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Two\'s Complement?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-char-encoding',
+  module: 15,
+  title: 'Character Encoding',
+  tagline: 'Master Character Encoding to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Character Encoding.',
+    whyItMatters: 'Understanding Character Encoding is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Character Encoding before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Character Encoding.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Character Encoding', explanation: 'Let\'s look at a simple example demonstrating Character Encoding in action.', code: 'console.log("Initializing Character Encoding...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Character Encoding...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Character Encoding', explanation: 'A practical example showing a real-world coding scenario using Character Encoding.', code: 'function demonstrate() {\n  console.log("Running Character Encoding flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Character Encoding flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Character Encoding setup', problem: 'Write a function testSetup() that returns the string "Character Encoding OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Character Encoding OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Character Encoding important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Character Encoding in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Character Encoding?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-unicode',
+  module: 15,
+  title: 'Unicode',
+  tagline: 'Master Unicode to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Unicode.',
+    whyItMatters: 'Understanding Unicode is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Unicode before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Unicode.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Unicode', explanation: 'Let\'s look at a simple example demonstrating Unicode in action.', code: 'console.log("Initializing Unicode...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Unicode...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Unicode', explanation: 'A practical example showing a real-world coding scenario using Unicode.', code: 'function demonstrate() {\n  console.log("Running Unicode flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Unicode flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Unicode setup', problem: 'Write a function testSetup() that returns the string "Unicode OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Unicode OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Unicode important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Unicode in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Unicode?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm15-ascii',
+  module: 15,
+  title: 'ASCII',
+  tagline: 'Master ASCII to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at ASCII.',
+    whyItMatters: 'Understanding ASCII is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of ASCII before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of ASCII.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of ASCII', explanation: 'Let\'s look at a simple example demonstrating ASCII in action.', code: 'console.log("Initializing ASCII...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing ASCII...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with ASCII', explanation: 'A practical example showing a real-world coding scenario using ASCII.', code: 'function demonstrate() {\n  console.log("Running ASCII flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running ASCII flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check ASCII setup', problem: 'Write a function testSetup() that returns the string "ASCII OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "ASCII OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is ASCII important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to ASCII in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of ASCII?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

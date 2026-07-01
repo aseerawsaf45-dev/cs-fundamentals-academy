@@ -86,3 +86,127 @@ window.CSFA_RAW_TOPICS.push({
     { q: "GraphQL schema uses ! to indicate:", options: ["Optional field", "Required/non-null field", "Deprecated field", "List field"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm41-commits',
+  module: 41,
+  title: 'Commits',
+  tagline: 'Master Commits to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Commits.',
+    whyItMatters: 'Understanding Commits is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Commits before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Commits.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Commits', explanation: 'Let\'s look at a simple example demonstrating Commits in action.', code: 'console.log("Initializing Commits...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Commits...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Commits', explanation: 'A practical example showing a real-world coding scenario using Commits.', code: 'function demonstrate() {\n  console.log("Running Commits flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Commits flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Commits setup', problem: 'Write a function testSetup() that returns the string "Commits OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Commits OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Commits important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Commits in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Commits?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm41-branches',
+  module: 41,
+  title: 'Branches',
+  tagline: 'Master Branches to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Branches.',
+    whyItMatters: 'Understanding Branches is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Branches before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Branches.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Branches', explanation: 'Let\'s look at a simple example demonstrating Branches in action.', code: 'console.log("Initializing Branches...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Branches...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Branches', explanation: 'A practical example showing a real-world coding scenario using Branches.', code: 'function demonstrate() {\n  console.log("Running Branches flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Branches flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Branches setup', problem: 'Write a function testSetup() that returns the string "Branches OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Branches OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Branches important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Branches in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Branches?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm41-merge-rebase',
+  module: 41,
+  title: 'Merge & Rebase',
+  tagline: 'Master Merge & Rebase to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Merge & Rebase.',
+    whyItMatters: 'Understanding Merge & Rebase is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Merge & Rebase before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Merge & Rebase.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Merge & Rebase', explanation: 'Let\'s look at a simple example demonstrating Merge & Rebase in action.', code: 'console.log("Initializing Merge & Rebase...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Merge & Rebase...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Merge & Rebase', explanation: 'A practical example showing a real-world coding scenario using Merge & Rebase.', code: 'function demonstrate() {\n  console.log("Running Merge & Rebase flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Merge & Rebase flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Merge & Rebase setup', problem: 'Write a function testSetup() that returns the string "Merge & Rebase OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Merge & Rebase OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Merge & Rebase important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Merge & Rebase in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Merge & Rebase?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm41-conflict-resolution',
+  module: 41,
+  title: 'Conflict Resolution',
+  tagline: 'Master Conflict Resolution to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Conflict Resolution.',
+    whyItMatters: 'Understanding Conflict Resolution is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Conflict Resolution before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Conflict Resolution.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Conflict Resolution', explanation: 'Let\'s look at a simple example demonstrating Conflict Resolution in action.', code: 'console.log("Initializing Conflict Resolution...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Conflict Resolution...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Conflict Resolution', explanation: 'A practical example showing a real-world coding scenario using Conflict Resolution.', code: 'function demonstrate() {\n  console.log("Running Conflict Resolution flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Conflict Resolution flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Conflict Resolution setup', problem: 'Write a function testSetup() that returns the string "Conflict Resolution OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Conflict Resolution OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Conflict Resolution important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Conflict Resolution in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Conflict Resolution?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

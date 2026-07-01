@@ -41,3 +41,65 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is exponential backoff?", options: ["Reducing retry count over time", "Increasing delay between retries exponentially", "Canceling retries after first failure", "Logging errors to a file"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm30-throw-finally',
+  module: 30,
+  title: 'throw / finally',
+  tagline: 'Master throw / finally to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at throw / finally.',
+    whyItMatters: 'Understanding throw / finally is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of throw / finally before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of throw / finally.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of throw / finally', explanation: 'Let\'s look at a simple example demonstrating throw / finally in action.', code: 'console.log("Initializing throw / finally...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing throw / finally...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with throw / finally', explanation: 'A practical example showing a real-world coding scenario using throw / finally.', code: 'function demonstrate() {\n  console.log("Running throw / finally flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running throw / finally flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check throw / finally setup', problem: 'Write a function testSetup() that returns the string "throw / finally OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "throw / finally OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is throw / finally important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to throw / finally in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of throw / finally?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm30-debugging',
+  module: 30,
+  title: 'Debugging',
+  tagline: 'Master Debugging to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Debugging.',
+    whyItMatters: 'Understanding Debugging is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Debugging before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Debugging.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Debugging', explanation: 'Let\'s look at a simple example demonstrating Debugging in action.', code: 'console.log("Initializing Debugging...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Debugging...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Debugging', explanation: 'A practical example showing a real-world coding scenario using Debugging.', code: 'function demonstrate() {\n  console.log("Running Debugging flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Debugging flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Debugging setup', problem: 'Write a function testSetup() that returns the string "Debugging OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Debugging OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Debugging important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Debugging in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Debugging?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

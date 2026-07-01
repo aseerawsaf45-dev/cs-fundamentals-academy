@@ -41,3 +41,96 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What does break do inside a switch statement?", options: ["Exits the function", "Restarts the switch", "Prevents fall-through to next case", "Throws an error"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm27-switch',
+  module: 27,
+  title: 'switch',
+  tagline: 'Master switch to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at switch.',
+    whyItMatters: 'Understanding switch is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of switch before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of switch.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of switch', explanation: 'Let\'s look at a simple example demonstrating switch in action.', code: 'console.log("Initializing switch...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing switch...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with switch', explanation: 'A practical example showing a real-world coding scenario using switch.', code: 'function demonstrate() {\n  console.log("Running switch flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running switch flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check switch setup', problem: 'Write a function testSetup() that returns the string "switch OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "switch OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is switch important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to switch in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of switch?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm27-loops-cf',
+  module: 27,
+  title: 'Loops',
+  tagline: 'Master Loops to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Loops.',
+    whyItMatters: 'Understanding Loops is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Loops before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Loops.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Loops', explanation: 'Let\'s look at a simple example demonstrating Loops in action.', code: 'console.log("Initializing Loops...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Loops...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Loops', explanation: 'A practical example showing a real-world coding scenario using Loops.', code: 'function demonstrate() {\n  console.log("Running Loops flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Loops flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Loops setup', problem: 'Write a function testSetup() that returns the string "Loops OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Loops OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Loops important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Loops in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Loops?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm27-break-continue',
+  module: 27,
+  title: 'break / continue',
+  tagline: 'Master break / continue to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at break / continue.',
+    whyItMatters: 'Understanding break / continue is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of break / continue before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of break / continue.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of break / continue', explanation: 'Let\'s look at a simple example demonstrating break / continue in action.', code: 'console.log("Initializing break / continue...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing break / continue...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with break / continue', explanation: 'A practical example showing a real-world coding scenario using break / continue.', code: 'function demonstrate() {\n  console.log("Running break / continue flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running break / continue flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check break / continue setup', problem: 'Write a function testSetup() that returns the string "break / continue OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "break / continue OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is break / continue important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to break / continue in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of break / continue?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

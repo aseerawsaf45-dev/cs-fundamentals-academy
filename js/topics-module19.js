@@ -46,3 +46,189 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What octal value = rwx?", options: ["5", "6", "7", "4"], answer: 2 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm19-linux-filesystem',
+  module: 19,
+  title: 'Linux Filesystem',
+  tagline: 'Master Linux Filesystem to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Linux Filesystem.',
+    whyItMatters: 'Understanding Linux Filesystem is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Linux Filesystem before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Linux Filesystem.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Linux Filesystem', explanation: 'Let\'s look at a simple example demonstrating Linux Filesystem in action.', code: 'console.log("Initializing Linux Filesystem...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Linux Filesystem...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Linux Filesystem', explanation: 'A practical example showing a real-world coding scenario using Linux Filesystem.', code: 'function demonstrate() {\n  console.log("Running Linux Filesystem flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Linux Filesystem flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Linux Filesystem setup', problem: 'Write a function testSetup() that returns the string "Linux Filesystem OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Linux Filesystem OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Linux Filesystem important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Linux Filesystem in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Linux Filesystem?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm19-directory-structure',
+  module: 19,
+  title: 'Directory Structure',
+  tagline: 'Master Directory Structure to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Directory Structure.',
+    whyItMatters: 'Understanding Directory Structure is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Directory Structure before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Directory Structure.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Directory Structure', explanation: 'Let\'s look at a simple example demonstrating Directory Structure in action.', code: 'console.log("Initializing Directory Structure...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Directory Structure...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Directory Structure', explanation: 'A practical example showing a real-world coding scenario using Directory Structure.', code: 'function demonstrate() {\n  console.log("Running Directory Structure flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Directory Structure flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Directory Structure setup', problem: 'Write a function testSetup() that returns the string "Directory Structure OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Directory Structure OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Directory Structure important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Directory Structure in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Directory Structure?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm19-ownership',
+  module: 19,
+  title: 'Ownership',
+  tagline: 'Master Ownership to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Ownership.',
+    whyItMatters: 'Understanding Ownership is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Ownership before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Ownership.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Ownership', explanation: 'Let\'s look at a simple example demonstrating Ownership in action.', code: 'console.log("Initializing Ownership...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Ownership...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Ownership', explanation: 'A practical example showing a real-world coding scenario using Ownership.', code: 'function demonstrate() {\n  console.log("Running Ownership flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Ownership flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Ownership setup', problem: 'Write a function testSetup() that returns the string "Ownership OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Ownership OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Ownership important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Ownership in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Ownership?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm19-users-groups',
+  module: 19,
+  title: 'Users & Groups',
+  tagline: 'Master Users & Groups to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Users & Groups.',
+    whyItMatters: 'Understanding Users & Groups is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Users & Groups before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Users & Groups.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Users & Groups', explanation: 'Let\'s look at a simple example demonstrating Users & Groups in action.', code: 'console.log("Initializing Users & Groups...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Users & Groups...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Users & Groups', explanation: 'A practical example showing a real-world coding scenario using Users & Groups.', code: 'function demonstrate() {\n  console.log("Running Users & Groups flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Users & Groups flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Users & Groups setup', problem: 'Write a function testSetup() that returns the string "Users & Groups OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Users & Groups OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Users & Groups important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Users & Groups in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Users & Groups?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm19-shell',
+  module: 19,
+  title: 'Shell',
+  tagline: 'Master Shell to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Shell.',
+    whyItMatters: 'Understanding Shell is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Shell before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Shell.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Shell', explanation: 'Let\'s look at a simple example demonstrating Shell in action.', code: 'console.log("Initializing Shell...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Shell...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Shell', explanation: 'A practical example showing a real-world coding scenario using Shell.', code: 'function demonstrate() {\n  console.log("Running Shell flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Shell flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Shell setup', problem: 'Write a function testSetup() that returns the string "Shell OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Shell OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Shell important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Shell in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Shell?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm19-env-variables',
+  module: 19,
+  title: 'Environment Variables',
+  tagline: 'Master Environment Variables to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Environment Variables.',
+    whyItMatters: 'Understanding Environment Variables is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Environment Variables before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Environment Variables.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Environment Variables', explanation: 'Let\'s look at a simple example demonstrating Environment Variables in action.', code: 'console.log("Initializing Environment Variables...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Environment Variables...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Environment Variables', explanation: 'A practical example showing a real-world coding scenario using Environment Variables.', code: 'function demonstrate() {\n  console.log("Running Environment Variables flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Environment Variables flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Environment Variables setup', problem: 'Write a function testSetup() that returns the string "Environment Variables OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Environment Variables OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Environment Variables important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Environment Variables in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Environment Variables?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

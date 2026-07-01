@@ -12,7 +12,7 @@ const htmlFiles = [
 
 let newScriptsBase = '';
 let newScriptsPages = '';
-for (let i = 1; i <= 45; i++) {
+for (let i = 1; i <= 65; i++) {
   newScriptsBase += `  <script src="js/topics-module${i}.js"></script>\n`;
   newScriptsPages += `  <script src="../js/topics-module${i}.js"></script>\n`;
 }

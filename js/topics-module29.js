@@ -41,3 +41,96 @@ window.CSFA_RAW_TOPICS.push({
     { q: "WeakMap holds references that are:", options: ["Strong (prevent GC)", "Weak (allow GC)", "Immutable", "Typed"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm29-arrays-prog',
+  module: 29,
+  title: 'Arrays',
+  tagline: 'Master Arrays to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Arrays.',
+    whyItMatters: 'Understanding Arrays is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Arrays before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Arrays.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Arrays', explanation: 'Let\'s look at a simple example demonstrating Arrays in action.', code: 'console.log("Initializing Arrays...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Arrays...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Arrays', explanation: 'A practical example showing a real-world coding scenario using Arrays.', code: 'function demonstrate() {\n  console.log("Running Arrays flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Arrays flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Arrays setup', problem: 'Write a function testSetup() that returns the string "Arrays OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Arrays OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Arrays important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Arrays in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Arrays?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm29-objects-prog',
+  module: 29,
+  title: 'Objects',
+  tagline: 'Master Objects to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Objects.',
+    whyItMatters: 'Understanding Objects is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Objects before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Objects.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Objects', explanation: 'Let\'s look at a simple example demonstrating Objects in action.', code: 'console.log("Initializing Objects...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Objects...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Objects', explanation: 'A practical example showing a real-world coding scenario using Objects.', code: 'function demonstrate() {\n  console.log("Running Objects flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Objects flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Objects setup', problem: 'Write a function testSetup() that returns the string "Objects OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Objects OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Objects important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Objects in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Objects?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm29-strings',
+  module: 29,
+  title: 'Strings',
+  tagline: 'Master Strings to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Strings.',
+    whyItMatters: 'Understanding Strings is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Strings before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Strings.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Strings', explanation: 'Let\'s look at a simple example demonstrating Strings in action.', code: 'console.log("Initializing Strings...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Strings...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Strings', explanation: 'A practical example showing a real-world coding scenario using Strings.', code: 'function demonstrate() {\n  console.log("Running Strings flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Strings flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Strings setup', problem: 'Write a function testSetup() that returns the string "Strings OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Strings OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Strings important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Strings in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Strings?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});

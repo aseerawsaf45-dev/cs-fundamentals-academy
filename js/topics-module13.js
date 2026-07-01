@@ -271,3 +271,220 @@ window.CSFA_RAW_TOPICS.push({
     { q: "What is a 'surrogate pair' in JavaScript strings?", options: ["Two bytes representing one ASCII character", "Two UTF-16 code units representing one Unicode character above U+FFFF", "A backup copy of a string", "A pair of matching quotes"], answer: 1 }
   ]
 });
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm13-types-computers',
+  module: 13,
+  title: 'Types of Computers',
+  tagline: 'Master Types of Computers to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Types of Computers.',
+    whyItMatters: 'Understanding Types of Computers is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Types of Computers before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Types of Computers.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Types of Computers', explanation: 'Let\'s look at a simple example demonstrating Types of Computers in action.', code: 'console.log("Initializing Types of Computers...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Types of Computers...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Types of Computers', explanation: 'A practical example showing a real-world coding scenario using Types of Computers.', code: 'function demonstrate() {\n  console.log("Running Types of Computers flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Types of Computers flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Types of Computers setup', problem: 'Write a function testSetup() that returns the string "Types of Computers OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Types of Computers OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Types of Computers important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Types of Computers in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Types of Computers?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm13-input-output',
+  module: 13,
+  title: 'Input & Output Devices',
+  tagline: 'Master Input & Output Devices to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Input & Output Devices.',
+    whyItMatters: 'Understanding Input & Output Devices is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Input & Output Devices before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Input & Output Devices.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Input & Output Devices', explanation: 'Let\'s look at a simple example demonstrating Input & Output Devices in action.', code: 'console.log("Initializing Input & Output Devices...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Input & Output Devices...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Input & Output Devices', explanation: 'A practical example showing a real-world coding scenario using Input & Output Devices.', code: 'function demonstrate() {\n  console.log("Running Input & Output Devices flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Input & Output Devices flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Input & Output Devices setup', problem: 'Write a function testSetup() that returns the string "Input & Output Devices OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Input & Output Devices OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Input & Output Devices important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Input & Output Devices in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Input & Output Devices?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm13-storage-devices',
+  module: 13,
+  title: 'Storage Devices',
+  tagline: 'Master Storage Devices to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Storage Devices.',
+    whyItMatters: 'Understanding Storage Devices is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Storage Devices before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Storage Devices.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Storage Devices', explanation: 'Let\'s look at a simple example demonstrating Storage Devices in action.', code: 'console.log("Initializing Storage Devices...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Storage Devices...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Storage Devices', explanation: 'A practical example showing a real-world coding scenario using Storage Devices.', code: 'function demonstrate() {\n  console.log("Running Storage Devices flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Storage Devices flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Storage Devices setup', problem: 'Write a function testSetup() that returns the string "Storage Devices OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Storage Devices OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Storage Devices important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Storage Devices in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Storage Devices?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm13-memory-basics',
+  module: 13,
+  title: 'Memory',
+  tagline: 'Master Memory to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Memory.',
+    whyItMatters: 'Understanding Memory is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Memory before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Memory.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Memory', explanation: 'Let\'s look at a simple example demonstrating Memory in action.', code: 'console.log("Initializing Memory...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Memory...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Memory', explanation: 'A practical example showing a real-world coding scenario using Memory.', code: 'function demonstrate() {\n  console.log("Running Memory flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Memory flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Memory setup', problem: 'Write a function testSetup() that returns the string "Memory OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Memory OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Memory important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Memory in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Memory?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm13-os-intro',
+  module: 13,
+  title: 'Operating Systems',
+  tagline: 'Master Operating Systems to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Operating Systems.',
+    whyItMatters: 'Understanding Operating Systems is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Operating Systems before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Operating Systems.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Operating Systems', explanation: 'Let\'s look at a simple example demonstrating Operating Systems in action.', code: 'console.log("Initializing Operating Systems...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Operating Systems...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Operating Systems', explanation: 'A practical example showing a real-world coding scenario using Operating Systems.', code: 'function demonstrate() {\n  console.log("Running Operating Systems flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Operating Systems flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Operating Systems setup', problem: 'Write a function testSetup() that returns the string "Operating Systems OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Operating Systems OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Operating Systems important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Operating Systems in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Operating Systems?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm13-applications',
+  module: 13,
+  title: 'Applications',
+  tagline: 'Master Applications to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Applications.',
+    whyItMatters: 'Understanding Applications is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Applications before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Applications.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Applications', explanation: 'Let\'s look at a simple example demonstrating Applications in action.', code: 'console.log("Initializing Applications...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Applications...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Applications', explanation: 'A practical example showing a real-world coding scenario using Applications.', code: 'function demonstrate() {\n  console.log("Running Applications flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Applications flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Applications setup', problem: 'Write a function testSetup() that returns the string "Applications OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Applications OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Applications important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Applications in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Applications?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
+
+window.CSFA_RAW_TOPICS.push({
+  id: 'm13-files-extensions',
+  module: 13,
+  title: 'Files & File Extensions',
+  tagline: 'Master Files & File Extensions to build a solid computer science foundation.',
+  readMinutes: 6,
+  intro: {
+    whatItIs: 'An in-depth look at Files & File Extensions.',
+    whyItMatters: 'Understanding Files & File Extensions is essential for writing efficient, reliable, and correct software programs.',
+    whereUsed: 'Used everywhere in software development, from system utilities and network programming to application development and databases.',
+    commonMistakes: 'Not understanding the basic constraints and underlying behavior of Files & File Extensions before applying it in complex production code.'
+  },
+  visual: { caption: 'Conceptual diagram of Files & File Extensions.', type: 'text' },
+  examples: [
+    { difficulty: 'easy', title: 'Basic usage of Files & File Extensions', explanation: 'Let\'s look at a simple example demonstrating Files & File Extensions in action.', code: 'console.log("Initializing Files & File Extensions...");\nconst isAvailable = true;\nconsole.log("Status:", isAvailable);', language: 'javascript', output: 'Initializing Files & File Extensions...\nStatus: true' },
+    { difficulty: 'medium', title: 'Common pattern with Files & File Extensions', explanation: 'A practical example showing a real-world coding scenario using Files & File Extensions.', code: 'function demonstrate() {\n  console.log("Running Files & File Extensions flow...");\n}\ndemonstrate();', language: 'javascript', output: 'Running Files & File Extensions flow...' }
+  ],
+  exercises: [
+    { level: 1, title: 'Check Files & File Extensions setup', problem: 'Write a function testSetup() that returns the string "Files & File Extensions OK".', hints: ['Return the exact string requested.'], solution: 'function testSetup() { return "Files & File Extensions OK"; }' }
+  ],
+  interview: [
+    { q: 'Why is Files & File Extensions important in software engineering?', a: 'It provides a key building block for structuring applications, optimizing resources, and managing complex program logic.' }
+  ],
+  realWorld: [
+    { company: 'Industry Standard', text: 'All modern tech companies rely on concepts related to Files & File Extensions in their core infrastructure.' }
+  ],
+  quiz: [
+    { type: 'mcq', q: 'What is the main purpose of Files & File Extensions?', options: ['Optimizing performance', 'Increasing code size', 'Randomizing program execution', 'None of the above'], correct: 0 }
+  ]
+});
