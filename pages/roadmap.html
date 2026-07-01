@@ -30,6 +30,25 @@
         <div class="roadmap-track" id="roadmap-track"></div>
       </div>
     </section>
+
+    <!-- SPECIALIZATION TRACKS SECTION -->
+    <section class="section" style="border-top: 1px solid var(--border-glass); padding-top: 60px; margin-top: 20px;">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Unlockable Paths</span>
+          <h2 class="text-h1">Specialization Tracks</h2>
+          <p class="text-lead" style="margin-top:14px; max-width:640px;">
+            These courses fit perfectly as <strong>Specialization Tracks</strong> that learners unlock after completing the Computer Science Fundamentals. The goal is to bridge the gap between theory and real-world software development.
+          </p>
+          <div id="lock-status-banner" style="margin-top: 24px;"></div>
+        </div>
+
+        <div class="specialization-grid" id="specialization-grid"></div>
+
+        <!-- CAPSTONE CARD -->
+        <div id="capstone-container" class="reveal"></div>
+      </div>
+    </section>
   </main>
 
   <div id="site-footer"></div>
@@ -80,11 +99,35 @@
   <script src="../js/topics-module43.js"></script>
   <script src="../js/topics-module44.js"></script>
   <script src="../js/topics-module45.js"></script>
+  <script src="../js/specializations-data.js"></script>
   <script src="../js/core/models.js"></script>
   <script src="../js/core/progress-store.js"></script>
   <script src="../js/core/ui-services.js"></script>
   <script src="../js/core/site-layout.js"></script>
   <script src="../js/core/app.js"></script>
+  <style>
+    .specialization-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 768px) {
+      .specialization-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .spec-locked {
+      position: relative;
+    }
+    .spec-locked .lock-overlay {
+      transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .spec-locked:hover .lock-overlay {
+      opacity: 0.18;
+      backdrop-filter: blur(1px);
+    }
+  </style>
   <script>
     function renderRoadmap() {
       const track = document.getElementById('roadmap-track');
@@ -118,15 +161,157 @@
         </div>`;
       }).join('');
 
-      // re-run reveal observer for newly injected elements
-      document.querySelectorAll('.roadmap-module.reveal').forEach(el => {
+      renderSpecializations();
+
+      // run reveal observer for newly injected elements
+      observeRevealElements();
+    }
+
+    function renderSpecializations() {
+      const state = window.CSFA.getState();
+      const coreModules = window.CSFA_MODULES.filter(m => m.num <= 12);
+      const allCoreDone = coreModules.every(m => window.CSFA.moduleCompletion(m.num) >= 1);
+      const forceUnlock = localStorage.getItem('csfa_force_unlock_specs') === 'true';
+      const isUnlocked = allCoreDone || forceUnlock;
+
+      // Render banner
+      const banner = document.getElementById('lock-status-banner');
+      if (isUnlocked) {
+        banner.innerHTML = `
+          <div class="glass card" style="padding: 16px 24px; border-color: rgba(52,211,153,0.3); background: rgba(52,211,153,0.04); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <span style="font-size: 1.6rem;">🔓</span>
+              <div>
+                <strong style="color: var(--success); font-size: 1rem; display: block; margin-bottom: 2px;">Specialization Tracks Unlocked!</strong>
+                <span style="font-size: 0.85rem; color: var(--text-2);">You've unlocked the advanced tracks bridging CS theory with modern production workflows.</span>
+              </div>
+            </div>
+            ${!allCoreDone ? `<button class="btn btn-ghost btn-sm" id="btn-lock-specs">Lock Tracks (Previewing)</button>` : ''}
+          </div>
+        `;
+      } else {
+        banner.innerHTML = `
+          <div class="glass card" style="padding: 16px 24px; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.02); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <span style="font-size: 1.6rem;">🔒</span>
+              <div>
+                <strong style="color: var(--primary-3); font-size: 1rem; display: block; margin-bottom: 2px;">Locked: Complete core CS Fundamentals</strong>
+                <span style="font-size: 0.85rem; color: var(--text-2);">Complete Modules 1–12 of Computer Science Fundamentals to unlock these Specialization Tracks.</span>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" id="btn-unlock-specs">Force Unlock (Preview Mode)</button>
+          </div>
+        `;
+      }
+
+      // Add event listeners
+      const unlockBtn = document.getElementById('btn-unlock-specs');
+      if (unlockBtn) {
+        unlockBtn.addEventListener('click', () => {
+          localStorage.setItem('csfa_force_unlock_specs', 'true');
+          renderSpecializations();
+          observeRevealElements();
+        });
+      }
+      const lockBtn = document.getElementById('btn-lock-specs');
+      if (lockBtn) {
+        lockBtn.addEventListener('click', () => {
+          localStorage.removeItem('csfa_force_unlock_specs');
+          renderSpecializations();
+          observeRevealElements();
+        });
+      }
+
+      // Render Spec Grid
+      const specGrid = document.getElementById('specialization-grid');
+      specGrid.innerHTML = window.CSFA_SPECIALIZATIONS.map(spec => {
+        const modulesHTML = spec.modules.map(mod => {
+          const topicsHTML = mod.topics.map(t => `<li style="font-size: 0.82rem; color: var(--text-2); margin-bottom: 4px; display: flex; align-items: start; gap: 8px;">
+            <span style="color: var(--primary-3); font-size: 0.75rem; margin-top: 3px;">•</span> <span>${t}</span>
+          </li>`).join('');
+
+          return `
+            <div style="margin-top: 14px;">
+              <h5 style="font-size: 0.88rem; color: var(--text-0); margin-bottom: 8px; font-weight: 600;">${mod.name}</h5>
+              <ul style="list-style: none; padding-left: 4px; margin: 0;">${topicsHTML}</ul>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <div class="card reveal ${!isUnlocked ? 'spec-locked' : ''}" style="padding: 28px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; background: var(--surface-glass);">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div class="module-icon" style="width: 40px; height: 40px; font-size: 1.15rem; border-radius: 10px;">${spec.icon}</div>
+                  <div>
+                    <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--primary-3); font-weight: 600;">SPECIALIZATION ${spec.num}</span>
+                    <h3 style="font-size: 1.15rem; margin: 2px 0 0 0; color: var(--text-0); font-weight: 700;">${spec.title}</h3>
+                  </div>
+                </div>
+                <span class="badge" style="font-family: var(--font-mono); font-size: 0.75rem;">${spec.lessons} Lessons</span>
+              </div>
+              <div style="margin-top: 18px; border-top: 1px solid var(--border-glass); padding-top: 10px;">
+                ${modulesHTML}
+              </div>
+            </div>
+            ${!isUnlocked ? `
+              <div class="lock-overlay" style="position: absolute; inset: 0; background: rgba(5,5,5,0.72); backdrop-filter: blur(4px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; z-index: 5;">
+                <span style="font-size: 2.2rem;">🔒</span>
+                <span style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--text-2); letter-spacing: 0.05em; text-transform: uppercase;">Locked</span>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+
+      // Render Capstone Project
+      const capstoneContainer = document.getElementById('capstone-container');
+      const capstone = window.CSFA_CAPSTONE;
+      const featuresHTML = capstone.features.map(f => `
+        <div style="display: flex; align-items: start; gap: 10px; font-size: 0.88rem; color: var(--text-2);">
+          <span style="color: var(--success); font-weight: bold; margin-top: 1px;">✓</span>
+          <span>${f}</span>
+        </div>
+      `).join('');
+
+      capstoneContainer.innerHTML = `
+        <div class="card reveal ${!isUnlocked ? 'spec-locked' : ''}" style="padding: 36px; background: linear-gradient(135deg, rgba(139,92,246,0.06) 0%, rgba(5,5,5,0.85) 100%); border: 1px solid var(--border-glow); position: relative; overflow: hidden; margin-top: 40px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div class="module-icon" style="width: 52px; height: 52px; font-size: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, rgba(52,211,153,0.2), rgba(5,150,105,0.1)); border-color: rgba(52,211,153,0.3);">${capstone.icon}</div>
+              <div>
+                <span style="font-size: 0.82rem; font-family: var(--font-mono); color: var(--success); font-weight: 600;">GRADUATION REQUIREMENT</span>
+                <h3 class="text-h2" style="margin: 4px 0 0 0; color: var(--text-0); font-weight: 700;">${capstone.title}</h3>
+              </div>
+            </div>
+            <span class="badge" style="color: var(--success); border-color: rgba(52,211,153,0.3); font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; padding: 6px 12px;">${capstone.duration}</span>
+          </div>
+          <p class="text-lead" style="color: var(--text-1); margin-bottom: 28px; max-width: 800px; line-height: 1.6;">${capstone.description}</p>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; border-top: 1px solid var(--border-glass); padding-top: 24px;">
+            ${featuresHTML}
+          </div>
+          ${!isUnlocked ? `
+            <div class="lock-overlay" style="position: absolute; inset: 0; background: rgba(5,5,5,0.76); backdrop-filter: blur(5px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; z-index: 5;">
+              <span style="font-size: 2.5rem;">🔒</span>
+              <span style="font-size: 0.9rem; font-family: var(--font-mono); color: var(--text-2); letter-spacing: 0.05em; text-transform: uppercase;">Locked</span>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    function observeRevealElements() {
+      document.querySelectorAll('.reveal').forEach(el => {
         const obs = new IntersectionObserver((entries) => {
           entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.05 });
         obs.observe(el);
       });
     }
+
     document.addEventListener('csfa:layout-ready', renderRoadmap);
   </script>
 </body>
 </html>
+
