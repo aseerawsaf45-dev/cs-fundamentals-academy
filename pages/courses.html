@@ -7,7 +7,7 @@
   <meta name="description" content="Browse every module and topic in CS Fundamentals Academy.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/components.css">
-</head>
+<link rel="icon" type="image/png" href="../assets/logo.png">`n</head>
 <body data-root="../">
   <a href="#main" class="skip-link">Skip to content</a>
   <div class="bg-mesh"></div>
@@ -34,6 +34,7 @@
           <button class="filter-chip" data-filter="available">Available</button>
           <button class="filter-chip" data-filter="in-progress">In progress</button>
           <button class="filter-chip" data-filter="completed">Completed</button>
+          <button class="btn btn-ghost btn-sm" id="toggle-all-btn" style="margin-left:auto; padding: 6px 12px; font-size: 0.8rem;">Collapse All</button>
         </div>
 
         <div id="explorer-results"></div>
@@ -448,6 +449,26 @@
         renderExplorer();
       });
 
+      const toggleAllBtn = document.getElementById('toggle-all-btn');
+      if (toggleAllBtn) {
+        toggleAllBtn.addEventListener('click', (e) => {
+          const isCollapse = e.target.textContent === 'Collapse All';
+          if (isCollapse) {
+            window.CSFA_MODULES.forEach(m => collapsedModules.add(m.id));
+            if (window.CSFA_SPECIALIZATIONS) {
+              window.CSFA_SPECIALIZATIONS.forEach(spec => {
+                spec.modules.forEach((mod, modIdx) => collapsedModules.add(`spec-${spec.num}-mod-${modIdx}`));
+              });
+            }
+            e.target.textContent = 'Expand All';
+          } else {
+            collapsedModules.clear();
+            e.target.textContent = 'Collapse All';
+          }
+          renderExplorer();
+        });
+      }
+
       document.querySelectorAll('.filter-chip').forEach(chip => {
         chip.addEventListener('click', () => {
           document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('is-active'));
@@ -468,3 +489,4 @@
   </script>
 </body>
 </html>
+

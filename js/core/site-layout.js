@@ -37,7 +37,7 @@ class SiteLayout {
     <nav class="nav" aria-label="Primary">
       <div class="nav-inner">
         <a class="nav-logo" href="${this._resolve('index.html')}">
-          <span class="nav-logo-mark">CS</span>
+          <img src="${this._resolve('assets/logo.png')}" alt="CS" style="height: 32px; width: auto; margin-right: 8px;">
           <span>CS Fundamentals Academy</span>
         </a>
         <div class="nav-links">${links}</div>
@@ -58,7 +58,7 @@ class SiteLayout {
         <div class="footer-grid">
           <div class="footer-col">
             <h5 style="display:flex;align-items:center;gap:10px;">
-              <span class="nav-logo-mark" style="width:26px;height:26px;font-size:0.7rem;">CS</span>
+              <img src="${this._resolve('assets/logo.png')}" alt="CS" style="height: 26px; width: auto;">
               CS Fundamentals Academy
             </h5>
             <p style="max-width:280px;">Computer science fundamentals built for people learning to direct AI well — so you understand what you're shipping, not just what you're prompting.</p>
