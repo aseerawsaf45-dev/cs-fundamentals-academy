@@ -152,6 +152,9 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
   padding: 0 28px;
 }
+@media (max-width: 640px) {
+  .container { padding: 0 16px; }
+}
 
 .section { padding: 110px 0; position: relative; }
 @media (max-width: 768px) { .section { padding: 72px 0; } }
@@ -248,6 +251,12 @@ h1, h2, h3, h4, h5 {
   border-radius: var(--radius-pill);
   transition: transform var(--dur-fast) var(--ease-spring), box-shadow var(--dur-med), filter var(--dur-fast);
   white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 .btn-primary {

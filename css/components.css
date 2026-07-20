@@ -99,6 +99,7 @@
 @media (max-width: 920px) {
   .nav-links { display: none; }
   .nav-burger { display: flex; }
+  .nav-streak { display: none; }
 }
 
 .nav-mobile-panel {
@@ -131,6 +132,9 @@
 @media (max-width: 768px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
+@media (max-width: 540px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
 .footer-col h5 { font-size: 0.85rem; color: var(--text-0); margin-bottom: 16px; letter-spacing: 0.02em; }
 .footer-col a, .footer-col p { color: var(--text-2); font-size: 0.9rem; line-height: 2; display: block; }
 .footer-col a:hover { color: var(--primary-3); }
@@ -162,6 +166,11 @@
 .hero-stats { display: flex; gap: 36px; margin-top: 52px; flex-wrap: wrap; }
 .hero-stat-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--text-0); }
 .hero-stat-label { font-size: 0.82rem; color: var(--text-2); margin-top: 2px; }
+@media (max-width: 640px) {
+  .hero-cta-row .btn { width: 100%; }
+  .hero-stats { gap: 20px; }
+  .hero-stats > div { min-width: calc(50% - 10px); }
+}
 
 /* ---- Floating code snippet visual ---- */
 .code-float-stage {
@@ -189,6 +198,18 @@
   .code-float-stage { height: 360px; }
   .code-float-card.c2 { left: 30%; }
 }
+@media (max-width: 640px) {
+  .code-float-stage {
+    height: auto;
+    display: grid;
+    gap: 12px;
+  }
+  .code-float-card {
+    position: static;
+    width: 100%;
+    animation: none;
+  }
+}
 @keyframes floatCard {
   0%, 100% { transform: translateY(0) rotate(-1.5deg); }
   50% { transform: translateY(-16px) rotate(1deg); }
@@ -203,6 +224,19 @@
 /* ---- Section header ---- */
 .section-head { max-width: 680px; margin-bottom: 56px; }
 .section-head.center { margin-inline: auto; text-align: center; }
+
+/* ---- Home page responsive grids ---- */
+.home-split-grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.home-split-grid-wide { gap: 56px; }
+.home-split-grid-compact { gap: 28px; }
+@media (max-width: 980px) {
+  .home-split-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ---- Roadmap ---- */
 .roadmap-track {
