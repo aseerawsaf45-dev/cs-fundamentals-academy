@@ -161,6 +161,8 @@ h1, h2, h3, h4, h5 {
 
 .flex { display: flex; }
 .grid { display: grid; }
+.grid-2-cols { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 768px) { .grid-2-cols { grid-template-columns: 1fr; } }
 .gap-sm { gap: 12px; }
 .gap-md { gap: 20px; }
 .gap-lg { gap: 32px; }
