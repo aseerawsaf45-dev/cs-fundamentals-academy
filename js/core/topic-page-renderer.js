@@ -241,18 +241,12 @@ class TopicPageRenderer {
             <button class="btn ${isDone ? 'btn-ghost' : 'btn-primary'} btn-sm" id="mark-complete-btn">${isDone ? '✓ Lesson complete' : 'Mark lesson complete'}</button>
           </div>
 
-          <!-- Show / Hide content toggle -->
-          <div class="topic-reveal-row">
-            <button class="btn btn-primary" id="show-content-btn">
-              <span id="show-content-icon">👁</span> Show Content
-            </button>
-            <span class="topic-reveal-hint">Content is hidden — press the button to start reading.</span>
-          </div>
+
         </div>
       </div>
 
       <!-- Collapsible content wrapper -->
-      <div id="topic-content-area" class="topic-content-area" aria-hidden="true">
+      <div id="topic-content-area" class="topic-content-area">
         <div class="container topic-layout">
           <nav class="topic-toc" aria-label="On this page">
             <a href="#sec-intro" class="toc-link">Introduction</a>
@@ -326,27 +320,6 @@ class TopicPageRenderer {
     };
     document.getElementById('mark-complete-btn')?.addEventListener('click', handleMarkComplete);
     document.getElementById('mark-complete-btn-bottom')?.addEventListener('click', handleMarkComplete);
-
-    // Show / Hide content toggle
-    const showBtn = document.getElementById('show-content-btn');
-    const contentArea = document.getElementById('topic-content-area');
-    const hintEl = showBtn.parentElement.querySelector('.topic-reveal-hint');
-    let isVisible = false;
-    showBtn.addEventListener('click', () => {
-      isVisible = !isVisible;
-      contentArea.classList.toggle('is-visible', isVisible);
-      contentArea.setAttribute('aria-hidden', String(!isVisible));
-      showBtn.innerHTML = isVisible
-        ? '<span>🙈</span> Hide Content'
-        : '<span>👁</span> Show Content';
-      hintEl.textContent = isVisible
-        ? 'Scroll down to read the lesson.'
-        : 'Content is hidden — press the button to start reading.';
-      if (isVisible) {
-        // Smooth scroll into content
-        setTimeout(() => contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
-      }
-    });
 
     document.querySelectorAll('[data-run-example]').forEach(btn => {
       btn.addEventListener('click', () => {
