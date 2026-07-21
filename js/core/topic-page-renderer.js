@@ -277,6 +277,9 @@ class TopicPageRenderer {
 
       <!-- Prev / Next navigation -->
       <div class="container">
+        <div style="text-align: center; margin-bottom: 32px;">
+          <button class="btn ${isDone ? 'btn-ghost' : 'btn-primary'} btn-sm" id="mark-complete-btn-bottom">${isDone ? '✓ Lesson complete' : 'Mark lesson complete'}</button>
+        </div>
         ${this._renderNavButtons(prev, next)}
       </div>`;
 
@@ -310,12 +313,19 @@ class TopicPageRenderer {
      INTERACTIONS
   --------------------------------------------------------------------- */
   _bindInteractions(topic) {
-    document.getElementById('mark-complete-btn').addEventListener('click', (e) => {
+    const handleMarkComplete = () => {
       this.app.markLessonComplete(topic.id);
-      e.target.textContent = '✓ Lesson complete';
-      e.target.classList.remove('btn-primary');
-      e.target.classList.add('btn-ghost');
-    });
+      const btns = [document.getElementById('mark-complete-btn'), document.getElementById('mark-complete-btn-bottom')];
+      btns.forEach(btn => {
+        if (btn) {
+          btn.textContent = '✓ Lesson complete';
+          btn.classList.remove('btn-primary');
+          btn.classList.add('btn-ghost');
+        }
+      });
+    };
+    document.getElementById('mark-complete-btn')?.addEventListener('click', handleMarkComplete);
+    document.getElementById('mark-complete-btn-bottom')?.addEventListener('click', handleMarkComplete);
 
     // Show / Hide content toggle
     const showBtn = document.getElementById('show-content-btn');
